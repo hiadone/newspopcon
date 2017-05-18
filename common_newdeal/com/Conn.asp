@@ -1,0 +1,4 @@
+<%
+CONST CONN_HIADONE = ""
+%>
+

@@ -1,0 +1,344 @@
+@charset "utf-8";
+/*page*/
+
+/*전체기사 영역*/
+.info01 h2{
+	padding-bottom:0 !important;
+	}
+
+.info01 #foin_pageid01 {
+	margin:0px;
+	padding:0px;
+	}
+
+.info01 #foin_pageid01 .title_area {
+	width:100%;
+	border-bottom:solid 1px #e5e5e5;
+	padding:0 2.5%;
+	box-sizing: border-box;
+	}
+
+.info01 #foin_pageid01 .title_area .title {
+
+	box-sizing: border-box;
+	background:url(../images/dot.png) no-repeat left center;
+	background-size: 1%;
+	padding:2% 0 2% 2.5%;
+	}
+
+.info01 #foin_pageid01 .title_area a{
+	text-decoration:none;
+	color:#000;
+	display: inline-block;
+	text-overflow:ellipsis;
+    white-space:nowrap;
+	overflow:hidden;
+	width:100%;
+	vertical-align: middle;
+	font-size:15px;
+	font-family: 'Nanum Gothic', sans-serif;
+	letter-spacing:-1px;
+
+	}
+
+/*==================*/
+
+
+/*포토뉴스 영역 , My 생활정보*/
+.info02 iframe{ width:100%; height: 125px;}
+
+
+
+#foin_pageid02{
+	width:100%;
+	padding:0 2.5%;
+	box-sizing: border-box;
+	display: inline-block;
+	}
+
+#foin_pageid02 div{
+	width:32%;
+	display:inline-block;
+	float: left;
+	margin-right:2%;
+	}
+
+#foin_pageid02 div:last-child{
+	margin-right:0;
+	}
+
+#foin_pageid02 .layout{
+	width:100%;
+	text-align:center;
+	}
+
+#foin_pageid02 .layout .thum {
+	width:100%;
+	margin-right:0;
+	}
+
+#foin_pageid02 .layout .thum a{
+	display: inline-block;
+	width:100%;
+	}
+
+#foin_pageid02 .layout .thum img {
+	width:100%;
+	border:0px;
+	}
+
+#foin_pageid02 .layout .summary {
+	width:100%;
+	margin-top:5%;
+	}
+
+#foin_pageid02 .layout .summary a {
+	color:#4e4e4f;
+	text-decoration:none;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size:12px;
+	line-height: 15px;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width:100%;
+	display: inline-block;
+	}
+/*==================*/
+
+
+/*많이본 뉴스 영역*/
+.info03 h2{
+	padding-bottom:0 !important;
+	}
+
+#foin_pageid03{
+	margin:0px;
+	padding:0px;
+	}
+
+#foin_pageid03 .title_area {
+	width:100%;
+	border-bottom:solid 1px #e5e5e5;
+	padding:0 2.5%;
+	box-sizing: border-box;
+	}
+
+#foin_pageid03 .title_area .title {
+	box-sizing: border-box;
+	padding:2.5% 0 2.5% 11.5%;
+ 	}
+
+#foin_pageid03 .title_area:nth-child(1) .title{
+	background:url(../images/news01.png) no-repeat left center;
+	background-size: 9.5%;
+	}
+
+#foin_pageid03 .title_area:nth-child(2) .title{
+	background:url(../images/news02.png) no-repeat left center;
+	background-size: 9.5%;
+	}
+
+#foin_pageid03 .title_area:nth-child(3) .title{
+	background:url(../images/news03.png) no-repeat left center;
+	background-size: 9.5%;
+		}
+
+#foin_pageid03 .title_area:nth-child(4) .title{
+	background:url(../images/news04.png) no-repeat left center;
+	background-size: 9.5%;
+	}
+
+#foin_pageid03 .title_area:nth-child(5) .title{
+	background:url(../images/news05.png) no-repeat left center;
+	background-size: 9.5%;
+	}
+
+#foin_pageid03 .title_area .title a{
+	text-decoration:none;
+	color:#000;
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width:100%;
+	vertical-align: middle;
+	font-size: 15px;
+	font-family: 'Nanum Gothic', sans-serif;
+	letter-spacing: -1px;
+	}
+
+/*==================*/
+
+/*요일별 웹툰 , 인기웹툰*/
+#foin_pageid04 { 
+	margin:0;
+	padding:0;
+	}	
+
+#foin_pageid04 ul{
+	display: inline-block;
+	padding-left: 2.5%;
+	padding-right:2.5%;
+	}
+
+#foin_pageid04 li {
+  	list-style: none;
+  	float:left;
+  	text-align:center;
+  	width:49%;
+  	margin-right: 2%;
+	}
+
+#foin_pageid04 li:nth-child(2n){
+	margin-right:0;
+	}
+
+#foin_pageid04 li:nth-child(1),#foin_pageid04 li:nth-child(2){
+	margin-bottom:2%;
+	}
+
+.hi_list01{
+  	display: block;
+  	width:100%;
+  	text-align:left;
+  	border:1px solid #e5e5e5;
+  	box-sizing: border-box;
+	}
+
+.hi_list01 a{
+	display: inline-block;
+	width:100%;
+	text-decoration: none;
+	}
+
+.hi_list01 p { 
+	padding:3% 0 2% 3%;
+	color:#000;
+	font-size:13px;
+	letter-spacing: -1px;
+	font-family: 'Nanum Gothic', sans-serif;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	line-height: 15px;
+ 	}
+
+.hi_list01 img { 
+	display: block;
+	width:100%;
+	}
+
+
+/*best 신문보기*/
+
+#foin_pageid05 {
+	width:100%;
+	box-sizing: border-box;
+	}
+
+#foin_pageid05 div{
+	padding:2.5%;
+	box-sizing: border-box;
+	border-bottom:1px solid #e5e5e5;
+	}
+#foin_pageid05 div:first-child{
+	padding-top:0;
+	}
+
+#foin_pageid05 div a{
+	width:100%;
+	display: inline-block;
+	}
+
+#foin_pageid05 div a img{
+	width:100%;
+	}
+
+/*주간 핫리포트*/
+
+#foin_pageid06{
+	width:100%;
+	display: inline-block;
+	padding: 0 2.5%;
+	box-sizing: border-box;
+	}
+
+#foin_pageid06 img{
+	width:100%;
+	}
+
+
+/*Best 웹툰 Top6*/
+#foin_pageid07{
+	width:100%;
+	display: inline-block;
+	}
+
+#foin_pageid07 ul{
+	width:100%;
+	display: inline-block;
+	padding:0 2.5%;
+	box-sizing: border-box;
+	}
+#foin_pageid07 li {
+	list-style: none;
+	float:left;
+	width:32%;
+	margin-right:2%;
+	border:1px solid #e5e5e5;	
+	box-sizing: border-box;
+	}
+#foin_pageid07 li:nth-child(3n){
+	margin-right:0;
+	}
+
+#foin_pageid07 li:nth-child(1),#foin_pageid07 li:nth-child(2),#foin_pageid07 li:nth-child(3){
+	margin-bottom:2%;
+	}
+
+#foin_pageid07 .hi_list02 {
+	text-align:center;
+	display: block;
+	width:100%;
+	padding:7.5%;
+	box-sizing: border-box;
+	}
+
+#foin_pageid07 .hi_list02 a{
+	display: inline-block;
+	width:100%;
+	text-decoration: none;
+	}
+
+#foin_pageid07 .hi_list02 img {
+	width:100%;
+	}
+
+#foin_pageid07 .hi_list02 p {
+	width:100%;
+	font-size:13px;
+	letter-spacing: -1px;
+	font-family: 'Nanum Gothic', sans-serif;
+	line-height: 15px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-top: 3%;
+	color:#000;
+	}
+
+/*하단 배너*/
+.info08 {
+	padding:0 !important;
+	margin-bottom:0 !important;
+	}
+
+.info08 a{
+	display: inline-block;
+	width:100%;
+	}
+
+.info08 a img{
+	width:100%;
+	}

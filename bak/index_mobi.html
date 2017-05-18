@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="euc-kr">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no, email=no, address=no"><!-- 자동 링크 적용 안되게 -->
+		<link rel="shortcut icon" href=" ">
+
+		<link href="assets/css/app_contents.css" rel="stylesheet" />
+		<link href="assets/css/news_main.css" rel="stylesheet" type="text/css">
+		<link href="assets/css/common.css" rel="stylesheet" />
+
+		<title>모비팝콘</title>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
+		<script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
+	</head>
+<body onload="callScheme('GRP', 4, 'DEFAULT');">
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<ul class="nav">
+					<li><a href="#"><img src="assets/images/navi.jpg"></a></li>
+					<li><a href="#"><img src="assets/images/logo.jpg"></a></li>
+					<li><a href="#"><img src="assets/images/search.jpg"></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div id='mySwipe' class='swipe'>
+		<div class='swipe-wrap'>
+			<div><!--// page1 //-->
+				
+
+				<nav>
+					<div class="container">
+						<div class="row">
+							<ul class="cate_nav">
+								<li class="active"><p>뉴스팝콘</p></li>
+								<li onclick='mySwipe.next()'>웹툰팝콘 <span class="adult">19</span></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<section id="nav-o">
+					<div class="container">
+						<div class="row">
+					<!--// 뉴스팝콘 컨텐츠 영역 //-->
+						<div id="int-global-wrapper">
+							<div id="int-body-wrapper">
+								<div id="int-container">
+									<div id="int-main-container">
+										<div id="int-main-section">
+											<div class="int-section">
+												<div>
+													<h2><img src="common/image/all_news.png" alt="전체기사"/></h2>
+													<span class="more"><a href="/" title="더보기"> <!-- <img src="common/image/arrow.png" alt="더보기"/> --> </a></span> 
+												</div>
+												<div>
+													<!-- <iframe width="100%" height="230" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Ca&out=iframe" frameborder="0" scrolling="no"></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Ca&out=script"></script>
+												</div>
+											</div><!-- int-section -->
+											<div class="int-section">
+												<div>
+													<h2><img src="common/image/photo_news.png" alt="포토뉴스"/></h2>
+												</div>
+												<div>
+													<!-- <iframe id="int-page-iframe-view" width="100%" height="120" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Cb&out=iframe" frameborder="0" scrolling="no" ></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Cb&out=script"></script>
+												</div>
+											</div><!-- int-section -->
+											                    
+											<div class="int-section">
+												<div>
+													<h2><img src="common/image/popular_news.png" alt="많이 본 뉴스"/></h2>
+													<span class="more"><a href="/" title="더보기"> <!--<img src="common/image/arrow.png" alt="더보기"/> --></a></span>
+												</div>
+													<!-- <iframe width="100%" height="150px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Cc&out=iframe" frameborder="0" scrolling="no" ></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Cc&out=script"></script>
+											</div><!-- int-section -->
+									
+											<!-- my 금융정보 -->
+											<div class="int-section">
+												<div>
+													<h2><img src="common/image/title_mylife.png" alt="my 생활정보"/></h2>
+												</div>
+												<div class="w-iframe">
+													<!-- <iframe width='100%' height='100px' src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02Ce&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02Ce&out=script"></script>
+												</div>
+											</div><!--/* my 금융정보 int-section -->
+											<div class="int-section"><!-- 새로 들어가는 만화놈1 360?-->
+												<div>
+													<h2><img src="common/image/week_webtoon.png" alt="요일별 웹툰"/></h2>
+													<span class="more"><a href="/" title="더보기"><!--<img src="common/image/arrow.png" alt="더보기"/> --></a></span>
+												</div>
+												<div class="S-iframe">
+													<!-- <iframe width="100%" height="340px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02kX&out=iframe" frameborder="0" scrolling="no" ></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02kX&out=script"></script>
+												</div>
+											</div><!-- int-section -->
+											<div class="int-section no-margin">
+												<div>
+													<h2><img src="common/image/best_news.png" alt="베스트뉴스"/></h2>
+												</div>
+												<div class="f-iframe">
+													<!-- <iframe width="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Ci&out=iframe" frameborder="0" scrolling="no" ></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Ci&out=script"></script>
+												</div>
+											</div><!--int-section-->
+											<div class="int-section"><!-- 새로 들어가는 만화놈2 360?-->
+												<div>
+													<h2><img src="common/image/popular_webtoon.png" alt="인기 웹툰"/></h2>
+													<span class="more"><a href="/" title="더보기"> <!-- <img src="common/image/arrow.png" alt="더보기"/> --> </a></span>
+												</div>
+												<div class="S-iframe">
+													<!-- <iframe width="100%" height="340px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02kY&out=iframe" frameborder="0" scrolling="no" ></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02kY&out=script"></script>
+												</div>
+											</div><!-- int-section -->
+											<div class="int-section">
+												<div>
+													<h2>
+														<!-- img src="common/image/week_test.png" alt="금주의 심리테스트"/ -->
+														<img src="common/image/title_weekhot.png" alt="주간핫리포트"/>
+													</h2>
+												</div>
+												<div class="n-iframe">
+													<!-- <iframe width="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=027J&out=iframe" allowTransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe> -->
+													<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=027J&out=script"></script>
+												</div>
+											</div><!--int-section-->
+
+											<section style="border-bottom:5px solid #ddd;">
+												<div class="panel" id="ARTICLE6" name="ARTICLE6">
+													<div class="panel_header">
+														<font color="009edd">베스트게임 TOP6</font>  <div class="pull-right"><img src="image/arrow_counter.png" class="arrow_more"></div>
+													</div>
+													<div class="panel_body">
+														<!-- <iframe width="100%" height="430px" src="article6.html" border="0" frameborder='0' scrolling='no' marginwidth='0' marginheight='0'></iframe> -->
+														<!-- <iframe width="100%" height="450px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02MM&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+														<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02u0&out=script"></script>
+													</div>
+												</div>
+											</section>
+
+											<section id="banner_bottom" style="border-bottom:5px solid #ddd;">
+												<!-- <iframe width="320px" height="130px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jJ&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+												<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02u8&out=script"></script>
+											</section>
+
+
+										</div><!-- #int-main-section -->
+									</div><!-- #int-main-container -->
+								</div>
+							</div>
+						   <div id="int-global-footer">              
+								<!-- #int-footer-ad -->
+								<div id="int-footer-copyright">
+										<p class="copyright"><span>서비스이용약관</span> &nbsp;|&nbsp; <span class="active">개인정보취급방침</span> &nbsp;|&nbsp; <span>제휴문의</span></p>
+								</div>
+							</div><!-- #int-global-footer -->
+						</div><!--// int-global-wrapper //-->
+
+						</div>
+					</div>
+
+				</section>
+			</div><!--// page1 end //-->
+
+			<div><!--// page2 //-->
+				
+
+				<nav>
+					<div class="container">
+						<div class="row">
+							<ul class="cate_nav">
+								<li onclick='mySwipe.prev()'>뉴스팝콘</li>
+								<li class="active"><p>웹툰팝콘 <span class="adult">19</span></p></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+					
+				<section id="nav-t">
+				<div class="container">
+					<div class="row">
+					<!--/ 오늘의 인기 앱 -->
+					<section>
+						<div class="panel" id="ARTICLE1" name="ARTICLE1">
+							<div class="panel_header">
+								<font color="009edd">따끈한 신작소식!! </font>  <div class="pull-right"><img src="image/arrow_right.png" class="arrow_more"></div>
+							</div>
+							<div class="panel_body">
+									<!-- <iframe width="100%" height="175px" src="article1.html" border="0" frameborder='0' scrolling='no' marginwidth='0' marginheight='0'></iframe> -->
+									<!-- <iframe width="100%" height="175px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jB&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->	
+									<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jB&out=script"></script>
+							</div>
+						</div><!--/* pannel -->
+					</section>
+					<!--/* 오늘의 인기 앱 끝 -->
+
+					<!-- 금주의 추천 app -->
+					<section>
+						<div class="panel" id="ARTICLE2" name="ARTICLE2">
+							<div class="panel_header">
+								<font color="009edd">오늘의 인기 웹툰</font> <div class="pull-right"><img src="image/arrow_right.png" class="arrow_more"></div>
+							</div>
+							<div class="panel_body">
+								<div class="frameset1">
+									<!-- <iframe width="100%" height="500px" src="article2.html" border="0" frameborder='0' scrolling='no' marginwidth='0' marginheight='0'></iframe> -->
+									<!-- <iframe width="100%" height="500px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jC&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+									<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jC&out=script"></script>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section id="banner_top">
+							<!-- <iframe width="320px" height="130px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jD&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+							<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jD&out=script"></script>
+					</section>
+
+					<section>
+						<div class="panel" id="ARTICLE3" name="ARTICLE3">
+							<div class="panel_header">
+								<font color="009edd">무료 웹툰 BEST</font>  <div class="pull-right"><img src="image/arrow_counter.png" class="arrow_more"></div>
+							</div>
+							<div class="panel_body">
+								<div class="frameset2">
+									<!-- <iframe width="100%" height="360px" src="article3.html" border="0" frameborder='0' scrolling='no' marginwidth='0' marginheight='0'></iframe> -->
+									<!-- <iframe width="100%" height="360px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jE&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+									<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jE&out=script"></script>
+								</div>
+							</div>
+						</div>
+					</section>	
+
+					<section>
+						<div class="panel" id="ARTICLE4" name="ARTICLE4">
+							<div class="panel_header">
+										<font color="009edd">심쿵! 추천웹툰</font> <div class="pull-right"><img src="image/arrow_counter.png" class="arrow_more"></div>
+							</div>
+							<div class="panel_body">
+										<div class="frameset3">
+											<!-- <iframe width="100%" height="360px" src="article4.html" border="0" frameborder='0' scrolling='no' marginwidth='0' marginheight='0'></iframe> -->
+											<!-- <iframe width="100%" height="360px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jF&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+											<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jF&out=script"></script>
+										</div>
+							</div>
+						</div>
+					</section>
+
+					<section id="banner_middle">
+								<!-- <iframe width="320px" height="130px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jG&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+								<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jG&out=script"></script>
+					</section>
+
+					<section>
+						<div class="panel" id="ARTICLE5" name="ARTICLE5">
+							<div class="panel_header">
+										<font color="009edd">직장인 생활정보</font> <div class="pull-right"><!-- <img src="image/arrow_counter.png" class="arrow_more"> --></div>
+							</div>
+							<div class="panel_body">
+										<div class="frameset4">
+											<!-- <iframe width="100%" height="360px" src="article5.html" border="0" frameborder='0' scrolling='no' marginwidth='0' marginheight='0'></iframe> -->
+											<!-- <iframe width="100%" height="360px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jH&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+											<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jH&out=script"></script>
+										</div>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<div class="panel" id="ARTICLE6" name="ARTICLE6">
+							<div class="panel_header">
+										<font color="009edd">베스트 웹툰 TOP5</font>  <div class="pull-right"><!-- <img src="image/arrow_counter.png" class="arrow_more"> --></div>
+							</div>
+							<div class="panel_body">
+										<!-- <iframe width="100%" height="430px" src="article6.html" border="0" frameborder='0' scrolling='no' marginwidth='0' marginheight='0'></iframe> -->
+										<!-- <iframe width="100%" height="450px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02MM&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+										<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02MM&out=script"></script>
+							</div>
+						</div>
+					</section>
+
+					<section id="banner_bottom">
+							<!-- <iframe width="320px" height="130px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jJ&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe> -->
+							<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=02jJ&out=script"></script>
+					</section>
+
+					<footer>
+							<p class="copyright"><span>서비스이용약관</span> &nbsp;|&nbsp; <span class="active">개인정보취급방침</span> &nbsp;|&nbsp; <span>제휴문의</span></p>
+					</footer>
+
+					</div>
+				</div>
+
+				</section>
+			</div><!--// page2 end //-->
+		</div><!--// swipe-wrap //-->
+	</div><!--// mySwipe //-->
+
+
+	</div>
+</div><!--// container //-->
+
+
+<script type="text/javascript" src="assets/js/swipe.js"></script>
+<script>
+// pure JS
+var elem = document.getElementById('mySwipe');
+window.mySwipe = Swipe(elem, {
+  // startSlide: 1,
+  // auto: 3000,
+  // continuous: true,
+  // disableScroll: true,
+  // stopPropagation: true,
+  // callback: function(index, element) {},
+  // transitionEnd: function(index, element) {}
+});
+
+// with jQuery
+// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+</script>
+</body>
+</html>
+
+
+<!--// 2016-08-03 모비팝콘백업 //-->

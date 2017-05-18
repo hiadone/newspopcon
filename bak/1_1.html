@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>에이씨 나쁜 노복...희숙</title>
+</head>
+<body>	
+	<!--
+	<form name="test" id="test" method="post">
+	<input type="text" value="" id="token" name="token">
+	<input type="button" value="LOGIN">
+	<input type="text" id="custId" name="custId">
+	</form>
+	<iframe width="500" height="600" id="fm" name="fm"></iframe>
+	-->
+</body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		function getQuerystring(paramName){
+			var _tempUrl = window.location.search.substring(1); //url에서 처음부터 '?'까지 삭제
+			var _tempArray = _tempUrl.split('&'); // '&'을 기준으로 분리하기
+			
+			for(var i = 0; _tempArray.length; i++) {
+				var _keyValuePair = _tempArray[i].split('='); // '=' 을 기준으로 분리하기
+				
+				if(_keyValuePair[0] == paramName){ // _keyValuePair[0] : 파라미터 명
+					// _keyValuePair[1] : 파라미터 값
+					return _keyValuePair[1];
+				}
+			}
+		}
+		debugger;
+		window.opener.location.href="http://newspopcon.com/bak/1.html?dt=success";
+		window.close();
+		/*
+		var dt = getQuerystring("data");
+		var url = "http://www.hiadone.com/work/2.html?token="+dt;
+		$("#fm").attr("src", url);
+		$("#test").attr("target", "fm");
+		$("#test").attr("action", url);
+		*/
+	});
+	
+	function fn_href() {
+		window.opener.location.href = "http://newspopcon.com/bak/1.html?token="+param;
+		//window.opener.test.custId = document.getElementById("parent").value;
+		window.close();
+	}
+
+</script>
+</html>			

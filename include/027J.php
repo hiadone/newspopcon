@@ -1,0 +1,1 @@
+<a href="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?CLK?pageid=027J%26bannerid=1xbj%26campaignid=0Elw" target="_blank"><img src="http://cdn1.ad4989.co.kr:80/02_kQ/0E_l_w/1484125505136.png" width="100%"  border="0"></a>

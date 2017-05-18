@@ -1,0 +1,522 @@
+/*BODY*/
+* {
+  outline:0;
+  padding:0;margin:0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bx-wrapper > .bx-viewport > .bxslider > li:nth-child(3) > .wrap{position:relative; padding-top:52%;}
+.bx-wrapper > .bx-viewport > .bxslider > li:nth-child(3) > .wrap > #sliders{width:100%; position:absolute; top:0; left: 0; height: 100%;}
+
+.bx-wrapper > .bx-viewport > .bxslider > li:nth-child(3) > .wrap > .banner_01{position:relative; padding-top: 31%}
+.bx-wrapper > .bx-viewport > .bxslider > li:nth-child(3) > .wrap > .banner_01 > #sliders2{position: absolute; top:0; left: 0; height: 100%;}
+#foin_058k > .layout > .summary{display: block!important; padding-top: 5%;}
+#foin_058k{width:100%!important; display: inline-block;}
+#foin_058k .layout{display: inline-block;}
+
+#foin_058Y .layout .summary{height:35px!important;}
+#foin_058Y .layout{height:145px!important;}
+#foin_058a .layout .summary a,#foin_058Y .layout .summary a,#foin_058b .layout .summary a,#foin_058d .layout .summary a,#foin_058k .layout .summary a
+{font-size:14px!important; line-height: 17px!important; overflow: hidden!important; white-space: nowrap!important; text-overflow: ellipsis!important; }
+#foin_02u8{padding:0;}
+
+
+#wrap {
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto;
+	width:100%;
+	float:left;
+}
+
+/*스와이프 메뉴*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding-top:20%;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+.bx-wrapper ul{padding:0;}
+
+
+.bx-wrapper .bx-viewport {
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+    	margin-top:10px;
+		margin-top: 8px;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+.bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+
+
+
+/* 각 section 별 공통 css */
+.all {background-color:#fff;padding:13px;position: relative;margin:8px 0 0 0; display:inline-block; width:100%;}
+.all > div > h2 {display: block; padding-bottom:13px; font-size:17px; font-weight:700; color:rgb(28, 41, 86); font-family: 'Jeju Gothic', sans-serif;}
+.all > div > h2 > img {display:block;height:16px;}
+.all > div > span > a > img {display:block;height:20px;}
+.all > div > span {display: block;position:absolute;top:0;right: 0;top:13px;right: 13px;}
+.all > div > iframe {width:100%; overflow:hidden;}
+.all > .g-iframe > iframe {width:100%; height:340px;}
+
+
+
+/*페이지 버튼*/
+#int-main-section > .int-section {background-color:#fff;padding:13px;position: relative;margin:8px 0 0 0;}
+.int-section > div > h2 {display: block;padding-bottom:13px;}
+.int-section > div > h2 > img {display:block;height:16px;}
+.int-section > div > span > a > img {display:block;height:20px;}
+.int-section > div > span {display: block;position:absolute;top:0;right: 0;top:13px;right: 13px;}
+.int-section > div > iframe {width:100%;overflow:hidden;}
+#int-pagination {text-align: center;}
+#int-pagination > p {display: block;margin:8px 0 0 0;}
+#int-pagination > p > a {display: inline-block;*display:inline;*zoom:1;vertical-align: middle;line-height: 1em;}
+#int-pagination > p > a > img {height: 9px;}
+#int-pagination > p > a {margin-top:-3px;padding:0 2px;}
+#int-pagination > p > .prev,
+#int-pagination > p > .next {margin:0;padding:0 13px;}
+#int-pagination > p > .prev > img,
+#int-pagination > p > .next > img {height: 16px;}
+#int-pagination > p > .int-pagination-button > img {display:block;}
+#int-pagination > p > .int-pagination-button {background:url(../image/bullet_hover.png) no-repeat -200px -200px;background-size:9px 9px;}
+#int-pagination > p > .int-pagination-button:hover,
+#int-pagination > p > .int-pagination-button.select {background-position:2px 0px;}
+#int-pagination > p > .int-pagination-button:hover img, 
+#int-pagination > p > .int-pagination-button.select img {visibility:hidden;}
+
+
+/*best 신문보기*/
+.best{width:100%; position:relative;}
+.best iframe{position:absolute; top:0; left:0; height:100%; display:inline-block;}
+@media (max-width:320px){.best{padding-bottom:82%;}}
+@media (min-width:320px){.best{padding-bottom:82%;}}
+@media (min-width:360px){.best{padding-bottom:80%;}}
+@media (min-width:414px){.best{padding-bottom:78%;}}
+
+
+/*요일별 웹툰,인기웹툰*/
+.week{width:100%; position:relative;}
+.week iframe{position:absolute; top:0; left:0; height:100%; display:inline-block;}
+@media (max-width:320px){.week{padding-bottom:99%;}}
+@media (min-width:320px){.week{padding-bottom:99%;}}
+@media (min-width:360px){.week{padding-bottom:95%;}}
+@media (min-width:414px){.week{padding-bottom:92%;}}
+
+
+
+/*주간 핫리포트*/
+.report{width:100%; position:relative;}
+.report iframe{position:absolute; top:0; left:0; height:100%; display:inline-block;}
+@media (max-width:320px){.report{padding-bottom:85%;}}
+@media (min-width:320px){.report{padding-bottom:85%;}}
+@media (min-width:360px){.report{padding-bottom:86%;}}
+@media (min-width:414px){.report{padding-bottom:85%;}}
+
+/*best 웹툰 top6*/
+.webtoon{width:100%; position:relative;}
+.webtoon iframe{position:absolute; top:0; left:0; height:100%; display:inline-block;}
+@media (max-width:320px){.webtoon{padding-bottom:107%;}}
+@media (min-width:320px){.webtoon{padding-bottom:107%;}}
+@media (min-width:360px){.webtoon{padding-bottom:102%;}}
+@media (min-width:414px){.webtoon{padding-bottom:89%;}}
+
+
+
+
+/*이미지 슬라이드*/
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+.slide > .bx-wrapper {
+	position: relative;
+	margin:8px 0 0 0;
+	*zoom: 1;
+	padding:0;
+	
+}
+
+/*============*/
+
+/*슬라이드 Css*/
+.slide > .bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+.slide > .bx-wrapper ul{padding:0;}
+/** THEME
+===================================*/
+
+.slide > .bx-wrapper .bx-viewport {
+	background: #fff;
+	position:fixed
+	width:100%;
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
+.slide > .bx-wrapper .bx-pager,
+.slide > .bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -5px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.slide > .bx-wrapper .bx-loading {
+	min-height: 50px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.slide > .bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+}
+
+ .slide > .bx-wrapper .bx-pager .bx-pager-item,
+.slide > .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.slide > .bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 6px;
+	height: 6px;
+	margin: 0 2px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.slide > .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.slide > .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: rgb(28, 41, 86);
+	width: 12px;
+	height: 6px;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.slide > .bx-wrapper .bx-prev {
+	left: 10px;
+}
+
+.slide > .bx-wrapper .bx-next {
+	right: 10px;
+}
+
+ .slide > .bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.slide > .bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.slide > .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 72%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.slide > .bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.slide > .bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.slide > .bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(../images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.slide > .bx-wrapper .bx-controls-auto .bx-start:hover,
+.slide > .bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.slide > .bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(../images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.slide > .bx-wrapper .bx-controls-auto .bx-stop:hover,
+.slide > .bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.slide > .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.slide >.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.slide > .bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.slide > .bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+
+/*상품 리스트*/
+.prod_list > ul > li{width:32%; margin-right:2%; float:left; margin-bottom:10px;}
+.prod_list > ul > li:nth-child(7),.prod_list > ul > li:nth-child(8),.prod_list > ul > li:nth-child(9){margin-bottom:0;}
+.prod_list > ul > li > a{width:100%; display:inline-block;}
+.prod_list > ul > li > a > img{width:100%; border:1px solid #ececec; box-sizing:border-box; margin-bottom:10px;}
+.prod_list > ul > li > a > p{font-size:13px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; line-height:14px;}
+.prod_list > ul > li:nth-child(3n){margin-right:0;}
+.prod_list .layout a img {border:1px solid #ececec;}
+.top_05 .layout a img {border:1px solid #ececec;}
+
+
+
+
+/*상품 리스트02*/
+.all > ul > li{width:49%; margin-right:2%; float:left; margin-bottom:10px;}
+.all > ul >li:nth-child(7),.all > ul >li:nth-child(8){margin-bottom:0;}
+.all > ul >li:nth-child(2n){margin-right:0;}
+.all > ul > li > a{display:inline-block; width:100%;}
+.all > ul > li > a > img{width:100%; border:1px solid #ececec; box-sizing:border-box; margin-bottom:10px;}
+.all > ul > li > a > p{text-align:left; font-size:13px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; line-height:14px;}
+
+
+/*하단 배너 영역*/
+.banner{width:100%; margin-top:8px;}
+.banner img{width:100%;}
+
+/*best영역*/
+.top_05 > ul > li{widht:100%; margin-top:5px;}
+.top_05 > ul > li > a{width:100%; display:inline-block;}
+.top_05 > ul > li > a > img {width:50%; margin-right:2%; display:inline-block; float:left; }
+.top_05 > ul > li > a > p{width:42%; display:inline-block; font-size:13px; line-height:12px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; line-height:14px; margin-top:8%;}
+/*.top_05 > ul > li:nth-child(1){background:url(../image/best_01.png) no-repeat top right; background-size:100%;}
+.top_05 > ul > li:nth-child(2){background:url(../image/best_02.png) no-repeat top right; background-size:100%;}
+.top_05 > ul > li:nth-child(3){background:url(../image/best_03.png) no-repeat top right; background-size:100%;}
+.top_05 > ul > li:nth-child(4){background:url(../image/best_04.png) no-repeat top right; background-size:100%;}
+.top_05 > ul > li:nth-child(5){background:url(../image/best_05.png) no-repeat top right; background-size:100%;}*/

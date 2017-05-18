@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta charset="utf-8">
+	<title>에이씨 나쁜 노복...희숙</title>
+</head>
+<body>	
+	<form id="test" name="test" method="post">
+	<input type="text" value="" id="token" name="token">
+	<input type="button" value="LOGIN" onclick="fn_login()">
+	<input type="text" id="custId" name="custId">
+	
+	</form>
+	<!-- <iframe width="500" height="600" id="fm" name="fm"></iframe> -->
+</body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	window.onmessage=function(e) {
+		if(e,data == 'replace your location') {
+			window.location.replace("http://www.naver.com?a=success");
+		}
+	};
+	function fn_login() {
+		var token = document.getElementById("token").value;
+		var url = "http://www.hiadone.com/work/2.html?token="+token
+		//var url2 = "http://www.hiadone.com/work/2.html?token="+token
+		//var url = "./1_1.html?data="+token;
+		
+		var newWindow = window.open(url, 'test', 'width=500, height=600, top=200, left=200, fullscreen=no, menubar=no, status=no, toolbar=no, titlebar=yes, location=no, scrollbar=no');
+		//newWindow.document.write('<iframe id="testFrame" name="testFrame" width="100%", height="100%", src="'+url2+'"></iframe>')
+		
+		//$("#test").attr("action", url).submit();
+		//document.test.action = url;
+		//document.test.target = "";
+		//document.test.submit();
+
+
+		//var newWindow = window.open(url, "_self", 'scrollbars=yes, width=500, height=600, top=200, left=200');
+		
+		//$("#fm").attr("src",url);
+
+		//$("#test").attr("action", url);
+		//$("#test").attr("target", "fm");
+		//$("#test").submit();
+
+		/*
+		if (window.focus) {
+			newWindow.focus();
+		}
+		*/
+	}
+
+	function fn_reload() {
+		var param = getQuerystring("token");
+		if(param != "" && typeof param!="undefained") {
+			location.href = "D:\\tmp\\1.html";
+		}
+	}
+
+	function getQuerystring(paramName){
+
+	var _tempUrl = window.location.search.substring(1); //url에서 처음부터 '?'까지 삭제
+	var _tempArray = _tempUrl.split('&'); // '&'을 기준으로 분리하기
+	
+	for(var i = 0; _tempArray.length; i++) {
+		var _keyValuePair = _tempArray[i].split('='); // '=' 을 기준으로 분리하기
+		
+		if(_keyValuePair[0] == paramName){ // _keyValuePair[0] : 파라미터 명
+			// _keyValuePair[1] : 파라미터 값
+			return _keyValuePair[1];
+		}
+	}
+}
+
+function test() {
+	window.opener.location.href = "http://www.naver.com";
+	window.close();
+}
+</script>
+</html>			

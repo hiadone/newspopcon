@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ </head>
+ <body>
+  
+
+<button onclick="openPopup();">[로그인하자]</button>
+
+
+<br><br><br><br>
+
+<form id="regForm" name="regForm" method="post" target="" action="">
+  <input type="hidden" id="callback_url2" name="callback_url2" value="inja-dev.html">
+  <input type="hidden" id="callback_url" name="callback_url" value="http://www.with-me.co.kr/include/loginPopup.asp">
+  <button>로그인좀하자</button>
+</form>
+<form id="fm_popup" name="fm_popup" method="post">
+  <input type="text" id="url_popup" name="url_popup">
+</form>
+
+
+
+<script>
+
+/*
+function onPopupWindow(){
+	window.name = "Parent_window";
+	window.open("http://www.hiadone.com/work/inja-dev-popup.html", "_blank", "top=10, left=10, width=400, height=400");
+	
+}
+*/
+var glVal = false;
+
+
+function fn_login() {
+	  glVal = true;
+	  //document.getElementById("regForm").setAttribute("target", "comIframe");
+	  //document.getElementById("regForm").setAttribute("action", "/m/include/loginProc.asp").submit();
+    $("#regForm").attr('target','comIframe');
+	$("#regForm").attr('action','inja-dev2.asp').submit();
+	
+	//document.regForm.submit();
+
+
+		//openToken(function a(u) {
+		//	var option = "width=370, height=200, resizeble=no, scrollbars=no, status=no;"
+		//	window.open(u, "", option);
+		//});
+	}
+
+
+function getSubmitResult(status, data) {
+    if(glVal) {
+      if(status == "200") {
+        //var url = "http://splogin.shinsegaepoint.com/login/servlet/withme/withmelogin.do?action=withmeweblogin_init&access_token=" + data;
+        //var url = "https://splogin.shinsegaepoint.com:443/login/servlet/withme/withmelogin.do?action=withmeweblogin_init&access_token=" + data;
+        //window.open(url, "", "width=450, height=380, left=100, top=50, resizeble=no, scrollbars=no, status=no"); 
+        //window.open(url, "", "toolbar=no, menubar=no, resizeble=no, scrollbars=no, status=no, width=450, height=380, left=100, top=50");
+        openPopup(status, data);
+      } else {
+        alert(status);
+      }
+    }
+  }
+
+
+
+ function openPopup(status, data) {
+    var w = 500;
+    var h = 556;
+    var title = "아미트위드미-로그인";
+    var url = "https://shinsegaepoint.emart.com/login/servlet/withme/withmelogin.do?action=withmelogin_init&access_token=" + data;
+    //var url = "https://splogin.shinsegaepoint.emart.com/login/servlet/withme/withmelogin.do?action=withmelogin_init&access_token=" + data;
+    
+    $("#url_popup").val(data);
+    
+    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+		var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+		width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+		height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+		var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+		var top = ((height / 2) - (h / 2)) + dualScreenTop;
+    //var newWindow =
+     window.open(url, title,'_blank', 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    
+/*		if (window.focus) {
+			newWindow.focus();
+		}*/
+  }
+
+
+
+</script>
+ </body>
+</html>
