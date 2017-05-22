@@ -742,7 +742,7 @@ default:
 
 
 
- $db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8', 'HIADONE_M', 'hi09281211');
+ $db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8', 'user_guest', 'guest///');
 
 
 // $query="SELECT `cb_post`.*, `cb_post_extra_vars`.`*`
