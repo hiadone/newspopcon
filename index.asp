@@ -23,6 +23,7 @@ $sIfrCode11 = "02yP"    ;// 베스트웹툰 랜덤
 $sIfrCode12 = "032y"  ;//탑배너
 $sIfrCode13 = "0320"  ;//신규생활정보
 $sIfrCode14 = "03EV"  ;//베스트신문보기 배너형
+$sIfrCode15 = "065Q" ;//인기신작
 
 
  			$db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8','user_guest', 'guest///');
@@ -162,8 +163,8 @@ if(!empty($extra_vars)){
 	    if(isset($media_code['sIfrCode12']))$sIfrCode12 = $media_code['sIfrCode12'];  //탑배너
 		if(isset($media_code['sIfrCode13']))$sIfrCode13 = $media_code['sIfrCode13'];  //신규생활정보
 		if(isset($media_code['sIfrCode14']))$sIfrCode14 = $media_code['sIfrCode14'];  //베스트신문보기 배너형
+        if(isset($media_code['sIfrCode15']))$sIfrCode15 = $media_code['sIfrCode15'];  //인기신작
 
-		
 
 	
 	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
@@ -340,6 +341,16 @@ div a img {
 			
 		</section>
 
+        <?php if (!empty($sIfrCode15)){ ?>
+        <section class="info02" id="scroll03">
+            <h2>인기신작</h2>
+            <div>
+                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
+                
+            </div>
+            
+        </section>
+        <?php } ?>
 	<!-- Best 신문보기 05 -->
 		<section class="info05">
 			<h2>BEST 신문보기</h2>

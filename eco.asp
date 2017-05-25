@@ -880,6 +880,7 @@ if(!empty($extra_vars)){
 	    if(isset($media_code['sIfrCode12']))$sIfrCode12 = $media_code['sIfrCode12'];  //탑배너
 		if(isset($media_code['sIfrCode13']))$sIfrCode13 = $media_code['sIfrCode13'];  //신규생활정보
 		if(isset($media_code['sIfrCode14']))$sIfrCode14 = $media_code['sIfrCode14'];  //베스트신문보기 배너형
+        if(isset($media_code['sIfrCode15']))$sIfrCode15 = $media_code['sIfrCode15'];  //인기 신작
 
 		
     
@@ -1075,6 +1076,17 @@ div a img {
 				<iframe width="100%" height="120px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode13?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 			</div>
 		</section>
+
+        <?php if (!empty($sIfrCode15)){ ?>
+        <section class="info02" id="scroll03">
+            <h2>인기신작</h2>
+            <div>
+                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
+                
+            </div>
+            
+        </section>
+        <?php } ?>
 
 	<!-- Best 신문보기 05 -->
 		<section class="info05">
