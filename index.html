@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+           <video id="Video1" controls loop autoplay >
+           <source src="http://ie.microsoft.com/testdrive/ieblog/2011/nov/pp4_blog_demo.mp4" type="video/mp4" />           
+       </video>
+       
+    </body>
+</html>
+<script language="javascript">
+    var player = document.getElementById('Video1');
+    player.addEventListener('click',function(){
+      player.play();
+    },false); 
+
+    player.click();
+
+ </script>

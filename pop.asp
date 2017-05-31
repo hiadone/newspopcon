@@ -747,7 +747,7 @@ div a img {
 
  	<!-- 하단 푸터 -->
 	 	<footer>
-	 		<a href="tel:02-2105-7498">
+	 		<a href="mailto:webtoonpopcon@gmail.com">
 	 			<h3>
 	 				광 고 문 의 			 			
 	 			</h3>
