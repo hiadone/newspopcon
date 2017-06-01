@@ -5,6 +5,7 @@ include_once "common/db_mysql.php";
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "default";
 
 $popstate="";
+$link_id="";
 $datescript=0;
 
 
@@ -138,13 +139,18 @@ if(!empty($extra_vars)){
 
 	                $popstate=1;
 	                $media_code['popstate_url']= $value['pln_url'];
+                    $link_id=$value['pln_id'];
 	                break;
 	            }            
 	        }
 	        
 	    } else {
 
-	        if(!empty($post_link)) $media_code['popstate_url']= $post_link[mt_rand(0,count($post_link)-1)]['pln_url'];
+	        if(!empty($post_link)) {
+                $rand = mt_rand(0,count($post_link)-1);
+                $media_code['popstate_url']= $post_link[$rand]['pln_url'];
+                $link_id= $post_link[$rand]['pln_id'];
+            }
 	    }
 	}
 
@@ -169,6 +175,8 @@ if(!empty($extra_vars)){
 	
 	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
 }
+
+
 ?>
 <!doctype html>
 <html>
@@ -207,6 +215,22 @@ if(!empty($extra_vars)){
 
     
 	});
+
+    function popstateStat(link_id) {
+        if(link_id){
+            $.ajax({
+                type: "GET", 
+                async: true,
+                url: "http://admin.newdealpopcon.com/postact/popstateStat/"+link_id, 
+                dataType : 'json',
+                success: function(data) 
+                {
+
+                },
+                error: function(xhr, status, error) {} 
+            });
+        }
+    }
 </script>
 
 <?php if($popstate === 0){?>
@@ -225,6 +249,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
+              popstateStat("<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
@@ -247,6 +272,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
+              popstateStat("<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
