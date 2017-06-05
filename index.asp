@@ -213,7 +213,7 @@ if(!empty($extra_vars)){
     		$('html , body').animate({scrollTop : 0});
     	});
 
-        popstateStat("<?php echo $link_id?>");
+    //    popstateStat("<?php echo $link_id?>");
 	});
 
     function popstateStat(link_id) {
