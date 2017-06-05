@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once "common/dc_dbpdomysql.php";
 include_once "common/db_mysql.php";
 
@@ -6,6 +7,7 @@ $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "default";
 
 $popstate="";
 $link_id="";
+$post_id="";
 $datescript=0;
 
 
@@ -177,6 +179,7 @@ if(!empty($extra_vars)){
 }
 
 
+
 ?>
 <!doctype html>
 <html>
@@ -213,7 +216,9 @@ if(!empty($extra_vars)){
     		$('html , body').animate({scrollTop : 0});
     	});
 
-    //    popstateStat("<?php echo $link_id?>");
+       
+        
+     //   popstateStat("<?php echo $link_id?>");
 	});
 
     function popstateStat(link_id) {

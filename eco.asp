@@ -1081,7 +1081,9 @@ div a img {
 	<!-- 생활정보 영역 03 -->
 		<section class="info03" id="scroll02">
 			<h2>생활정보</h2>
-				<iframe width="100%" height="185" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&out=iframe" frameborder="0" scrolling="no"></iframe>
+				<div id="foin_pageid03">
+                    <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&lang=utf-8&out=script'></script>
+                </div>
 		</section>
 
 <!-- 요일별 웹툰 04 -->
