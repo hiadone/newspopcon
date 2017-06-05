@@ -213,7 +213,7 @@ if(!empty($extra_vars)){
     		$('html , body').animate({scrollTop : 0});
     	});
 
-    
+        popstateStat("<?php echo $link_id?>");
 	});
 
     function popstateStat(link_id) {
@@ -249,7 +249,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
-              popstateStat("<?php echo $link_id?>");
+             // popstateStat("<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
@@ -272,7 +272,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
-              popstateStat("<?php echo $link_id?>");
+           //   popstateStat("<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
