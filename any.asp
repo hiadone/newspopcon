@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "common/dc_dbpdomysql.php";
 include_once "common/db_mysql.php";
 
@@ -7,6 +7,7 @@ $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "moneyWe";
 
 $popstate="";
 $link_id="";
+$post_id="";
 $datescript=0;
 $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
 switch ($sType) {
@@ -143,12 +144,12 @@ if ($r = $db_db->fetchrow()) {
     // $weekPageId[6] = $media_code['pageid15'];
     // $weekPageId[0] = $media_code['pageid16'];
 
-    
+    $post_id=$r['post_id'];
 
     $query="SELECT `cb_post_extra_vars`.*
     FROM `cb_post_extra_vars`
     WHERE `cb_post_extra_vars`.`post_id` = :post_id";
-    $db_db->bindParam(':post_id', $r['post_id'], PDO::PARAM_INT);
+    $db_db->bindParam(':post_id', $post_id, PDO::PARAM_INT);
     $db_db->pquery($query);
     
     while($row = $db_db->fetchrow()){
@@ -161,7 +162,7 @@ if ($r = $db_db->fetchrow()) {
     $query="SELECT `cb_post_link`.*
     FROM `cb_post_link`
     WHERE `cb_post_link`.`post_id` = :post_id";
-    $db_db->bindParam(':post_id', $r['post_id'], PDO::PARAM_INT);
+    $db_db->bindParam(':post_id', $post_id, PDO::PARAM_INT);
     $db_db->pquery($query);
     
     while($row = $db_db->fetchrow()){
@@ -278,18 +279,37 @@ if(!empty($extra_vars)){
 		    	$('header h1 span img').click(function(){
 		    		$('html , body').animate({scrollTop : 0});
 		    	});
+
+
+		    	<?php 
+        if($post_id){
+            if(empty($_SESSION['post_link_click_'.$post_id])) {
+                $_SESSION['post_link_click_'.$post_id] = 1;
+                ?>
+                    popstateStat("<?php echo $post_id?>","<?php echo session_id()?>");
+                <?php
+            } else {
+                ?>
+                    popstateStat("<?php echo $post_id?>","<?php echo session_id()?>");
+                <?php
+            }
+        }
+         ?>
 	});
 
-	function popstateStat(link_id) {
-        if(link_id){
+	function popstateStat(post_id,session_id,link_id) {
+        if(post_id){
+            if(link_id)
+                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id;
+            else 
+                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id;
             $.ajax({
                 type: "GET", 
                 async: true,
-                url: "http://admin.newdealpopcon.com/postact/popstateStat/"+link_id, 
+                url: url, 
                 dataType : 'json',
                 success: function(data) 
                 {
-
                 },
                 error: function(xhr, status, error) {} 
             });
@@ -314,7 +334,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
-			//  popstateStat("<?php echo $link_id?>");
+			  popstateStat("<?php echo $post_id?>","<?php echo session_id()?>","<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
@@ -337,7 +357,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
-			//  popstateStat("<?php echo $link_id?>");
+			  popstateStat("<?php echo $post_id?>","<?php echo session_id()?>","<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
