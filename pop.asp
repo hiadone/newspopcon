@@ -587,11 +587,7 @@ if(!empty($extra_vars)){
                 ?>
                     popstateStat("<?php echo $post_id?>","<?php echo session_id()?>");
                 <?php
-            } else {
-                ?>
-                    popstateStat("<?php echo $post_id?>","<?php echo session_id()?>");
-                <?php
-            }
+            } 
         }
          ?>
 	});
