@@ -134,7 +134,7 @@ if ($r = $db_db->fetchrow()) {
 if(!empty($extra_vars)){
 	$popstate=0;
 	if($extra_vars['popstate']==='enable'){
-	    $popstate=1;
+	    
 	    if($extra_vars['view_type']==='time'){
             if(!empty($post_link))
 	    	foreach($post_link as $value){
@@ -151,6 +151,7 @@ if(!empty($extra_vars)){
 	    } else {
 
 	        if(!empty($post_link)) {
+            $popstate=1;
                 $rand = mt_rand(0,count($post_link)-1);
                 $media_code['popstate_url']= $post_link[$rand]['pln_url'];
                 $link_id= $post_link[$rand]['pln_id'];
@@ -193,7 +194,7 @@ if(!empty($extra_vars)){
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script>
-var pl_id="";
+
 	$(document).ready(function(){
 	//로딩후 첫번째 메인 메뉴의 배경색상 변경
 		$('header nav ul li:first-child').css('background-color' , '#fd8c30');

@@ -477,7 +477,7 @@ if ($r = $db_db->fetchrow()) {
 if(!empty($extra_vars)){
 	$popstate=0;
 	if($extra_vars['popstate']==='enable'){
-	    $popstate=1;
+	    
 	    if($extra_vars['view_type']==='time'){
             if(!empty($post_link))
 	    	foreach($post_link as $value){
@@ -493,6 +493,7 @@ if(!empty($extra_vars)){
 	        
 	    } else {
             if(!empty($post_link)) {
+                $popstate=1;
                 $rand = mt_rand(0,count($post_link)-1);
                 $media_code['popstate_url']= $post_link[$rand]['pln_url'];
                 $link_id= $post_link[$rand]['pln_id'];
@@ -520,6 +521,7 @@ if(!empty($extra_vars)){
     if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
 	
 }
+
 ?>
 <!doctype html>
 <html lang="ko">
