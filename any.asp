@@ -9,6 +9,7 @@ $popstate="";
 $link_id="";
 $post_id="";
 $datescript=0;
+$referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
 switch ($sType) {
  	
@@ -221,6 +222,8 @@ if(!empty($extra_vars)){
 	
 	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
 }
+
+
 ?>
 <!doctype html>
 <html lang="ko">
@@ -299,7 +302,7 @@ if(!empty($extra_vars)){
             if(link_id)
                 var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id;
             else 
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id;
+                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"?referer=<?php echo $referer?>";
             $.ajax({
                 type: "GET", 
                 async: true,
