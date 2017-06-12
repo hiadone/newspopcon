@@ -286,32 +286,47 @@ if(!empty($extra_vars)){
 
 
 		    	<?php 
-        if($post_id){
-            if(empty($_SESSION['post_link_click_'.$post_id])) {
-                $_SESSION['post_link_click_'.$post_id] = 1;
-                ?>
-                    popstateStat("<?php echo $post_id?>","<?php echo session_id()?>");
-                <?php
-            } 
-        }
-         ?>
+                if($post_id){
+                        ?>
+                         popstateStat("<?php echo $post_id?>");
+                        <?php
+                    
+                }
+                 ?>
 	});
 
-	function popstateStat(post_id,session_id,link_id) {
+	function popstateStat(post_id,link_id) {
         if(post_id){
-            if(link_id)
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id;
-            else 
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"?referer=<?php echo $referer?>";
+            var session_id="";
             $.ajax({
                 type: "GET", 
                 async: true,
-                url: url, 
+                url: "./session_chk.asp", 
                 dataType : 'json',
                 success: function(data) 
                 {
+                    
+                    if(data.result==1){
+                        session_id=data.session_id;
+                        if(link_id)
+                            var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
+                        else 
+                            var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
+                        $.ajax({
+                            type: "GET", 
+                            async: true,
+                            url: url, 
+                            dataType : 'json',
+                            success: function(data) 
+                            {
+                            },
+                            error: function(xhr, status, error) {} 
+                        });
+                    }
                 },
                 error: function(xhr, status, error) {} 
+
+
             });
         }
     }
@@ -334,7 +349,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
-			  popstateStat("<?php echo $post_id?>","<?php echo session_id()?>","<?php echo $link_id?>");
+			  popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
@@ -357,7 +372,7 @@ if(!empty($extra_vars)){
 			  popped = true
 			  if (initialPop) return;
 			  
-			  popstateStat("<?php echo $post_id?>","<?php echo session_id()?>","<?php echo $link_id?>");
+			  popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
