@@ -235,10 +235,10 @@ if(!empty($extra_vars)){
 
     function popstateStat(post_id,link_id) {
         if(post_id){
-            var session_id="";
+            var session_id="no_session";
             $.ajax({
                 type: "GET", 
-                async: true,
+                async: false,
                 url: "./session_chk.asp", 
                 dataType : 'json',
                 success: function(data) 
@@ -246,26 +246,29 @@ if(!empty($extra_vars)){
                     
                     if(data.result==1){
                         session_id=data.session_id;
-                        if(link_id)
-                            var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
-                        else 
-                            var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
-                        $.ajax({
-                            type: "GET", 
-                            async: true,
-                            url: url, 
-                            dataType : 'json',
-                            success: function(data) 
-                            {
-                            },
-                            error: function(xhr, status, error) {} 
-                        });
+                        
                     }
                 },
                 error: function(xhr, status, error) {} 
 
 
             });
+
+            if(link_id)
+                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
+            else 
+                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
+            $.ajax({
+                type: "GET", 
+                async: true,
+                url: url, 
+                dataType : 'json',
+                success: function(data) 
+                {
+                },
+                error: function(xhr, status, error) {} 
+            });
+            
         }
     }
 </script>
@@ -310,7 +313,7 @@ if(!empty($extra_vars)){
 			  if (initialPop) return;
 			  
               popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
-			  parent.top.location.replace("<?php echo $sURL?>");
+			//  parent.top.location.replace("<?php echo $sURL?>");
           
 
 	        });
