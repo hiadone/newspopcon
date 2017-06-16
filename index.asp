@@ -313,7 +313,7 @@ if(!empty($extra_vars)){
 			  if (initialPop) return;
 			  
               popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
-			//  parent.top.location.replace("<?php echo $sURL?>");
+			  parent.top.location.replace("<?php echo $sURL?>");
           
 
 	        });
