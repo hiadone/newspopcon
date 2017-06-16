@@ -915,6 +915,8 @@ if(!empty($extra_vars)){
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<link href="common/css/normalize.css" rel="stylesheet" type="text/css">
 		<link href="common/css/common.css" rel="stylesheet" type="text/css">
@@ -928,8 +930,7 @@ if(!empty($extra_vars)){
 
 
 		<link href="css_new/import.css" rel="stylesheet" type="text/css">
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/jquery-ui.js"></script>
+		
 		<script>
 			$(document).ready(function(){
 			//로딩후 첫번째 메인 메뉴의 배경색상 변경

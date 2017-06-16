@@ -193,6 +193,9 @@ if(!empty($extra_vars)){
 <link href="css_new/import.css" rel="stylesheet" type="text/css">
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
 <script>
 
 	$(document).ready(function(){
@@ -332,7 +335,7 @@ div a img {
 </style>
 </head>
 
-<body>
+<body  onload="callScheme('GRP', 4, 'DEFAULT');">
 <!-- 구글애널리틱스 시작 -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
