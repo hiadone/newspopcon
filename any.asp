@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include_once "common/dc_dbpdomysql.php";
 include_once "common/db_mysql.php";
 
@@ -299,23 +299,23 @@ if(!empty($extra_vars)){
 	function popstateStat(post_id,link_id) {
         if(post_id){
             var session_id="no_session";
-            $.ajax({
-                type: "GET", 
-                async: false,
-                url: "./session_chk.asp", 
-                dataType : 'json',
-                success: function(data) 
-                {
+            // $.ajax({
+            //     type: "GET", 
+            //     async: false,
+            //     url: "./session_chk.asp", 
+            //     dataType : 'json',
+            //     success: function(data) 
+            //     {
                     
-                    if(data.result==1){
-                        session_id=data.session_id;
+            //         if(data.result==1){
+            //             session_id=data.session_id;
                         
-                    }
-                },
-                error: function(xhr, status, error) {} 
+            //         }
+            //     },
+            //     error: function(xhr, status, error) {} 
 
 
-            });
+            // });
 
             if(link_id)
                 var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
