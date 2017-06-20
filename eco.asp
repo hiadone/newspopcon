@@ -4,7 +4,7 @@ include_once "common/dc_dbpdomysql.php";
 include_once "common/db_mysql.php";
 
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "hiadone";
-
+$db_db="";
 $popstate="";
 $link_id="";
 $post_id="";

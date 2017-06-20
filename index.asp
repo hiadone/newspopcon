@@ -5,7 +5,7 @@ include_once "common/dc_dbpdomysql.php";
 include_once "common/db_mysql.php";
 
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "default";
-
+$db_db="";
 $popstate="";
 $link_id="";
 $post_id="";
@@ -46,7 +46,7 @@ $sIfrCode15 = "065Q" ;//인기신작
 
 $query="SELECT `cb_board`.*
 FROM `cb_board`
-WHERE `cb_board`.`brd_key` = 'hiadone_newspopcon'
+WHERE `cb_board`.`brd_key1` = 'hiadone_newspopcon'
 ";
 $db_db->pquery($query);
 $r = $db_db->fetchrow();
