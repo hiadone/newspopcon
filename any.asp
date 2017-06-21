@@ -17,40 +17,42 @@ switch ($sType) {
 
 
    	 case "adpop" : // 애드팝
-		$popstate=1;
+		$popstate=0;
 		$sCode = "04Gd" ;//pv 체크
-		$sIfrCode1 = "03QF";	// 전체기사
-		$sIfrCode2 = "03QI";	// 포토뉴스
-		$sIfrCode3 = "03QA";   // 많이본 뉴스
-		$sIfrCode4 = "03QC";	// 베스트 신문보기
-		$sIfrCode5 = "03QB";	// 주간 핫 리포트
-		$sIfrCode7 = "03QD";	// 요일별 웹툰
-		$sIfrCode8 = "03QE";	// 인기웹툰
-		$sIfrCode9 = "03QH";	// 베스트TV
-		$sIfrCode10 = "03QJ";	// 푸터배너
-		$sIfrCode11 = "03QG";	// 베스트웹툰 랜덤
-		$sIfrCode12 = "032y";  //탑배너
-		$sIfrCode13 = "03QK";  //신규생활정보
-		$sIfrCode14 = "03Ff";  //베스트신문보기 배너형
+        $sIfrCode1 = "04LZ";    // 전체기사
+        $sIfrCode2 = "04Lx";    // 포토뉴스
+        $sIfrCode3 = "04JL"; // 많이본 뉴스
+        $sIfrCode4 = "04K1";    // 베스트 신문보기
+        $sIfrCode5 = "04Ja";    // 주간 핫 리포트
+        $sIfrCode7 = "04Ku";    // 요일별 웹툰
+        $sIfrCode8 = "04LG";    // 인기웹툰
+        $sIfrCode9 = "04KL";    // 베스트TV
+        $sIfrCode10 = "04ML";   // 푸터배너
+        $sIfrCode11 = "04KL";   // 베스트웹툰 랜덤
+        $sIfrCode12 = "032y"; //탑배너
+        $sIfrCode13 = "04Me"; //신규생활정보
+        $sIfrCode14 = "03Ff"; //베스트신문보기 배너형
+        $sIfrCode15 = "069Q"; // 인기신작
 		break;
 
 
-		case "moneyWe": // 머니위
-		$popstate=1;
+		case "moneyWe": // 머니위크
+		$popstate=0;
 		$sCode = "02ca" ;//pv 체크
-		$sIfrCode1 = "02cI";	// 전체기사
-		$sIfrCode2 = "04f2";	// 포토뉴스
-		$sIfrCode3 = "02cF";   // 많이본 뉴스
-		$sIfrCode4 = "02cH";	// 베스트 신문보기
-		$sIfrCode5 = "04eJ";	// 주간 핫 리포트
-		$sIfrCode7 = "04ek";	// 요일별 웹툰
-		$sIfrCode8 = "04en";	// 인기웹툰
-		$sIfrCode9 = "04eY";	// 베스트TV
-		$sIfrCode10 = "04f8";	// 푸터배너
-		$sIfrCode11 = "04eY";	// 베스트웹툰 랜덤
-	    $sIfrCode12 = "032y";  //탑배너
-		$sIfrCode13 = "0321";  //신규생활정보
-		$sIfrCode14 = "03Ff";  //베스트신문보기 배너형
+        $sIfrCode1 = "02cI";    // 전체기사
+        $sIfrCode2 = "04f2";    // 포토뉴스
+        $sIfrCode3 = "02cF"; // 많이본 뉴스
+        $sIfrCode4 = "02cH";    // 베스트 신문보기
+        $sIfrCode5 = "04eJ";    // 주간 핫 리포트
+        $sIfrCode7 = "04ek";    // 요일별 웹툰
+        $sIfrCode8 = "04en";    // 인기웹툰
+        $sIfrCode9 = "04eY";    // 베스트TV
+        $sIfrCode10 = "04f8";   // 푸터배너
+        $sIfrCode11 = "04eY";   // 베스트웹툰 랜덤
+        $sIfrCode12 = "032y"; //탑배너
+        $sIfrCode13 = "0321"; //신규생활정보
+        $sIfrCode14 = "03Ff"; //베스트신문보기 배너형
+        $sIfrCode15 = "065S"; //인기신작
 		break;
 	default:
  		$popstate=1;
@@ -73,7 +75,7 @@ switch ($sType) {
 
 
 
-
+/*
 $db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8', 'user_guest', 'guest///');
 
 
@@ -222,7 +224,8 @@ if(!empty($extra_vars)){
 	
 	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
 }
-
+$db_db->disconnect();
+*/
 
 ?>
 <!doctype html>
@@ -317,20 +320,20 @@ if(!empty($extra_vars)){
 
             // });
 
-            if(link_id)
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
-            else 
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
-            $.ajax({
-                type: "GET", 
-                async: true,
-                url: url, 
-                dataType : 'json',
-                success: function(data) 
-                {
-                },
-                error: function(xhr, status, error) {} 
-            });
+            // if(link_id)
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
+            // else 
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
+            // $.ajax({
+            //     type: "GET", 
+            //     async: true,
+            //     url: url, 
+            //     dataType : 'json',
+            //     success: function(data) 
+            //     {
+            //     },
+            //     error: function(xhr, status, error) {} 
+            // });
             
         }
     }

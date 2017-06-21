@@ -13,6 +13,147 @@ $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER'])
 $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
 
 switch ($sType) {
+
+    case "hiadone": // 자사
+        $popstate = 1;
+        $sURL=" http://www.popapp.co.kr/anytoon/md.php?MD=hiadone";
+        
+        $sCode = "05uO"; //pv 체크
+        $sIfrCode1 = "01Ca" ; // 전체기사
+        $sIfrCode2 = "02vo" ; // 포토뉴스
+        $sIfrCode3 = "01Cc" ; // 많이본 뉴스
+        $sIfrCode4 = "032o" ; // 베스트 신문보기
+        $sIfrCode5 = "02vi" ; // 주간 핫 리포트
+        $sIfrCode7 = "02vk" ; // 요일별 웹툰
+        $sIfrCode8 = "02vl" ; // 인기웹툰
+        $sIfrCode9 = "02yT" ; // 베스트게임
+        $sIfrCode10 = "02vp"; // 푸터배너
+        $sIfrCode11 = "02yT"; // 베스트웹툰 랜덤
+        $sIfrCode12 = "032y" ; //탑배너
+        $sIfrCode13 = "0320" ; //신규생활정보
+        $sIfrCode14 = "03EV" ; //베스트신문보기 배너형
+        $sIfrCode15 = "065R" ;//인기신작
+        break;
+
+    case "community": // 지니어스 커뮤니티
+        
+        $popstate = 1;
+        $sURL="http://www.popapp.co.kr/tomix/md.php?MD=community";
+
+        $sCode = "0676"; //pv 체크
+        $sIfrCode1 = "04LL" ; // 전체기사
+        $sIfrCode2 = "04Lf" ; // 포토뉴스
+        $sIfrCode3 = "04Ji" ; // 많이본 뉴스
+        $sIfrCode4 = "04Jn" ; // 베스트 신문보기
+        $sIfrCode5 = "04Jf" ; // 주간 핫 리포트
+        $sIfrCode7 = "04Kg" ; // 요일별 웹툰
+        $sIfrCode8 = "04Ky" ; // 인기웹툰
+        $sIfrCode9 = "04K7" ; // 베스트게임
+        $sIfrCode10 = "04M8"; // 푸터배너
+        $sIfrCode11 = "04K7"; // 베스트웹툰 랜덤
+        $sIfrCode13 = "04MR" ; //신규생활정보
+        $sIfrCode15 = "065c" ; //인기신작
+        break;
+
+    case "enewstoday": // 이뉴스투데이
+        
+        $popstate = 1;
+        $sURL="http://www.popapp.co.kr/tomix/md.php?MD=enewstoday";
+
+        $sCode = "06PO"; //pv 체크
+        $sIfrCode1 = "04fw" ; // 전체기사
+        $sIfrCode2 = "04g2" ; // 포토뉴스
+        $sIfrCode3 = "04fG" ; // 많이본 뉴스
+        $sIfrCode4 = "04fS" ; // 베스트 신문보기
+        $sIfrCode5 = "04fM" ; // 주간 핫 리포트
+        $sIfrCode7 = "04fk" ; // 요일별 웹툰
+        $sIfrCode8 = "04fq" ; // 인기웹툰
+        $sIfrCode9 = "04fY" ; // 베스트게임
+        $sIfrCode10 = "04gJ"; // 푸터배너
+        $sIfrCode11 = "04fY"; // 베스트웹툰 랜덤
+        $sIfrCode13 = "04gD" ; //신규생활정보
+        break;
+
+    case "adpop": // 애드팝
+        
+        $popstate = 0;
+        $sURL="http://www.popapp.co.kr/tomix/md.php?MD=adpop";
+
+        $sCode = "04Gd"; //pv 체크
+        $sIfrCode1 = "04LZ" ; // 전체기사
+        $sIfrCode2 = "04Lx" ; // 포토뉴스
+        $sIfrCode3 = "04JL" ; // 많이본 뉴스
+        $sIfrCode4 = "04K1" ; // 베스트 신문보기
+        $sIfrCode5 = "04Ja" ; // 주간 핫 리포트
+        $sIfrCode7 = "04Ku" ; // 요일별 웹툰
+        $sIfrCode8 = "04LG" ; // 인기웹툰
+        $sIfrCode9 = "04KL" ; // 베스트게임
+        $sIfrCode10 = "04ML"; // 푸터배너
+        $sIfrCode11 = "04KL"; // 베스트웹툰 랜덤
+        $sIfrCode13 = "04Me" ; //신규생활정보
+        $sIfrCode15 = "066r" ; //인기신작
+        break;
+
+    case "genius": // 지니어스 언론사
+        
+        $popstate = 1;
+        $sURL="http://www.popapp.co.kr/tomix/md.php?MD=genius";
+
+        $sCode = "0675"; //pv 체크
+        $sIfrCode1 = "04Jj" ; // 전체기사
+        $sIfrCode2 = "04Jo" ; // 포토뉴스
+        $sIfrCode3 = "04It" ; // 많이본 뉴스
+        $sIfrCode4 = "04J1" ; // 베스트 신문보기
+        $sIfrCode5 = "04Ix" ; // 주간 핫 리포트
+        $sIfrCode7 = "04JQ" ; // 요일별 웹툰
+        $sIfrCode8 = "04JY" ; // 인기웹툰
+        $sIfrCode9 = "04J5" ; // 베스트게임
+        $sIfrCode10 = "04K3"; // 푸터배너
+        $sIfrCode11 = "04J5"; // 베스트웹툰 랜덤
+        $sIfrCode13 = "04K9" ; //신규생활정보
+        $sIfrCode15 = "065a" ; //인기신작
+        break;
+
+    case "non": // 애니툰 논타겟
+        
+        $popstate = 0;
+        $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=non";
+
+        $sCode = "05r7"; //pv 체크
+        $sIfrCode1 = "05Ei" ; // 전체기사
+        $sIfrCode2 = "05Eq" ; // 포토뉴스
+        $sIfrCode3 = "05Dy" ; // 많이본 뉴스
+        $sIfrCode4 = "05EC" ; // 베스트 신문보기
+        $sIfrCode5 = "05E4" ; // 주간 핫 리포트
+        $sIfrCode7 = "05ES" ; // 요일별 웹툰
+        $sIfrCode8 = "05Ea" ; // 인기웹툰
+        $sIfrCode9 = "05EJ" ; // 베스트게임
+        $sIfrCode10 = "05F6"; // 푸터배너
+        $sIfrCode11 = "05EJ"; // 베스트웹툰 랜덤
+        $sIfrCode13 = "05Ey" ; //신규생활정보
+        $sIfrCode15 = "069Q" ; //인기신작
+        break;
+
+    case "re": // 애니툰 논타겟
+        
+        $popstate = 0;
+        $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=re";
+
+        $sCode = "05sZ"; //pv 체크
+        $sIfrCode1 = "05Ei" ; // 전체기사
+        $sIfrCode2 = "05Eq" ; // 포토뉴스
+        $sIfrCode3 = "05Dy" ; // 많이본 뉴스
+        $sIfrCode4 = "05EC" ; // 베스트 신문보기
+        $sIfrCode5 = "05E4" ; // 주간 핫 리포트
+        $sIfrCode7 = "05ES" ; // 요일별 웹툰
+        $sIfrCode8 = "05Ea" ; // 인기웹툰
+        $sIfrCode9 = "05EJ" ; // 베스트게임
+        $sIfrCode10 = "05F6"; // 푸터배너
+        $sIfrCode11 = "05EJ"; // 베스트웹툰 랜덤
+        $sIfrCode13 = "05Ey" ; //신규생활정보
+        $sIfrCode15 = "069Q" ; //인기신작
+        break;
+
      case "sstv": // $sstv
         
         $sCode = "04Vk"; //pv 체크
@@ -29,7 +170,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MR" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
      case "munhwanews": // 문화뉴스
         
         $sCode = "04W3"; //pv 체크
@@ -46,7 +187,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Mc" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "beatsports": // 비트스포츠
         
         $sCode = "04W0"; //pv 체크
@@ -63,7 +204,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "ggilbohot": // 금강일보(핫)
         
         $sCode = "04Vu"; //pv 체크
@@ -80,7 +221,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MW" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "ggilbo": // 금강일보
         
         $sCode = "04Vv"; //pv 체크
@@ -97,7 +238,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MV" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "ksilboenter": // 경상일보(연예)
         
         $sCode = "04Vr"; //pv 체크
@@ -114,7 +255,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MU" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "starjnhot": // 스타저널(핫)
         
         $sCode = "04Yc"; //pv 체크
@@ -131,7 +272,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MU" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "ksilbo": // 경상일보
         
         $sCode = "04Vs"; //pv 체크
@@ -148,7 +289,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MT" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "kihoilbohot": // 기호일보(핫)
         
         $sCode = "04Vw"; //pv 체크
@@ -165,7 +306,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MY" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "kihoilbo": // 기호일보
         
         $sCode = "04Vx"; //pv 체크
@@ -182,7 +323,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MX" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "polinews": // 폴리뉴스
         
         $sCode = "04W2"; //pv 체크
@@ -199,7 +340,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Mg" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "polinewshot": // 폴리뉴스(핫)
     
         $sCode = "04Yd"; //pv 체크
@@ -216,7 +357,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Mg" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "liveen": // 라이브엔
     
         $sCode = "04Vz"; //pv 체크
@@ -233,7 +374,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Ma" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "cctvnews": // cctv뉴스
     
         $sCode = "04Vp"; //pv 체크
@@ -250,7 +391,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04MS" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "cbcnews": // cbc뉴스
     
         $sCode = "04Vo"; //pv 체크
@@ -267,7 +408,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04K9" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "dailygrid": // 데일리그리드
     
         $sCode = "04Vy"; //pv 체크
@@ -284,7 +425,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04KB" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "upkorea": // 업코리아
 
         $sCode = "04W1"; //pv 체크
@@ -301,7 +442,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04KD" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "gooddailynews": // 굿데일리
     
         $sCode = "04Vt"; //pv 체크
@@ -318,7 +459,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04KG" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
 
     case "kyungintoday": // 경인투데이
     
@@ -336,7 +477,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "econotalking": // 경제풍월
     
         $sCode = "04c6"; //pv 체크
@@ -353,7 +494,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "datanet": // 데이터넷
     
         $sCode = "04c7"; //pv 체크
@@ -370,7 +511,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "bithub": // 비트허브
     
         $sCode = "04c8"; //pv 체크
@@ -387,7 +528,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "bithubhot": // 비트허브(핫)
     
         $sCode = "04c9"; //pv 체크
@@ -404,7 +545,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "itdaily": // 아이티데일리
 
         $sCode = "04cA"; //pv 체크
@@ -421,7 +562,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "worldtoday": // 월드투데이
     
         $sCode = "04cB"; //pv 체크
@@ -438,7 +579,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "koreadaily": // 코리아데일리
 
         $sCode = "04cC"; //pv 체크
@@ -455,7 +596,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "koreatimes": // 코리아타임즈
     
         $sCode = "04cD"; //pv 체크
@@ -472,7 +613,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
 
     case "kgdm": // 경기도민일보
     
@@ -490,7 +631,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "gnmaeil": // 경남매일
 
         $sCode = "04dz"; //pv 체크
@@ -507,7 +648,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "newsquick": // 뉴스퀵
     
         $sCode = "04e0"; //pv 체크
@@ -524,7 +665,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "ujnews": // 울산종합일보
     
         $sCode = "04e1"; //pv 체크
@@ -541,7 +682,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "jnewsk": // 정읍신문
 
         $sCode = "04e2"; //pv 체크
@@ -558,7 +699,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "gwnews": // 강원신문
 
         $sCode = "04e3"; //pv 체크
@@ -575,7 +716,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "kcsnews": // 한국정경신문
     
         $sCode = "04e4"; //pv 체크
@@ -592,7 +733,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "sportsdongajubunna": // 스포츠동아/주번나
 
         $sCode = "04hO"; //pv 체크
@@ -609,7 +750,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "sportsseoulholic": // 스포츠서울/홀릭
     
         $sCode = "04hQ"; //pv 체크
@@ -626,7 +767,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "stoozipper": // 스포츠투데이/지퍼
     
         $sCode = "04hR"; //pv 체크
@@ -643,7 +784,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
+        break;
     case "ispluscream": // 일간스포츠크림
     
         $sCode = "04hS"; //pv 체크
@@ -660,28 +801,7 @@ switch ($sType) {
         $sIfrCode12 = "04DZ" ; //탑배너
         $sIfrCode13 = "04Me" ; //신규생활정보
         $sIfrCode14 = "03Ff" ; //베스트신문보기 배너형
-
-
-    case "hiadone": // 자사
-        $popstate = 1;
-        $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
-        
-        $sCode = "05uO"; //pv 체크
-        $sIfrCode1 = "01Ca" ; // 전체기사
-        $sIfrCode2 = "02vo" ; // 포토뉴스
-        $sIfrCode3 = "01Cc"  ; // 많이본 뉴스
-        $sIfrCode4 = "032o" ; // 베스트 신문보기
-        $sIfrCode5 = "02vi" ; // 주간 핫 리포트
-        $sIfrCode7 = "02vk" ; // 요일별 웹툰
-        $sIfrCode8 = "02vl" ; // 인기웹툰
-        $sIfrCode9 = "02yT" ; // 베스트게임
-        $sIfrCode10 = "02vp"; // 푸터배너
-        $sIfrCode11 = "02yT"; // 베스트웹툰 랜덤
-        $sIfrCode12 = "032y" ; //탑배너
-        $sIfrCode13 = "0320" ; //신규생활정보
-        $sIfrCode14 = "03EV" ; //베스트신문보기 배너형
-
-
+        break;
 
        case "jemin": // 제민일보
     
@@ -700,8 +820,7 @@ switch ($sType) {
         $sIfrCode12 = "030q" ; //탑배너
         $sIfrCode13 = "0324" ; //신규배너
         $sIfrCode14 = "03Eb" ; //베스트신문보기 배너형
-
-
+        break;
 
 
     case "bridgenews": // 브릿지뉴스
@@ -722,6 +841,8 @@ switch ($sType) {
         $sIfrCode13 = "0322" ; //신규배너
         $sIfrCode14 = "03EW" ; //베스트신문보기 배너형
         break;
+
+    
         
 default:
         $popstate = 1;
@@ -743,7 +864,7 @@ default:
  } 
 
 
-
+/*
  $db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8', 'user_guest', 'guest///');
 
 
@@ -894,6 +1015,10 @@ if(!empty($extra_vars)){
 	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
 	
 }
+
+$db_db->disconnect();
+*/
+
 ?>
 <!doctype html>
 <html lang="ko">
@@ -988,20 +1113,20 @@ if(!empty($extra_vars)){
 
             // });
 
-            if(link_id)
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
-            else 
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
-            $.ajax({
-                type: "GET", 
-                async: true,
-                url: url, 
-                dataType : 'json',
-                success: function(data) 
-                {
-                },
-                error: function(xhr, status, error) {} 
-            });
+            // if(link_id)
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
+            // else 
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
+            // $.ajax({
+            //     type: "GET", 
+            //     async: true,
+            //     url: url, 
+            //     dataType : 'json',
+            //     success: function(data) 
+            //     {
+            //     },
+            //     error: function(xhr, status, error) {} 
+            // });
             
         }
     }

@@ -13,24 +13,25 @@ $datescript=0;
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 
 
-$sURL="http://www.popapp.co.kr/tomix/md.php?MD=".$sType;
+$sURL="http://www.popapp.co.kr/tomix/md.php?MD=default";
 $sCode = "05Ps" ;//pv 체크
 $sIfrCode1 = "01Ca" ;// 전체기사
 $sIfrCode2 = "01Cb" ;// 포토뉴스
-$sIfrCode3 = "01Cc"   ;// 많이본 뉴스
+$sIfrCode3 = "01Cc" ;// 많이본 뉴스
 $sIfrCode4 = "01Ci" ;// 베스트 신문보기
 $sIfrCode5 = "027J" ;// 주간 핫 리포트
 $sIfrCode7 = "02kX" ;// 요일별 웹툰
 $sIfrCode8 = "02kY" ;// 인기웹툰
 $sIfrCode9 = "02yT" ;// 베스트게임
-$sIfrCode10 = "02u8"    ;// 푸터배너
-$sIfrCode11 = "02yP"    ;// 베스트웹툰 랜덤
-$sIfrCode12 = "032y"  ;//탑배너
-$sIfrCode13 = "0320"  ;//신규생활정보
-$sIfrCode14 = "03EV"  ;//베스트신문보기 배너형
+$sIfrCode10 = "02u8" ;// 푸터배너
+$sIfrCode11 = "02yP" ;// 베스트웹툰 랜덤
+$sIfrCode12 = "032y" ;//탑배너
+$sIfrCode13 = "0320" ;//신규생활정보
+$sIfrCode14 = "03EV" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q" ;//인기신작
+$popstate=1;
 
-
+/*
  			$db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8','user_guest', 'guest///');
 
 
@@ -180,9 +181,9 @@ if(!empty($extra_vars)){
 	
 	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
 }
+$db_db->disconnect();
 
-
-
+*/
 ?>
 <!doctype html>
 <html>
@@ -257,20 +258,20 @@ if(!empty($extra_vars)){
 
             // });
 
-            if(link_id)
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
-            else 
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
-            $.ajax({
-                type: "GET", 
-                async: true,
-                url: url, 
-                dataType : 'json',
-                success: function(data) 
-                {
-                },
-                error: function(xhr, status, error) {} 
-            });
+            // if(link_id)
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
+            // else 
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
+            // $.ajax({
+            //     type: "GET", 
+            //     async: true,
+            //     url: url, 
+            //     dataType : 'json',
+            //     success: function(data) 
+            //     {
+            //     },
+            //     error: function(xhr, status, error) {} 
+            // });
             
         }
     }
@@ -347,6 +348,7 @@ div a img {
   ga('send', 'pageview');
 
 </script>
+
 <!-- 구글애널리틱스 끝 -->
 	<header>
 		<h1>
