@@ -9,6 +9,7 @@ $popstate="";
 $link_id="";
 $post_id="";
 $datescript=0;
+$outerscript="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
 
@@ -39,7 +40,7 @@ switch ($sType) {
         
         $popstate = 1;
         $sURL="http://www.popapp.co.kr/tomix/md.php?MD=community";
-
+        $outerscript='<script src="http://ad.tjtune.com/cgi-bin/PelicanC.dll?impr?pageid=06T2&out=script"></script>';
         $sCode = "0676"; //pv 체크
         $sIfrCode1 = "04LL" ; // 전체기사
         $sIfrCode2 = "04Lf" ; // 포토뉴스
@@ -98,7 +99,7 @@ switch ($sType) {
         
         $popstate = 1;
         $sURL="http://www.popapp.co.kr/tomix/md.php?MD=genius";
-
+        $outerscript='<script src="http://ad.tjtune.com/cgi-bin/PelicanC.dll?impr?pageid=06T1&out=script"></script>';
         $sCode = "0675"; //pv 체크
         $sIfrCode1 = "04Jj" ; // 전체기사
         $sIfrCode2 = "04Jo" ; // 포토뉴스
@@ -1051,7 +1052,7 @@ $db_db->disconnect();
 
 		<script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
 		<script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
-
+        <?php if(isset($outerscript)) echo $outerscript;?>
 
 
 		<link href="css_new/import.css" rel="stylesheet" type="text/css">
