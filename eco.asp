@@ -18,12 +18,12 @@ switch ($sType) {
     case "hiadone": // 자사
         $popstate = 1;
         $sURL=" http://www.popapp.co.kr/anytoon/md.php?MD=hiadone";
-        
+
         $sCode = "05uO"; //pv 체크
         $sIfrCode1 = "01Ca" ; // 전체기사
         $sIfrCode2 = "02vo" ; // 포토뉴스
         $sIfrCode3 = "01Cc" ; // 많이본 뉴스
-        $sIfrCode4 = "032o" ; // 베스트 신문보기
+        $sIfrCode4 = "01Ci" ; // 베스트 신문보기
         $sIfrCode5 = "02vi" ; // 주간 핫 리포트
         $sIfrCode7 = "02vk" ; // 요일별 웹툰
         $sIfrCode8 = "02vl" ; // 인기웹툰
@@ -883,141 +883,145 @@ $query="SELECT `cb_board`.*
 FROM `cb_board`
 WHERE `cb_board`.`brd_key` = 'eco'
 ";
-$db_db->pquery($query);
-$r = $db_db->fetchrow();
-
-$query="SELECT `cb_post`.*
-FROM `cb_post`
-WHERE `cb_post`.`brd_id` = :brd_id
-AND `post_del` <> 2
-AND `post_md` = :post_md
-ORDER BY `cb_post`.`post_id` desc";
 
 
-$db_db->bindParam(':brd_id', $r['brd_id'], PDO::PARAM_INT);
-$db_db->bindParam(':post_md', $sType, PDO::PARAM_STR);
-$db_db->pquery($query);
-$extra_vars="";
-if ($r = $db_db->fetchrow()) {
+if($db_db->pquery($query)){
+    $r = $db_db->fetchrow();
+
+    $query="SELECT `cb_post`.*
+    FROM `cb_post`
+    WHERE `cb_post`.`brd_id` = :brd_id
+    AND `post_del` <> 2
+    AND `post_md` = :post_md
+    ORDER BY `cb_post`.`post_id` desc";
 
 
-    $content_arr=explode("$",$r['post_content']);
-
-    $media_code=array();
-    foreach($content_arr as $value1){
-
-        
-        if(!empty($value1)){
-
-        //echo content($value1)."<br>";
-        $value2=explode("=",strip_tags($value1));
-        
-        //echo htmlspecialchars($value2[1],ENT_NOQUOTES)."<br>";
-        $value3= explode(";",$value2[1]);
-
-        $value3[0]= str_replace("\"","",$value3[0]);
-        $value3[0]= str_replace("\'","",$value3[0]);
-
-        
-        $media_code[trim($value2[0])]= trim($value3[0]);
-        //preg_match_all($pattern, $value3[0], $match);
-        //$value3[0] = implode('', $match[0]);
-        
-
-      
-        }
-    }
-    //print_r($media_code);
-    // $weekPageId="";
-    // $weekPageId[1] = $media_code['pageid10'];
-    // $weekPageId[2] = $media_code['pageid11'];
-    // $weekPageId[3] = $media_code['pageid12'];
-    // $weekPageId[4] = $media_code['pageid13'];
-    // $weekPageId[5] = $media_code['pageid14'];
-    // $weekPageId[6] = $media_code['pageid15'];
-    // $weekPageId[0] = $media_code['pageid16'];
-
-    $post_id=$r['post_id'];
-
-    $query="SELECT `cb_post_extra_vars`.*
-    FROM `cb_post_extra_vars`
-    WHERE `cb_post_extra_vars`.`post_id` = :post_id";
-    $db_db->bindParam(':post_id', $post_id, PDO::PARAM_INT);
+    $db_db->bindParam(':brd_id', $r['brd_id'], PDO::PARAM_INT);
+    $db_db->bindParam(':post_md', $sType, PDO::PARAM_STR);
     $db_db->pquery($query);
-    
-    while($row = $db_db->fetchrow()){
+    $extra_vars="";
+    if ($r = $db_db->fetchrow()) {
 
 
-        $extra_vars[$row['pev_key']] = $row['pev_value'];
-    }
+        $content_arr=explode("$",$r['post_content']);
 
+        $media_code=array();
+        foreach($content_arr as $value1){
 
-    $query="SELECT `cb_post_link`.*
-    FROM `cb_post_link`
-    WHERE `cb_post_link`.`post_id` = :post_id";
-    $db_db->bindParam(':post_id', $post_id, PDO::PARAM_INT);
-    $db_db->pquery($query);
-    
-    while($row = $db_db->fetchrow()){
+            
+            if(!empty($value1)){
 
+            //echo content($value1)."<br>";
+            $value2=explode("=",strip_tags($value1));
+            
+            //echo htmlspecialchars($value2[1],ENT_NOQUOTES)."<br>";
+            $value3= explode(";",$value2[1]);
 
-        $post_link[] = $row;
-    }
-} 
-    
+            $value3[0]= str_replace("\"","",$value3[0]);
+            $value3[0]= str_replace("\'","",$value3[0]);
 
+            
+            $media_code[trim($value2[0])]= trim($value3[0]);
+            //preg_match_all($pattern, $value3[0], $match);
+            //$value3[0] = implode('', $match[0]);
+            
 
-if(!empty($extra_vars)){
-	$popstate=0;
-	if($extra_vars['popstate']==='enable'){
-	    
-	    if($extra_vars['view_type']==='time'){
-            if(!empty($post_link))
-	    	foreach($post_link as $value){
-
-	            if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
-
-	                $popstate=1;
-	                $media_code['popstate_url']= $value['pln_url'];
-                    $link_id=$value['pln_id'];
-	                break;
-	            }            
-	        }
-	        
-	    } else {
-            if(!empty($post_link)) {
-            $popstate=1;
-                $rand = mt_rand(0,count($post_link)-1);
-                $media_code['popstate_url']= $post_link[$rand]['pln_url'];
-                $link_id= $post_link[$rand]['pln_id'];
+          
             }
-	    }
-	}
+        }
+        //print_r($media_code);
+        // $weekPageId="";
+        // $weekPageId[1] = $media_code['pageid10'];
+        // $weekPageId[2] = $media_code['pageid11'];
+        // $weekPageId[3] = $media_code['pageid12'];
+        // $weekPageId[4] = $media_code['pageid13'];
+        // $weekPageId[5] = $media_code['pageid14'];
+        // $weekPageId[6] = $media_code['pageid15'];
+        // $weekPageId[0] = $media_code['pageid16'];
 
-	//미디어 코드 재구성
-		if(isset($media_code['sCode']))$sCode = $media_code['sCode'] ;//pv 체크
-		if(isset($media_code['sIfrCode1']))$sIfrCode1 = $media_code['sIfrCode1'];	// 전체기사
-		if(isset($media_code['sIfrCode2']))$sIfrCode2 = $media_code['sIfrCode2'];	// 포토뉴스
-		if(isset($media_code['sIfrCode3']))$sIfrCode3 = $media_code['sIfrCode3'];   // 많이본 뉴스
-		if(isset($media_code['sIfrCode4']))$sIfrCode4 = $media_code['sIfrCode4'];	// 베스트 신문보기
-		if(isset($media_code['sIfrCode5']))$sIfrCode5 = $media_code['sIfrCode5'];	// 주간 핫 리포트
-		if(isset($media_code['sIfrCode7']))$sIfrCode7 = $media_code['sIfrCode7'];	// 요일별 웹툰
-		if(isset($media_code['sIfrCode8']))$sIfrCode8 = $media_code['sIfrCode8'];	// 인기웹툰
-		if(isset($media_code['sIfrCode9']))$sIfrCode9 = $media_code['sIfrCode9'];	// 베스트TV
-		if(isset($media_code['sIfrCode10']))$sIfrCode10 = $media_code['sIfrCode10'];	// 푸터배너
-		if(isset($media_code['sIfrCode11']))$sIfrCode11 = $media_code['sIfrCode11'];	// 베스트웹툰 랜덤
-	    if(isset($media_code['sIfrCode12']))$sIfrCode12 = $media_code['sIfrCode12'];  //탑배너
-		if(isset($media_code['sIfrCode13']))$sIfrCode13 = $media_code['sIfrCode13'];  //신규생활정보
-		if(isset($media_code['sIfrCode14']))$sIfrCode14 = $media_code['sIfrCode14'];  //베스트신문보기 배너형
-        if(isset($media_code['sIfrCode15']))$sIfrCode15 = $media_code['sIfrCode15'];  //인기 신작
+        $post_id=$r['post_id'];
 
-		
-    
-	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
-	
+        $query="SELECT `cb_post_extra_vars`.*
+        FROM `cb_post_extra_vars`
+        WHERE `cb_post_extra_vars`.`post_id` = :post_id";
+        $db_db->bindParam(':post_id', $post_id, PDO::PARAM_INT);
+        $db_db->pquery($query);
+        
+        while($row = $db_db->fetchrow()){
+
+
+            $extra_vars[$row['pev_key']] = $row['pev_value'];
+        }
+
+
+        $query="SELECT `cb_post_link`.*
+        FROM `cb_post_link`
+        WHERE `cb_post_link`.`post_id` = :post_id";
+        $db_db->bindParam(':post_id', $post_id, PDO::PARAM_INT);
+        $db_db->pquery($query);
+        
+        while($row = $db_db->fetchrow()){
+
+
+            $post_link[] = $row;
+        }
+    } 
+        
+
+
+    if(!empty($extra_vars)){
+    	$popstate=0;
+    	if($extra_vars['popstate']==='enable'){
+    	    
+    	    if($extra_vars['view_type']==='time'){
+                if(!empty($post_link))
+    	    	foreach($post_link as $value){
+
+    	            if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
+
+    	                $popstate=1;
+    	                $media_code['popstate_url']= $value['pln_url'];
+                        $link_id=$value['pln_id'];
+    	                break;
+    	            }            
+    	        }
+    	        
+    	    } else {
+                if(!empty($post_link)) {
+                $popstate=1;
+                    $rand = mt_rand(0,count($post_link)-1);
+                    $media_code['popstate_url']= $post_link[$rand]['pln_url'];
+                    $link_id= $post_link[$rand]['pln_id'];
+                }
+    	    }
+    	}
+
+    	//미디어 코드 재구성
+    		if(isset($media_code['sCode']))$sCode = $media_code['sCode'] ;//pv 체크
+    		if(isset($media_code['sIfrCode1']))$sIfrCode1 = $media_code['sIfrCode1'];	// 전체기사
+    		if(isset($media_code['sIfrCode2']))$sIfrCode2 = $media_code['sIfrCode2'];	// 포토뉴스
+    		if(isset($media_code['sIfrCode3']))$sIfrCode3 = $media_code['sIfrCode3'];   // 많이본 뉴스
+    		if(isset($media_code['sIfrCode4']))$sIfrCode4 = $media_code['sIfrCode4'];	// 베스트 신문보기
+    		if(isset($media_code['sIfrCode5']))$sIfrCode5 = $media_code['sIfrCode5'];	// 주간 핫 리포트
+    		if(isset($media_code['sIfrCode7']))$sIfrCode7 = $media_code['sIfrCode7'];	// 요일별 웹툰
+    		if(isset($media_code['sIfrCode8']))$sIfrCode8 = $media_code['sIfrCode8'];	// 인기웹툰
+    		if(isset($media_code['sIfrCode9']))$sIfrCode9 = $media_code['sIfrCode9'];	// 베스트TV
+    		if(isset($media_code['sIfrCode10']))$sIfrCode10 = $media_code['sIfrCode10'];	// 푸터배너
+    		if(isset($media_code['sIfrCode11']))$sIfrCode11 = $media_code['sIfrCode11'];	// 베스트웹툰 랜덤
+    	    if(isset($media_code['sIfrCode12']))$sIfrCode12 = $media_code['sIfrCode12'];  //탑배너
+    		if(isset($media_code['sIfrCode13']))$sIfrCode13 = $media_code['sIfrCode13'];  //신규생활정보
+    		if(isset($media_code['sIfrCode14']))$sIfrCode14 = $media_code['sIfrCode14'];  //베스트신문보기 배너형
+            if(isset($media_code['sIfrCode15']))$sIfrCode15 = $media_code['sIfrCode15'];  //인기 신작
+
+    		
+        
+    	if(isset($media_code['popstate_url'])) $sURL= $media_code['popstate_url'];
+    	
+    }
+
+    $db_db->disconnect();
+
 }
-
-$db_db->disconnect();
 */
 
 ?>

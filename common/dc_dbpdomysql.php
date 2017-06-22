@@ -63,9 +63,9 @@ class dc_dbpdomysql {
         catch( PDOException $Exception ) {
             // PHP Fatal Error. Second Argument Has To Be An Integer, But PDOException::getCode Returns A
             // String.
-            echo $Exception->getMessage();
-            echo $Exception->getCode() ;
-
+            //echo $Exception->getMessage();
+            //echo $Exception->getCode() ;
+            return false;
         }
     return true;
   }
@@ -156,6 +156,7 @@ class dc_dbpdomysql {
             
             $Query_String=$debugquery.$Query_String;
             $this->curquery=$Query_String;
+            
             $mt1 = microtime();
             if(!$Stmt = $this->Pdo->prepare($Query_String)){
                 echo $msg;
@@ -260,6 +261,7 @@ class dc_dbpdomysql {
             return $this->Stmt;
       }
         catch( PDOException $e ) {
+
             // PHP Fatal Error. Second Argument Has To Be An Integer, But PDOException::getCode Returns A
             // String.
             echo $e->getMessage( );
