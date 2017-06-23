@@ -202,6 +202,19 @@ if($db_db->pquery($query)){
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
+<!-- 구글애널리틱스 시작 -->
+<script type='text/javascript'>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88829342-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- 구글애널리틱스 끝 -->
 <script>
 
 	$(document).ready(function(){
@@ -342,19 +355,7 @@ div a img {
 </head>
 
 <body  onload="callScheme('GRP', 4, 'DEFAULT');">
-<!-- 구글애널리틱스 시작 -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-88829342-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<!-- 구글애널리틱스 끝 -->
 	<header>
 		<h1>
 			<img src="images/logo.png" alt="logo">
