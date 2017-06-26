@@ -217,7 +217,7 @@ if($db_db->pquery($query)){
 
 	$(document).ready(function(){
 	//로딩후 첫번째 메인 메뉴의 배경색상 변경
-	//	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
+		$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 	//클릭한 메뉴의 배경 색상 변경
 		$('header nav ul li').click(function(){
 			$('header nav ul li').css('background-color' , '#002a4b');	
