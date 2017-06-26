@@ -1045,16 +1045,11 @@ if($db_db->pquery($query)){
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<link href="common/css/normalize.css" rel="stylesheet" type="text/css">
-		<link href="common/css/common.css" rel="stylesheet" type="text/css">
-		<link href="common/css/main.css" rel="stylesheet" type="text/css">
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
 		<script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
-        <script src="common/js/main.js"></script>
+        
         <?php if(isset($outerscript)) echo $outerscript;?>
         <!-- 구글애널리틱스 시작 -->
         <script type='text/javascript'>

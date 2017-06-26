@@ -32,7 +32,7 @@ $sIfrCode15 = "065Q" ;//인기신작
 $popstate=1;
 
 
-/*
+
 
  			$db_db = new DB_mysql('mysql:host=117.52.171.237;dbname=hiadone_ADM;charset=utf8','user_guest', 'guest///') ;
 
@@ -188,7 +188,7 @@ if($db_db->pquery($query)){
     }
     $db_db->disconnect();
 }
-*/
+
 ?>
 <!doctype html>
 <html>
@@ -197,8 +197,6 @@ if($db_db->pquery($query)){
 <title>Newspopcon</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="css_new/import.css" rel="stylesheet" type="text/css">
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery-ui.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
@@ -219,7 +217,7 @@ if($db_db->pquery($query)){
 
 	$(document).ready(function(){
 	//로딩후 첫번째 메인 메뉴의 배경색상 변경
-		$('header nav ul li:first-child').css('background-color' , '#fd8c30');
+	//	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 	//클릭한 메뉴의 배경 색상 변경
 		$('header nav ul li').click(function(){
 			$('header nav ul li').css('background-color' , '#002a4b');	
