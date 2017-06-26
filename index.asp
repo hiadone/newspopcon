@@ -33,7 +33,7 @@ $popstate=1;
 
 
 
-
+/*
  			$db_db = new DB_mysql('mysql:host=117.52.171.237;dbname=hiadone_ADM;charset=utf8','user_guest', 'guest///') ;
 
 
@@ -188,7 +188,7 @@ if($db_db->pquery($query)){
     }
     $db_db->disconnect();
 }
-
+*/
 ?>
 <!doctype html>
 <html>
