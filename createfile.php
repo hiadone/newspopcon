@@ -47,8 +47,7 @@ switch ($press) {
 $post_content="<?php\n";
 $query="SELECT `cb_board`.*
 FROM `cb_board`
-WHERE `cb_board`.`brd_key` = ".$brd_key
-;
+WHERE `cb_board`.`brd_key` = '".$brd_key."'";
 if($db_db->pquery($query)){
     
 

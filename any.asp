@@ -428,7 +428,10 @@ div a img {
 	<!-- 전체기사 영역 01 -->
 		<section class="info01" id="scroll01">
 			<h2>전체기사</h2>
-					<iframe id="top-article" width="100%" height="296" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&out=iframe" frameborder="0" scrolling="no"></iframe>
+                <div id="foin_pageid01">
+                    <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+                </div>
+					
 		</section>
 
 	<!-- 포토뉴스영역 02-->
@@ -490,7 +493,7 @@ div a img {
 		<section class="info6">
 				<h2>주간 핫 리포트</h2>
 				<div style="position:relative; padding-top: 83%;">
-				<iframe width="100%" height="100%" style="position:absolute; top:0; left: 0; padding:0 3%;" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+				<iframe width="100%" height="100%" style="position:absolute; top:0; left: 0; padding:0%;" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 				<div>
 		</section>
 
