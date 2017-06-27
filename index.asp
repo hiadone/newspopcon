@@ -1,8 +1,7 @@
 <?php 
 
 
-include_once "common/dc_dbpdomysql.php";
-include_once "common/db_mysql.php";
+
 
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "default";
 $db_db="";
@@ -30,6 +29,7 @@ $sIfrCode13 = "0320" ;//신규생활정보
 $sIfrCode14 = "03EV" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q" ;//인기신작
 $popstate=1;
+
 
 
 
@@ -196,6 +196,7 @@ if($db_db->pquery($query)){
 <meta charset="utf-8">
 <title>Newspopcon</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/images/favi.png">
 <link href="css_new/import.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>

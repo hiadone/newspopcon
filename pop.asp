@@ -55,7 +55,7 @@ switch ($sType) {
                 }            
             }
 
-            $sURL="http://www.popapp.co.kr/tomix/md.php?MD=heraldpop";
+            
 
             $sCode = "02pp";//pv 체크
             $sIfrCode1 = "02t6";// 전체기사
@@ -645,8 +645,8 @@ if($db_db->pquery($query)){
 		<meta property="og:image" content=" ">
 		<meta property="og:description" content="NEWSPOPCON">
 		<meta name="robots" content="noindex">
-		<link rel="shortcut icon" href=" ">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+        <link rel="shortcut icon" href="/images/favi.png">
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
