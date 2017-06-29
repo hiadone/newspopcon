@@ -1,14 +1,12 @@
 <?php 
 
-
-
-
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "default";
 $db_db="";
 $popstate="";
 $link_id="";
 $post_id="";
 $datescript=0;
+$view_type="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 
 
@@ -28,11 +26,38 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "0320" ;//신규생활정보
 $sIfrCode14 = "03EV" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q" ;//인기신작
-$popstate=1;
+$popstate='enable';
+
+
+include_once "common/type_hiadone_newspopcon.php";
 
 
 
+if($popstate==='enable'){
+$popstate='disable';    
+    if($view_type==='time'){
+        if(!empty($post_link))
+        foreach($post_link as $value){
 
+            if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
+
+                $popstate='enable';
+                $sURL= $value['pln_url'];
+                $link_id=$value['pln_id'];
+                break;
+            }            
+        }
+        
+    } else {
+
+        if(!empty($post_link)) {
+        $popstate='enable';
+            $rand = mt_rand(0,count($post_link)-1);
+            $sURL= $post_link[$rand]['pln_url'];
+            $link_id= $post_link[$rand]['pln_id'];
+        }
+    }
+}
 /*
  			$db_db = new DB_mysql('mysql:host=117.52.171.237;dbname=hiadone_ADM;charset=utf8','user_guest', 'guest///') ;
 
@@ -202,7 +227,7 @@ if($db_db->pquery($query)){
 <script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
 <!-- 구글애널리틱스 시작 -->
-<script type='text/javascript'>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -275,26 +300,26 @@ if($db_db->pquery($query)){
 
             // });
 
-            // if(link_id)
-            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
-            // else 
-            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
-            // $.ajax({
-            //     type: "GET", 
-            //     async: true,
-            //     url: url, 
-            //     dataType : 'json',
-            //     success: function(data) 
-            //     {
-            //     },
-            //     error: function(xhr, status, error) {} 
-            // });
+            if(link_id)
+                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
+            else 
+                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
+            $.ajax({
+                type: "GET", 
+                async: true,
+                url: url, 
+                dataType : 'json',
+                success: function(data) 
+                {
+                },
+                error: function(xhr, status, error) {} 
+            });
             
         }
     }
 </script>
 
-<?php if($popstate === 0){?>
+<?php if($popstate === 'disable'){?>
 
 <?php } elseif($datescript === 1){ ?>
 	<?php if (date('H') <= 4 || date('H') >= 9){ ?>

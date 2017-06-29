@@ -1,7 +1,5 @@
 <?php
 
-include_once "common/dc_dbpdomysql.php";
-include_once "common/db_mysql.php";
 
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "hiadone";
 $db_db="";
@@ -12,11 +10,11 @@ $datescript=0;
 $outerscript="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
-
+$view_type="";
 switch ($sType) {
 
     case "hiadone": // 자사
-        $popstate = 1;
+        $popstate = 'enable';
         $sURL=" http://www.popapp.co.kr/anytoon/md.php?MD=hiadone";
 
         $sCode = "05uO"; //pv 체크
@@ -38,9 +36,9 @@ switch ($sType) {
 
     case "community": // 지니어스 커뮤니티
         
-        $popstate = 1;
+        $popstate = 'enable';
         $sURL="http://www.popapp.co.kr/tomix/md.php?MD=community";
-        $outerscript='<script src="http://ad.tjtune.com/cgi-bin/PelicanC.dll?impr?pageid=06T2&out=script"></script>';
+        $outerscript='http://ad.tjtune.com/cgi-bin/PelicanC.dll?impr?pageid=06T2&out=json';
         $sCode = "0676"; //pv 체크
         $sIfrCode1 = "04LL" ; // 전체기사
         $sIfrCode2 = "04Lf" ; // 포토뉴스
@@ -58,7 +56,7 @@ switch ($sType) {
 
     case "enewstoday": // 이뉴스투데이
         
-        $popstate = 1;
+        $popstate = 'enable';
         $sURL="http://www.popapp.co.kr/tomix/md.php?MD=enewstoday";
 
         $sCode = "06PO"; //pv 체크
@@ -77,7 +75,7 @@ switch ($sType) {
 
     case "adpop": // 애드팝
         
-        $popstate = 0;
+        $popstate = 'disable';
         $sURL="http://www.popapp.co.kr/tomix/md.php?MD=adpop";
 
         $sCode = "04Gd"; //pv 체크
@@ -97,9 +95,9 @@ switch ($sType) {
 
     case "genius": // 지니어스 언론사
         
-        $popstate = 1;
+        $popstate = 'enable';
         $sURL="http://www.popapp.co.kr/tomix/md.php?MD=genius";
-        $outerscript='<script src="http://ad.tjtune.com/cgi-bin/PelicanC.dll?impr?pageid=06T1&out=script"></script>';
+        $outerscript='http://ad.tjtune.com/cgi-bin/PelicanC.dll?impr?pageid=06T1&out=json';
         $sCode = "0675"; //pv 체크
         $sIfrCode1 = "04Jj" ; // 전체기사
         $sIfrCode2 = "04Jo" ; // 포토뉴스
@@ -117,7 +115,7 @@ switch ($sType) {
 
     case "non": // 애니툰 논타겟
         
-        $popstate = 0;
+        $popstate = 'disable';
         $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=non";
 
         $sCode = "05r7"; //pv 체크
@@ -137,7 +135,7 @@ switch ($sType) {
 
     case "re": // 애니툰 논타겟
         
-        $popstate = 0;
+        $popstate = 'disable';
         $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=re";
 
         $sCode = "05sZ"; //pv 체크
@@ -846,7 +844,7 @@ switch ($sType) {
     
         
 default:
-        $popstate = 1;
+        $popstate = 'enable';
         $sCode = "02ca"; //pv 체크
         $sIfrCode1 = "02cI";    // 전체기사
         $sIfrCode2 = "04f2";    // 포토뉴스
@@ -864,7 +862,33 @@ default:
         break;
  } 
 
+include_once "common/type_eco.php";
 
+if($popstate==='enable'){
+$popstate='disable';    
+    if($view_type==='time'){
+        if(!empty($post_link))
+        foreach($post_link as $value){
+
+            if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
+
+                $popstate='enable';
+                $sURL= $value['pln_url'];
+                $link_id=$value['pln_id'];
+                break;
+            }            
+        }
+        
+    } else {
+
+        if(!empty($post_link)) {
+        $popstate='enable';
+            $rand = mt_rand(0,count($post_link)-1);
+            $sURL= $post_link[$rand]['pln_url'];
+            $link_id= $post_link[$rand]['pln_id'];
+        }
+    }
+}
 /*
  $db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8', 'user_guest', 'guest///');
 
@@ -1050,7 +1074,7 @@ if($db_db->pquery($query)){
 		<script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
 		<script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
         
-        <?php if(isset($outerscript)) echo $outerscript;?>
+        <?php // if(isset($outerscript)) echo $outerscript;?>
         <!-- 구글애널리틱스 시작 -->
         <script type='text/javascript'>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -1097,6 +1121,22 @@ if($db_db->pquery($query)){
                     
                 }
                  ?>
+
+                <?php if(isset($outerscript)){ ?>
+                    $.ajax({
+                        type: "GET", 
+                        async: true,
+                        url: "<?php echo $outerscript ?>", 
+                        cache: false, 
+                        dataType: "jsonp", 
+                        jsonp: "jquerycallback", 
+                        success: function(data) 
+                        {
+                        },
+                        error: function(xhr, status, error) { ; } 
+                    });
+
+                <?php } ?>
 	});
 
     function popstateStat(post_id,link_id) {
@@ -1139,7 +1179,7 @@ if($db_db->pquery($query)){
     }
 		</script>
 
-<?php if($popstate === 0){?>
+<?php if($popstate === 'disable'){?>
 
 <?php } elseif($datescript === 1){ ?>
 	<?php if (date('H') <= 4 || date('H') >= 9){ ?>

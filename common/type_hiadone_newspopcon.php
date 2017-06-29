@@ -15,11 +15,13 @@ $sIfrCode12 = "032y"  ;//탑배너
 $sIfrCode13 = "0320"  ;//신규생활정보
 $sIfrCode14 = "03EV"  ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q"  ;//인기신작
+$post_id='6';
 $popstate='enable';
 $press_url='http://newspopcon.com/';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
 $post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=default';
+$post_link[0]['pln_id']='6';
 }
 ?>

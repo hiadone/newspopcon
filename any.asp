@@ -1,7 +1,5 @@
 <?php
 
-include_once "common/dc_dbpdomysql.php";
-include_once "common/db_mysql.php";
 
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "moneyWe";
 $db_db="";
@@ -11,13 +9,14 @@ $post_id="";
 $datescript=0;
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
+$view_type="";
 switch ($sType) {
  	
 
 
 
    	 case "adpop" : // 애드팝
-		$popstate=0;
+		$popstate = 'disable';
 		$sCode = "04Gd" ;//pv 체크
         $sIfrCode1 = "04LZ";    // 전체기사
         $sIfrCode2 = "04Lx";    // 포토뉴스
@@ -37,7 +36,7 @@ switch ($sType) {
 
 
 		case "moneyWe": // 머니위크
-		$popstate=0;
+		$popstate = 'disable';
 		$sCode = "02ca" ;//pv 체크
         $sIfrCode1 = "02cI";    // 전체기사
         $sIfrCode2 = "04f2";    // 포토뉴스
@@ -55,7 +54,7 @@ switch ($sType) {
         $sIfrCode15 = "065S"; //인기신작
 		break;
 	default:
- 		$popstate=1;
+ 		$popstate = 'enable';
 		$sCode = "02ca"; //pv 체크
 		$sIfrCode1 = "02cI";	// 전체기사
 		$sIfrCode2 = "04f2";	// 포토뉴스
@@ -73,7 +72,33 @@ switch ($sType) {
  		break;
  }
 
+include_once "common/type_any.php";
 
+if($popstate==='enable'){
+$popstate='disable';    
+    if($view_type==='time'){
+        if(!empty($post_link))
+        foreach($post_link as $value){
+
+            if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
+
+                $popstate='enable';
+                $sURL= $value['pln_url'];
+                $link_id=$value['pln_id'];
+                break;
+            }            
+        }
+        
+    } else {
+
+        if(!empty($post_link)) {
+        $popstate='enable';
+            $rand = mt_rand(0,count($post_link)-1);
+            $sURL= $post_link[$rand]['pln_url'];
+            $link_id= $post_link[$rand]['pln_id'];
+        }
+    }
+}
 /*
 
 $db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8', 'user_guest', 'guest///');
@@ -178,7 +203,7 @@ WHERE `cb_board`.`brd_key` = 'any'
         
 
     if(!empty($extra_vars)){
-    	$popstate=0;
+    	$popstate = 'disable';
     	if($extra_vars['popstate']==='enable'){
     	    
     	    if($extra_vars['view_type']==='time'){
@@ -187,7 +212,7 @@ WHERE `cb_board`.`brd_key` = 'any'
 
     	            if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
 
-    	                $popstate=1;
+    	                $popstate = 'enable';
     	                $media_code['popstate_url']= $value['pln_url'];
     	                $link_id=$value['pln_id'];
     	                break;
@@ -196,7 +221,7 @@ WHERE `cb_board`.`brd_key` = 'any'
     	        
     	    } else {
     			if(!empty($post_link)) {
-                $popstate=1;
+                $popstate = 'enable';
                     $rand = mt_rand(0,count($post_link)-1);
                     $media_code['popstate_url']= $post_link[$rand]['pln_url'];
                     $link_id= $post_link[$rand]['pln_id'];
@@ -344,7 +369,7 @@ WHERE `cb_board`.`brd_key` = 'any'
 		</script>
 
 
-<?php if($popstate === 0){?>
+<?php if($popstate === 'disable'){?>
 
 <?php } elseif($datescript === 1){ ?>
 	<?php if (date('H') <= 4 || date('H') >= 9){ ?>

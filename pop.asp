@@ -1,7 +1,5 @@
 <?php
 
-include_once "common/dc_dbpdomysql.php";
-include_once "common/db_mysql.php";
 
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "moneyW";
 $db_db="";
@@ -9,13 +7,14 @@ $popstate="";
 $link_id="";
 $post_id="";
 $datescript=0;
+$view_type="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 $sURL="http://www.popapp.co.kr/tomix/md.php?MD=".$sType;
 
 switch ($sType) {
 
     case "ajunews": // 아주경제
-           $popstate=1;
+           $popstate='enable';
             $sURL="http://www.popapp.co.kr/tomix/md.php?MD=ajunews";
 
             $sCode = "03Fg" ;//pv 체크
@@ -37,7 +36,7 @@ switch ($sType) {
             break;
 
     case "heraldpop" :// 헤럴드팝
-            $popstate = 0;
+            $popstate = 'disable';
             $post_link[0]['pln_start']=0;
             $post_link[0]['pln_end']=4;
             $post_link[0]['pln_url']="http://www.popapp.co.kr/tomix/md.php?MD=heraldpop";
@@ -49,7 +48,7 @@ switch ($sType) {
 
                 if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
 
-                    $popstate=1;
+                    $popstate='enable';
                     $sURL= $value['pln_url'];
                     break;
                 }            
@@ -77,7 +76,7 @@ switch ($sType) {
 break;
         
     case "me": // 미소설
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "061U" ;//pv 체크
             $sIfrCode1 = "04LZ" ;// 전체기사
@@ -96,7 +95,7 @@ break;
             break;
 
     case "moodeung": // 무등일보
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "032z" ;//pv 체크
             $sIfrCode1 = "032r" ;// 전체기사
@@ -116,7 +115,7 @@ break;
             break;
     
     case "jemin": // 제민일보
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "04YB" ;//pv 체크0.
             $sIfrCode1 = "02cQ" ;// 전체기사
@@ -136,7 +135,7 @@ break;
             break;
 
     case "newstown": // 뉴스타운
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "04YC" ;//pv 체크0.
             $sIfrCode1 = "033Z" ;// 전체기사
@@ -156,7 +155,7 @@ break;
             break;
 
     case "hubnews": // 허브뉴스
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "05ix" ;//pv 체크0.
             $sIfrCode1 = "03H0" ;// 전체기사
@@ -176,7 +175,7 @@ break;
             break;
 
         case "bridgeany": // 브릿지경제
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "02pn" ;//pv 체크0.
             $sIfrCode1 = "02pJ" ;// 전체기사
@@ -196,7 +195,7 @@ break;
             break;
 
         case "moreadd": // 모애드
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "066z" ;//pv 체크0.
             $sIfrCode1 = "04LZ" ;// 전체기사
@@ -215,7 +214,7 @@ break;
             break;
 
         case "kookje": // 국제신문
-           $popstate=0;
+           $popstate = 'disable';
             
             $sCode = "05Ps" ;//pv 체크
             $sIfrCode1 = "01Ca" ;// 전체기사
@@ -375,7 +374,7 @@ break;
  	
 
  		case "hiadone": // 자사
- 			$popstate = 1;
+ 			$popstate = 'enable';
  			$sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
  			$sCode = "05uO" ;//pv 체크
  			$sIfrCode1 = "01Ca"	;// 전체기사
@@ -458,7 +457,7 @@ break;
     
 
  	default:
- 		$popstate = 1;
+ 		$popstate = 'enable';
  			$sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
  			$sCode = "05uO" ;//pv 체크
  			$sIfrCode1 = "01Ca"	;// 전체기사
@@ -476,6 +475,34 @@ break;
  			$sIfrCode14 = "03EV"  ;//베스트신문보기 배너형
  		break;
  } 
+
+include_once "common/type_pop.php";
+
+if($popstate==='enable'){
+$popstate='disable';    
+    if($view_type==='time'){
+        if(!empty($post_link))
+        foreach($post_link as $value){
+
+            if($value['pln_start'] <= date('H') && $value['pln_end'] >= date('H') ){
+
+                $popstate='enable';
+                $sURL= $value['pln_url'];
+                $link_id=$value['pln_id'];
+                break;
+            }            
+        }
+        
+    } else {
+
+        if(!empty($post_link)) {
+        $popstate='enable';
+            $rand = mt_rand(0,count($post_link)-1);
+            $sURL= $post_link[$rand]['pln_url'];
+            $link_id= $post_link[$rand]['pln_id'];
+        }
+    }
+}
 /*
 $db_db = new DB_mysql('mysql:host=hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com;dbname=hiadone_ADM;charset=utf8', 'user_guest', 'guest///');
 
@@ -744,7 +771,7 @@ if($db_db->pquery($query)){
     }
 		</script>
 
-<?php if($popstate === 0){?>
+<?php if($popstate === 'disable'){?>
 
 <?php } elseif($datescript === 1){ ?>
 	<?php if (date('H') <= 4 || date('H') >= 9){ ?>
