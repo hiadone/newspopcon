@@ -15,6 +15,7 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "0320" ;//신규생활정보
 $sIfrCode14 = "03EV" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q" ;//인기신작
+$post_id='66';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=kookje';
 $view_type='';
@@ -34,6 +35,7 @@ $sIfrCode11 = "04KF" ;// 베스트웹툰 랜덤
 $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "04Me" ;//신규생활정보
 $sIfrCode15 = "066r" ;//인기신작
+$post_id='64';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=moreadd';
 $view_type='random';
@@ -54,6 +56,7 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "0322" ;//신규생활정보
 $sIfrCode14 = "03Ff" ;//베스트신문보기 배너형
 $sIfrCode15 = "065T" ;//인기신작
+$post_id='34';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=bridgeany';
 $view_type='random';
@@ -74,6 +77,7 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "03H5" ;//신규생활정보
 $sIfrCode14 = "03Ff" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Z" ;//인기신작
+$post_id='33';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=hubnews';
 $view_type='random';
@@ -94,6 +98,7 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "033d" ;//신규생활정보
 $sIfrCode14 = "03Ff" ;//베스트신문보기 배너형
 $sIfrCode15 = "065X" ;//인기신작
+$post_id='32';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=newstown';
 $view_type='random';
@@ -114,6 +119,7 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "0324" ;//신규생활정보
 $sIfrCode14 = "03Ff" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Y" ;//인기신작
+$post_id='31';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=jemin';
 $view_type='random';
@@ -134,6 +140,7 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "032w" ;//신규생활정보
 $sIfrCode14 = "03Ff" ;//베스트신문보기 배너형
 $sIfrCode15 = "065V" ;//인기신작
+$post_id='29';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=moodeung';
 $view_type='random';
@@ -153,6 +160,7 @@ $sCode = "061U" ;//pv 체크
  			$sIfrCode12 = "032y"  ;//탑배너
  			$sIfrCode13 = "04Me"  ;//신규생활정보
  			$sIfrCode14 = "03EV"  ;//베스트신문보기 배너형
+$post_id='28';
 $popstate='disable';
 $press_url='http://newspopcon.com/pop.asp?type=me';
 $view_type='random';
@@ -173,15 +181,18 @@ $sIfrCode12 = "030p";  //탑배너
 $sIfrCode13 = "032j";  //신규생활정보
 $sIfrCode14 = "03EZ";  //베스트신문보기 배너형
 $sIfrCode15 = "065W";  //인기신작
+$post_id='23';
 $popstate='enable';
 $press_url='http://newspopcon.com/pop.asp?type=heraldpop';
 $view_type='time';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=4;
 $post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=heraldpop';
+$post_link[0]['pln_id']='19';
 $post_link[1]['pln_start']=21;
 $post_link[1]['pln_end']=24;
 $post_link[1]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=heraldpop';
+$post_link[1]['pln_id']='21';
 }
 if($sType=='ajunews'){
 $sCode = "03Fg" ;//pv 체크
@@ -199,11 +210,13 @@ $sIfrCode12 = "032y"  ;//탑배너
 $sIfrCode13 = "03CW"  ;//신규생활정보
 $sIfrCode14 = "03Ff"  ;//베스트신문보기 배너형
 $sIfrCode15 = "065U"  ;//인기신작
+$post_id='22';
 $popstate='enable';
 $press_url='http://newspopcon.com/pop.asp?type=ajunews';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
 $post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=ajunews';
+$post_link[0]['pln_id']='18';
 }
 ?>
