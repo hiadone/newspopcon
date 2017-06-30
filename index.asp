@@ -223,7 +223,7 @@ if($db_db->pquery($query)){
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/images/favi.png">
 <link href="css_new/import.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/js/jquery-1.11.1.min.js"></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
 <script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
 <!-- 구글애널리틱스 시작 -->
