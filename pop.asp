@@ -696,16 +696,16 @@ if($db_db->pquery($query)){
         <!-- 구글애널리틱스 끝 -->
 		<script>
 			$(document).ready(function(){
-			//로딩후 첫번째 메인 메뉴의 배경색상 변경
-				$('header nav ul li:first-child').css('background-color' , '#fd8c30');
+			// //로딩후 첫번째 메인 메뉴의 배경색상 변경
+			// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 			//클릭한 메뉴의 배경 색상 변경
 				$('header nav ul li').click(function(){
-					$('header nav ul li').css('background-color' , '#002a4b');	
-					$(this).css('background-color' , '#fd8c30');
-				});
+                    $('header nav ul li').removeClass('active');
+                    $(this).addClass('active');
+                });
 			//header의 높이값 계산
-				var hei =$('header').height() - 6
-				$('header').css('height' , hei);
+				// var hei =$('header').height() - 6
+				// $('header').css('height' , hei);
 
 		   //scrollTop 의 위치 0으로 지정
 				$('html , body').animate({scrollTop : 0 });
@@ -844,7 +844,7 @@ div a img {
 			</h1>
 			<nav>
 				<ul>
-					<li data-id="scroll01">뉴 스</li>
+					<li data-id="scroll01" class="active">뉴 스</li>
 					<li data-id="scroll02">생활정보</li>
 					<li data-id="scroll03">핫토픽</li>
 					<li data-id="scroll04">인기웹툰</li>

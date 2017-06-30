@@ -39,8 +39,8 @@ header h1 span img{
 
 header nav{
 	width:100%;
-	background-color:#002a4b ;
-	display: inline-block;
+	/*background-color:#002a4b ;*/
+	/*display: inline-block;*/
 }
 
 header nav ul li{
@@ -55,6 +55,11 @@ header nav ul li{
 	box-sizing: border-box;
 	line-height: 16px;
 	text-decoration: none;
+	background-color:#002a4b ;
+}
+
+header nav ul li.active{
+	background-color:#fd8c30 ;
 }
 
 .wrap {
