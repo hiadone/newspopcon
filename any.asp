@@ -276,9 +276,9 @@ WHERE `cb_board`.`brd_key` = 'any'
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
-        <script src="/js/jquery-1.11.1.min.js"></script>
-		<script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
-		<script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
+        <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
+        <script type='text/javascript' src='/js/jquery.cookie.js'></script>
+        <script type='text/javascript' src='/js/shortcut.js'></script>
 		<!-- 구글애널리틱스 시작 -->
         <script type='text/javascript'>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -1070,9 +1070,9 @@ if($db_db->pquery($query)){
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
-        <script src="/js/jquery-1.11.1.min.js"></script>
-		<script type='text/javascript' src='http://www.mobipopcon.com/js/jquery.cookie.js'></script>
-		<script type='text/javascript' src='http://www.mobipopcon.com/js/shortcut.js'></script>
+        <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
+        <script type='text/javascript' src='/js/jquery.cookie.js'></script>
+        <script type='text/javascript' src='/js/shortcut.js'></script>
         
         <?php // if(isset($outerscript)) echo $outerscript;?>
         <!-- 구글애널리틱스 시작 -->
