@@ -300,20 +300,20 @@ if($db_db->pquery($query)){
 
             // });
 
-            if(link_id)
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
-            else 
-                var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
-            $.ajax({
-                type: "GET", 
-                async: true,
-                url: url, 
-                dataType : 'json',
-                success: function(data) 
-                {
-                },
-                error: function(xhr, status, error) {} 
-            });
+            // if(link_id)
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
+            // else 
+            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
+            // $.ajax({
+            //     type: "GET", 
+            //     async: true,
+            //     url: url, 
+            //     dataType : 'json',
+            //     success: function(data) 
+            //     {
+            //     },
+            //     error: function(xhr, status, error) {} 
+            // });
             
         }
     }
