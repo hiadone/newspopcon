@@ -24,6 +24,7 @@ $post_content="<?php\n";
 $query="SELECT `cb_board`.*
 FROM `cb_board`
 WHERE `cb_board`.`brd_key` = '".$brd_key."'";
+
 if($db_db->pquery($query)){
     
 
@@ -85,15 +86,10 @@ if($db_db->pquery($query)){
     $db_db2->disconnect();
 }
 $post_content.="?>\n";
-echo $post_content;
+
 
 $filename=dirname(__FILE__).'/type_'.$brd_key.'.php';
             
 $fp2= fopen($filename,"w");
 fwrite($fp2,$post_content);
 fclose($fp2);
-
-
-
-
-
