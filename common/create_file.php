@@ -2,8 +2,10 @@
 include_once "./dc_dbpdomysql.php";
 include_once "./db_mysql.php";
 
-$db_db = new DB_mysql('mysql:host=117.52.171.237;dbname=hiadone_ADM;charset=utf8','user_guest', 'guest///') ;
-$db_db2 = new DB_mysql('mysql:host=117.52.171.237;dbname=hiadone_ADM;charset=utf8','user_guest', 'guest///') ;
+include_once "./database.php";
+
+$db_db = new DB_mysql($db['dsn'],$db['username'],$db['password']) ;
+$db_db2 = new DB_mysql($db['dsn'],$db['username'],$db['password']) ;
 
 
 $brd_key = isset($_REQUEST["brd_key"]) ? $_REQUEST["brd_key"] : "hiadone_newspopcon";
