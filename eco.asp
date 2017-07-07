@@ -931,13 +931,16 @@ $popstate='disable';
         </script>
         <!-- 구글애널리틱스 끝 -->
 		<script>
+        var webtoon_flag=true;
 			$(document).ready(function(){
 			// //로딩후 첫번째 메인 메뉴의 배경색상 변경
 			// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 			//클릭한 메뉴의 배경 색상 변경
 				$('header nav ul li').click(function(){
                     if($(this).index()==1){
-                        $("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=eco');
+                        if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=default');
+                            webtoon_flag=false;
+                        }
                         $("#newspopcon").hide();
                         $("#webtoon").show();
                     } else {
@@ -1242,7 +1245,9 @@ div a img {
 	<!-- 포토뉴스영역 02-->
 		<section class="info02">
 				<h2>포토뉴스</h2>
-				<iframe src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode2?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>	 
+                <div>
+                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode2?>&lang=utf-8&out=script'></script>
+                </div>
 		</section>
 
 	<!-- 생활정보 영역 03 -->

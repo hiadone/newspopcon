@@ -85,14 +85,16 @@ $popstate='disable';
 
 <!-- 구글애널리틱스 끝 -->
 <script>
-
+var webtoon_flag=true;
 	$(document).ready(function(){
 	// //로딩후 첫번째 메인 메뉴의 배경색상 변경
 	// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 	//클릭한 메뉴의 배경 색상 변경
 		$('header nav ul li').click(function(){
             if($(this).index()==1){
-                $("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=default');
+                if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=default');
+                    webtoon_flag=false;
+                }
                 $("#newspopcon").hide();
                 $("#webtoon").show();
             } else {
