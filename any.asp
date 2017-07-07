@@ -145,7 +145,7 @@ $popstate='disable';
 			//클릭한 메뉴의 배경 색상 변경
 				$('header nav ul li').click(function(){
                     if($(this).index()==1){
-                        if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=default');
+                        if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=any');
                             webtoon_flag=false;
                         }
                         $("#newspopcon").hide();
