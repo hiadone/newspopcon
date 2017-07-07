@@ -69,8 +69,8 @@ $popstate='disable';
 <link rel="shortcut icon" href="/images/favi.png">
 <link href="css_new/import.css" rel="stylesheet" type="text/css">
 <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
-<script type='text/javascript' src='/js/jquery.cookie.js'></script>
-<script type='text/javascript' src='/js/shortcut.js'></script>
+<!-- <script type='text/javascript' src='/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/js/shortcut.js'></script> -->
 <!-- 구글애널리틱스 시작 -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -91,8 +91,18 @@ $popstate='disable';
 	// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 	//클릭한 메뉴의 배경 색상 변경
 		$('header nav ul li').click(function(){
+            if($(this).index()==1){
+                $("#webtoon").load('./webtoon.asp?sType=default&webtoon_type=default');
+                $("#newspopcon").hide();
+                $("#webtoon").show();
+            } else {
+                $('html , body').animate({scrollTop : 0});
+                $("#webtoon").hide();
+                $("#newspopcon").show();
+            }
 			$('header nav ul li').removeClass('active');
 			$(this).addClass('active');
+            
 		});
 	//header의 높이값 계산
 		// var hei =$('header').height() - 6
@@ -102,10 +112,7 @@ $popstate='disable';
 		$('html , body').animate({scrollTop : 0 });
 
 
-	//서브메뉴 클릭시 scroll bar 이동 
-		$("header nav ul li").click(function(){
-                $('html, body').animate({scrollTop : ($("#"+$(this).data('id')).offset().top - $("header").height() - 12 )});
-        });
+	
     //홈버튼 클릭시 top 으로 이동
     	$('header h1 span img').click(function(){
     		$('html , body').animate({scrollTop : 0});
@@ -220,11 +227,122 @@ div a img {
 	width:100% !important;;
 }
 
+
+/*전체 기사영역*/
+	.info01 .title_area:nth-child(1) .title{
+		padding-top: 0 !important;
+	}
+
+	.info01 a{
+		height: 18px;
+	}
+
+	.info01 .title_area{
+		padding: 0 5% !important;
+	}
+
+/*생활정보 영역*/
+	.info03 .title_area{
+		padding:0 5% !important;
+	}
+
+	.info03 .title_area:nth-child(1) .title{
+		padding-top: 0 !important;
+	}
+
+/*요일별웹툰 , 인기웹툰 영역*/
+	.info04 > div > div > ul{
+		width: 90% !important;
+		padding:0 5% !important;	
+	}
+
+/* 포토뉴스,핫토픽,인기신작 영역,*/
+	.info02 > div{
+		padding:0 5%;
+	}
+
+	.info02 > div > div {
+		height: 100% !important;
+	}
+
+	.info02 > div > div > div{
+		width: 32% !important;
+		height: auto !important;
+		position: relative !important;
+		top:0 !important;
+		left: 0 !important;
+		display: inline-block !important;
+		margin-right: 2%;
+		float: left;
+	}
+
+	.info02 > div > div > div:last-child{
+		margin-right: 0;
+	}
+
+	.info02 .layout{
+		width: 100% !important;
+		margin:0 !important;
+	}
+
+	.info02 .layout .thum{
+		position: relative !important;
+		top:0 !important;
+		left: 0 !important;
+	}
+	.info02 .layout .summary{
+		position: relative !important;
+		top:0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		margin:0 !important;
+		margin-top: 2% !important;
+		font-family: "돋움",dotum !important;
+	}
+
+	.info02 .layout .summary a{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow:hidden;
+	}
+
+/*best 신문보기 영역*/
+	.info05 > div > div{
+		padding:0 !important;
+		border:0 !important;
+	}
+
+	.info05 > div > div > div{
+		padding:1% 5% !important;
+	}
+
+	.info05 > div > div > div:first-child{
+		padding-top:0 !important;
+	}
+
+/*광고 배너 영역*/
+	.info06 img{
+		padding:0 5%;
+		box-sizing: border-box;
+	}
+
+/*best 웹툰 Top6 영역*/
+	.info07 > div > div > ul{
+		padding: 0 5% !important;
+	}
+
+	.info07 .hi_list_contents{
+		border:0 !important;
+	}
+
+
+
 </style>
 </head>
 
-<body  onload="callScheme('GRP', 4, 'DEFAULT');">
-
+<!-- <body  onload="callScheme('GRP', 4, 'DEFAULT');"> -->
+<body>
+<!-- header 영역 -->
 	<header>
 		<h1>
 			<img src="images/logo.png" alt="logo">
@@ -232,121 +350,141 @@ div a img {
 		</h1>
 		<nav>
 			<ul>
-				<li data-id="scroll01" class="active">뉴 스</li>
-				<li data-id="scroll02">생활정보</li>
-				<li data-id="scroll03">핫토픽</li>
-				<li data-id="scroll04">인기웹툰</li>
+				<li class="active">
+					<a >
+						뉴 스
+					</a>
+				</li>
+				<li>
+					<a>
+						<figure>
+							웹 툰
+							<img src="./images/19bg.png" alt="19bg">
+						</figure>
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
 
 	<div class="wrap">
-	<!-- 전체기사 영역 01 -->
-		<section class="info01" id="scroll01">
-			<h2>전체기사</h2>
-				<!-- iframe 영역 -->
-				<div id="foin_pageid01">
-					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+        <div id="newspopcon">
+		<!-- 전체기사 영역-->
+			<section class="info01">
 
+				<h2>전체기사</h2>
+					<!-- 스크립트 영역 -->
+					<div id="foin_pageid01">
+						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+					</div>
+			</section>
+
+		<!-- 포토뉴스 영역-->
+			<section class="info02">
+				<h2>포토뉴스</h2>
+
+				<div>
+				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode2?>&lang=utf-8&out=script'></script>
 				</div>
-		</section>
 
-	<!-- 포토뉴스 영역 02-->
-		<section class="info02">
-			<h2>포토뉴스</h2>				
-			<div>
-			<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode2?>&lang=utf-8&out=script'></script>
-			
-			</div>
-		</section>
+			</section>
 
-	<!-- 생활정보 영역 03 -->
-		<section class="info03" id="scroll02">
-			<h2>생활정보</h2>
-				<div id="foin_pageid03">
-					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&lang=utf-8&out=script'></script>
-					   
+		<!-- 생활정보 영역 -->
+			<section class="info03">
+				<h2>생활정보</h2>
+
+					<div id="foin_pageid03">
+						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&lang=utf-8&out=script'></script>					   
+					</div>
+
+			</section>
+
+		<!-- 요일별 웹툰 영역 -->
+			<section class="info04">
+				<h2>요일별 웹툰</h2>
+					<div id="foin_pageid04">
+						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&lang=utf-8&out=script'></script>
+					</div>
+			</section>
+
+		<!-- 핫토픽 영역-->
+			<section class="info02">
+				<h2>핫토픽</h2>
+				<div>
+					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode13?>&lang=utf-8&out=script'></script>
+					
 				</div>
-		</section>
+			</section>
 
-	<!-- 요일별 웹툰 04 -->
-		<section class="info04">
-			<h2>요일별 웹툰</h2>
+		<!-- 인기신작 영역 -->
+	        <?php if (!empty($sIfrCode15)){ ?>
+	        <section class="info02" id="scroll03">
+	            <h2>인기신작</h2>
+	            <div>
+	                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
+	                
+	            </div>
+	            
+	        </section>
+	        <?php } ?>
+
+		<!-- Best 신문보기-->
+			<section class="info05">
+
+				<h2>BEST 신문보기</h2>
+				<div id="foin_pageid05">
+					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode4?>&lang=utf-8&out=script'></script>
+				</div>
+			</section>
+
+		<!-- 인기웹툰 04 -->
+			<section class="info04">
+				<h2>인기 웹툰</h2>
 				<div id="foin_pageid04">
-					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&lang=utf-8&out=script'></script>
+					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&lang=utf-8&out=script'></script>
 				</div>
-		</section>
+			</section>
 
-	<!-- 핫토픽 02-->
-		<section class="info02" id="scroll03">
-			<h2>핫토픽</h2>
-			<div>
-				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode13?>&lang=utf-8&out=script'></script>
-				
-			</div>
-			
-		</section>
+		<!-- 주간 핫리포트 06 -->
+			<section class="info06">
+				<h2>주간 핫 리포트</h2>
+				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&lang=utf-8&out=script'></script>
+			</section>
 
-        <?php if (!empty($sIfrCode15)){ ?>
-        <section class="info02" id="scroll03">
-            <h2>인기신작</h2>
-            <div>
-                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
-                
-            </div>
-            
-        </section>
-        <?php } ?>
-	<!-- Best 신문보기 05 -->
-		<section class="info05">
-			<h2>BEST 신문보기</h2>
-			<div id="foin_pageid05">
-								<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode4?>&lang=utf-8&out=script'></script>
-											
-				</div>
-		</section>
+		<!-- Best 웹툰 Top6 07 -->
+			<section class="info07">
+				<h2>Best 웹툰 TOP6</h2>
+					<div id="foin_pageid07">
+						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&lang=utf-8&out=script'></script>
+					</div>
+			</section>
 
-	<!-- 인기웹툰 04 -->
-		<section class="info04" id="scroll04">
-			<h2>인기 웹툰</h2>
-			<div id="foin_pageid04">
-				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&lang=utf-8&out=script'></script>
-			</div>
-		</section>
+		<!-- 하단 배너 08 -->
+			<section class="info08" style="margin-bottom: 0">
+				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&lang=utf-8&out=script'></script>
+				</a>
+			</section>
+        </div>
 
-	<!-- 주간 핫리포트 06 -->
-		<section class="info6">
-			<h2>주간 핫 리포트</h2>
-			<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&lang=utf-8&out=script'></script>
-		</section>
 
-	<!-- Best 웹툰 Top6 07 -->
-		<section class="info07" id="scroll04">
-			<h2>Best 웹툰 TOP6</h2>
-				<div id="foin_pageid07">
-					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&lang=utf-8&out=script'></script>
-				</div>
-		</section>
+        <div id="webtoon" style="display:none">
 
-	<!-- 하단 배너 08 -->
-		<section class="info08">
-			<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&lang=utf-8&out=script'></script>
-			
-			</a>
-		</section>
+        </div>
  	</div>
+
  	<!-- 하단 푸터 -->
- 	<footer>
- 		<a href="mailto:webtoonpopcon@gmail.com">
- 			<h3>
- 				광 고 문 의 			 			
- 			</h3>
- 		</a>
- 		<p>
- 			<span>뉴스팝콘 | newspopcon.com</span>
- 			Copyright ⓒ NEWSPOPCON ALL RIGHT RESERVED
- 		</p>
- 	</footer>
+	 	<footer>
+	 		<a href="mailto:webtoonpopcon@gmail.com">
+	 			<h3>
+	 				광 고 문 의 			 			
+	 			</h3>
+	 		</a>
+	 		<p>
+	 			<span>뉴스팝콘 | newspopcon.com</span>
+	 			Copyright ⓒ NEWSPOPCON ALL RIGHT RESERVED
+	 		</p>
+	 	</footer>
+ 	
 	<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
 </body>
 </html>
