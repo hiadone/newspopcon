@@ -15,12 +15,14 @@ $sIfrCode12 = "032y";  //탑배너
 $sIfrCode13 = "04Me";  //신규생활정보
 $sIfrCode14 = "03Ff";  //베스트신문보기 배너형
 $sIfrCode15 = "069Q";  // 인기신작
+$post_id='7';
 $popstate='disable';
 $press_url='http://newspopcon.com/any.asp?type=adpop';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
 $post_link[0]['pln_url']='http://www.popapp.co.kr/anytoon/md.php?MD=adpop';
+$post_link[0]['pln_id']='7';
 }
 if($sType=='moneyWe'){
 $sCode = "02ca" ;//pv 체크
@@ -38,11 +40,13 @@ $sIfrCode12 = "032y";  //탑배너
 $sIfrCode13 = "0321";  //신규생활정보
 $sIfrCode14 = "03Ff";  //베스트신문보기 배너형
 $sIfrCode15 = "065S";  //인기신작
+$post_id='3';
 $popstate='disable';
 $press_url='http://newspopcon.com/any.asp?type=moneyWe';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
 $post_link[0]['pln_url']='http://www.popapp.co.kr/anytoon/md.php?MD=moneyWe';
+$post_link[0]['pln_id']='3';
 }
 ?>

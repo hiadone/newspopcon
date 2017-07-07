@@ -201,8 +201,8 @@ $post_link[0]['pln_end']=0;
 $post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=6';
 $post_link[0]['pln_id']='28';
 }
-if($sType=='5'){
-$sCode = ""; //pv 체크
+if($sType=='topstarnews'){
+$sCode = "06Yn"; //pv 체크
 $sIfrCode1 = "04gi" ; // 전체기사
 $sIfrCode2 = "04gm" ; // 포토뉴스
 $sIfrCode3 = "04gL" ; // 많이본 뉴스
@@ -214,13 +214,14 @@ $sIfrCode9 = "04gW" ; // 베스트게임
 $sIfrCode10 = "04gu"; // 푸터배너
 $sIfrCode11 = "04gW"; // 베스트웹툰 랜덤
 $sIfrCode13 = "04gq" ; //신규생활정보
+$sIfrCode15 = "065f" ; //인기신작
 $post_id='39';
-$popstate='disable';
-$press_url='http://newspopcon.com/eco.asp?type=5';
+$popstate='enable';
+$press_url='http://newspopcon.com/eco.asp?type=topstarnews';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
-$post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=5';
+$post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=topstarnews';
 $post_link[0]['pln_id']='27';
 }
 if($sType=='geni'){
