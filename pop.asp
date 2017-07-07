@@ -547,8 +547,18 @@ $popstate='disable';
 			// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 			//클릭한 메뉴의 배경 색상 변경
 				$('header nav ul li').click(function(){
+                    if($(this).index()==1){
+                        $("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=pop');
+                        $("#newspopcon").hide();
+                        $("#webtoon").show();
+                    } else {
+                        $('html , body').animate({scrollTop : 0});
+                        $("#webtoon").hide();
+                        $("#newspopcon").show();
+                    }
                     $('header nav ul li').removeClass('active');
                     $(this).addClass('active');
+                    
                 });
 			//header의 높이값 계산
 				// var hei =$('header').height() - 6
@@ -559,9 +569,7 @@ $popstate='disable';
 
 
 			//서브메뉴 클릭시 scroll bar 이동 
-				$("header nav ul li").click(function(){
-		                $('html, body').animate({scrollTop : ($("#"+$(this).data('id')).offset().top - $("header").height() - 12 )});
-		        });
+				
 		    //홈버튼 클릭시 top 으로 이동
 		    	$('header h1 span img').click(function(){
 		    		$('html , body').animate({scrollTop : 0});
@@ -670,8 +678,118 @@ $popstate='disable';
 
 div a img {
     height: auto !important;;
-	width:100% !important;;
+    width:100% !important;;
 }
+
+
+/*전체 기사영역*/
+    .info01 .title_area:nth-child(1) .title{
+        padding-top: 0 !important;
+    }
+
+    .info01 a{
+        height: 18px;
+    }
+
+    .info01 .title_area{
+        padding: 0 5% !important;
+    }
+
+/*생활정보 영역*/
+    .info03 .title_area{
+        padding:0 5% !important;
+    }
+
+    .info03 .title_area:nth-child(1) .title{
+        padding-top: 0 !important;
+    }
+
+/*요일별웹툰 , 인기웹툰 영역*/
+    .info04 > div > div > ul{
+        width: 90% !important;
+        padding:0 5% !important;    
+    }
+
+/* 포토뉴스,핫토픽,인기신작 영역,*/
+    .info02 > div{
+        padding:0 5%;
+    }
+
+    .info02 > div > div {
+        height: 100% !important;
+    }
+
+    .info02 > div > div > div{
+        width: 32% !important;
+        height: auto !important;
+        position: relative !important;
+        top:0 !important;
+        left: 0 !important;
+        display: inline-block !important;
+        margin-right: 2%;
+        float: left;
+    }
+
+    .info02 > div > div > div:last-child{
+        margin-right: 0;
+    }
+
+    .info02 .layout{
+        width: 100% !important;
+        margin:0 !important;
+    }
+
+    .info02 .layout .thum{
+        position: relative !important;
+        top:0 !important;
+        left: 0 !important;
+    }
+    .info02 .layout .summary{
+        position: relative !important;
+        top:0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin:0 !important;
+        margin-top: 2% !important;
+        font-family: "돋움",dotum !important;
+    }
+
+    .info02 .layout .summary a{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow:hidden;
+    }
+
+/*best 신문보기 영역*/
+    .info05 > div > div{
+        padding:0 !important;
+        border:0 !important;
+    }
+
+    .info05 > div > div > div{
+        padding:1% 5% !important;
+    }
+
+    .info05 > div > div > div:first-child{
+        padding-top:0 !important;
+    }
+
+/*광고 배너 영역*/
+    .info06 img{
+        padding:0 5%;
+        box-sizing: border-box;
+    }
+
+/*best 웹툰 Top6 영역*/
+    .info07 > div > div > ul{
+        padding: 0 5% !important;
+    }
+
+    .info07 .hi_list_contents{
+        border:0 !important;
+    }
+
+
 
 </style>
 </head>
@@ -685,21 +803,30 @@ div a img {
 <!-- 추가 -->
 	<!-- header -->
 		<header>
-			<h1>
-				<img src="images/logo.png" alt="logo">
-				<span><img src="images/home.png" alt="home"></span>
-			</h1>
-			<nav>
-				<ul>
-					<li data-id="scroll01" class="active">뉴 스</li>
-					<li data-id="scroll02">생활정보</li>
-					<li data-id="scroll03">핫토픽</li>
-					<li data-id="scroll04">인기웹툰</li>
-				</ul>
-			</nav>
-		</header>
+        <h1>
+            <img src="images/logo.png" alt="logo">
+            <span><img src="images/home.png" alt="home"></span>
+        </h1>
+        <nav>
+            <ul>
+                <li class="active">
+                    <a >
+                        뉴 스
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <figure>
+                            웹 툰
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 	<div class="wrap">
+        <div id="newspopcon">
 	<!-- 전체기사 영역 01 -->
 		<section class="info01" id="scroll01">
 			<h2>전체기사</h2>
@@ -783,6 +910,12 @@ div a img {
 		<section class="info08">
 			<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&out=script"></script>
 		</section>
+        </div>
+
+
+        <div id="webtoon" style="display:none">
+
+        </div>
  	</div>
 
  	<!-- 하단 푸터 -->

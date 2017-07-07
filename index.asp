@@ -92,7 +92,7 @@ $popstate='disable';
 	//클릭한 메뉴의 배경 색상 변경
 		$('header nav ul li').click(function(){
             if($(this).index()==1){
-                $("#webtoon").load('./webtoon.asp?sType=default&webtoon_type=default');
+                $("#webtoon").load('./webtoon.asp?type=<?php echo $_REQUEST["type"]?>&webtoon_type=default');
                 $("#newspopcon").hide();
                 $("#webtoon").show();
             } else {
@@ -359,7 +359,6 @@ div a img {
 					<a>
 						<figure>
 							웹 툰
-							<img src="./images/19bg.png" alt="19bg">
 						</figure>
 					</a>
 				</li>
