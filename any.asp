@@ -341,7 +341,7 @@ $popstate='disable';
 	<!-- 요일별 웹툰 04 -->
 		<section class="info04">
 			<h2>요일별 웹툰</h2>
-				<div >
+				<div id="foin_pageid04">
 				<iframe width="100%" height="340px"  src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 				</div>
 		</section>
@@ -368,14 +368,18 @@ $popstate='disable';
 	<!-- Best 신문보기 05 -->
 		<section class="info05">
 			<h2>BEST 신문보기</h2>
+            <div id="foin_pageid05">
 	<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode4?>&lang=utf-8&out=script'></script>
+            </div>
 				
 		</section>
 
 	<!-- 인기웹툰 04 -->
 		<section class="info04" id="scroll04">
 			<h2>인기 웹툰</h2>
+            <div id="foin_pageid04">
 			<iframe width="100%" height="348" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+            </div>
 		</section>
 
 	<!-- 주간 핫 리포트 -->
@@ -389,7 +393,9 @@ $popstate='disable';
 	<!-- Best 웹툰 Top6 07 -->
 		<section class="info07" id="scroll04">
 			<h2>Best 웹툰 TOP6</h2>
+            <div id="foin_pageid07">
 			<iframe width="100%" height="345" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>	
+            </div>
 				
 		</section>
 
