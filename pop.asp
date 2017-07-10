@@ -797,7 +797,7 @@ $popstate='disable';
 		</section>
 
 	<!-- 하단 배너 08 -->
-		<section class="info08">
+		<section class="info08" style="margin-bottom: 0">
 			<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&out=script"></script>
 		</section>
         </div>
