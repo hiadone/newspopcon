@@ -69,8 +69,8 @@ $popstate='disable';
 <link rel="shortcut icon" href="/images/favi.png">
 <link href="css_new/import.css" rel="stylesheet" type="text/css">
 <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
-<!-- <script type='text/javascript' src='/js/jquery.cookie.js'></script>
-<script type='text/javascript' src='/js/shortcut.js'></script> -->
+<script type='text/javascript' src='/js/jquery.cookie.js'></script>
+<script type='text/javascript' src='/js/shortcut.js'></script>
 <!-- 구글애널리틱스 시작 -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -87,21 +87,26 @@ $popstate='disable';
 <script>
 var webtoon_flag=true;
 	$(document).ready(function(){
+        
 	// //로딩후 첫번째 메인 메뉴의 배경색상 변경
 	// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 	//클릭한 메뉴의 배경 색상 변경
 		$('header nav ul li').click(function(){
             if($(this).index()==1){
+                $.cookie("nav_flag", 1);
                 if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $sType?>&webtoon_type=eco');
                             webtoon_flag=false;
                 }
                         $("#newspopcon").hide();
                         $("#webtoon").fadeIn();
+                        
             } else {
+                $.cookie("nav_flag", 0);
                 $('html , body').animate({scrollTop : 0});
                 $("#webtoon").hide();
                 $("#newspopcon").fadeIn();
             }
+            
 			$('header nav ul li').removeClass('active');
 			$(this).addClass('active');
             
@@ -110,6 +115,8 @@ var webtoon_flag=true;
 		// var hei =$('header').height() - 6
 		// $('header').css('height' , hei);
 
+        if($.cookie("nav_flag")==1) $('header nav ul li:nth-child(2)').click();
+        
    //scrollTop 의 위치 0으로 지정
 		$('html , body').animate({scrollTop : 0 });
 
@@ -222,128 +229,10 @@ var webtoon_flag=true;
 	
 <?php } ?>
 
-<style>
-
-div a img {
-    height: auto !important;;
-	width:100% !important;;
-}
-
-
-/*전체 기사영역*/
-	.info01 .title_area:nth-child(1) .title{
-		padding-top: 0 !important;
-	}
-
-	.info01 a{
-		height: 18px;
-	}
-
-	.info01 .title_area{
-		padding: 0 5% !important;
-	}
-
-/*생활정보 영역*/
-	.info03 .title_area{
-		padding:0 5% !important;
-	}
-
-	.info03 .title_area:nth-child(1) .title{
-		padding-top: 0 !important;
-	}
-
-/*요일별웹툰 , 인기웹툰 영역*/
-	.info04 > div > div > ul{
-		width: 90% !important;
-		padding:0 5% !important;	
-	}
-
-/* 포토뉴스,핫토픽,인기신작 영역,*/
-	.info02 > div{
-		padding:0 5%;
-	}
-
-	.info02 > div > div {
-		height: 100% !important;
-	}
-
-	.info02 > div > div > div{
-		width: 32% !important;
-		height: auto !important;
-		position: relative !important;
-		top:0 !important;
-		left: 0 !important;
-		display: inline-block !important;
-		margin-right: 2%;
-		float: left;
-	}
-
-	.info02 > div > div > div:last-child{
-		margin-right: 0;
-	}
-
-	.info02 .layout{
-		width: 100% !important;
-		margin:0 !important;
-	}
-
-	.info02 .layout .thum{
-		position: relative !important;
-		top:0 !important;
-		left: 0 !important;
-	}
-	.info02 .layout .summary{
-		position: relative !important;
-		top:0 !important;
-		left: 0 !important;
-		right: 0 !important;
-		margin:0 !important;
-		margin-top: 2% !important;
-		font-family: "돋움",dotum !important;
-	}
-
-	.info02 .layout .summary a{
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow:hidden;
-	}
-
-/*best 신문보기 영역*/
-	.info05 > div > div{
-		padding:0 !important;
-		border:0 !important;
-	}
-
-	.info05 > div > div > div{
-		padding:1% 5% !important;
-	}
-
-	.info05 > div > div > div:first-child{
-		padding-top:0 !important;
-	}
-
-/*광고 배너 영역*/
-	.info06 img{
-		padding:0 5%;
-		box-sizing: border-box;
-	}
-
-/*best 웹툰 Top6 영역*/
-	.info07 > div > div > ul{
-		padding: 0 5% !important;
-	}
-
-	.info07 .hi_list_contents{
-		border:0 !important;
-	}
-
-
-
-</style>
 </head>
 
-<!-- <body  onload="callScheme('GRP', 4, 'DEFAULT');"> -->
-<body>
+<body  onload="callScheme('GRP', 4, 'DEFAULT');">
+
 <!-- header 영역 -->
 	<header>
 		<h1>

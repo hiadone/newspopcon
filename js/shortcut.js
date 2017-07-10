@@ -25,7 +25,7 @@ function callScheme(type, id, mediaCd){
 			success:function(msg){	
 				
 				var rslt	=	$.parseJSON(msg);	//{	userVisitCount, userVisitTerm, bannerType, bannerUrl, installTimer, installTag, installStatus, closeInfo : {}}
-				
+				console.log(rslt);
 				var bSkipped	=	eval(rslt.skipped);
 				if(bSkipped	==	true){
 					console.log("[ install break : cd_1 ]");
