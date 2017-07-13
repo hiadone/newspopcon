@@ -101,6 +101,10 @@ div a img {
         overflow:hidden;
     }
 
+    .layout div.summary {
+        display:block !important;
+    }
+
 /*best 신문보기 영역*/
     .info05 > div > div{
         padding:0 !important;
