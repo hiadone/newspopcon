@@ -1107,9 +1107,15 @@ $popstate='disable';
                     </a>
                 </li>
                 <li>
-                    <a>
+                    <?php 
+                    if($sType==='genius'){
+                        echo '<a href="http://www.popapp.co.kr/tomix/md.php?MD='.$sType.'" target="_blank">';
+                    } else echo '<a>';
+                    ?>
+                    
                         <figure>
                             웹 툰
+                            <img src="./images/19bg.png">
                         </figure>
                     </a>
                 </li>

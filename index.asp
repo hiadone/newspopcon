@@ -250,6 +250,7 @@ var webtoon_flag=true;
 					<a>
 						<figure>
 							웹 툰
+                            <img src="./images/19bg.png">
 						</figure>
 					</a>
 				</li>

@@ -72,10 +72,10 @@ header nav ul li a{
 	box-sizing: border-box;
 }
 
-/*header nav ul li a figure{
+header nav ul li a figure{
 	position: relative;
 	top: -3px;
-}*/
+}
 
 header nav ul li a figure img{
 	width: 20px;
