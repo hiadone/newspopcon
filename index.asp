@@ -93,7 +93,7 @@ var webtoon_flag=true;
 	//클릭한 메뉴의 배경 색상 변경
 		$('header nav ul li').click(function(){
             if($(this).index()==1){
-                $.cookie("nav_flag", 1);
+                $.cookie("nav_<?php echo $sType?>_flag", 1);
                 if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $sType?>&webtoon_type=eco');
                             webtoon_flag=false;
                 }
@@ -101,7 +101,7 @@ var webtoon_flag=true;
                         $("#webtoon").fadeIn();
                         
             } else {
-                $.cookie("nav_flag", 0);
+                $.cookie("nav_<?php echo $sType?>_flag", 0);
                 $('html , body').animate({scrollTop : 0});
                 $("#webtoon").hide();
                 $("#newspopcon").fadeIn();
@@ -115,7 +115,7 @@ var webtoon_flag=true;
 		// var hei =$('header').height() - 6
 		// $('header').css('height' , hei);
 
-        if($.cookie("nav_flag")==1) $('header nav ul li:nth-child(2)').click();
+        if($.cookie("nav_<?php echo $sType?>_flag")==1) $('header nav ul li:nth-child(2)').click();
         
    //scrollTop 의 위치 0으로 지정
 		$('html , body').animate({scrollTop : 0 });

@@ -549,7 +549,7 @@ $popstate='disable';
 			//클릭한 메뉴의 배경 색상 변경
 				$('header nav ul li').click(function(){
                     if($(this).index()==1){
-                        $.cookie("nav_pop_flag", 1);
+                        $.cookie("nav_pop_<?php echo $sType?>_flag", 1);
                         if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $sType?>&webtoon_type=pop');
                             webtoon_flag=false;
                         }
@@ -557,7 +557,7 @@ $popstate='disable';
                         $("#newspopcon").hide();
                         $("#webtoon").fadeIn();
                     } else {
-                        $.cookie("nav_pop_flag", 0);
+                        $.cookie("nav_pop_<?php echo $sType?>_flag", 0);
                         $('html , body').animate({scrollTop : 0});
                         $("#webtoon").hide();
                         $("#newspopcon").fadeIn();
@@ -573,7 +573,7 @@ $popstate='disable';
 		   //scrollTop 의 위치 0으로 지정
 				$('html , body').animate({scrollTop : 0 });
 
-                if($.cookie("nav_pop_flag")==1) $('header nav ul li:nth-child(2)').click();
+                if($.cookie("nav_pop_<?php echo $sType?>_flag")==1) $('header nav ul li:nth-child(2)').click();
 			//서브메뉴 클릭시 scroll bar 이동 
 				
 		    //홈버튼 클릭시 top 으로 이동
