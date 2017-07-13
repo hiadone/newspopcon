@@ -1108,7 +1108,7 @@ $popstate='disable';
                 </li>
                 <li>
                     <?php 
-                    if($sType==='genius'){
+                    if($sType==='genius' || $sType==='community'){
                         echo '<a href="http://www.popapp.co.kr/tomix/md.php?MD='.$sType.'" target="_blank">';
                     } else echo '<a>';
                     ?>
