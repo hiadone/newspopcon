@@ -914,8 +914,8 @@ $popstate='disable';
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
-       <!--  <script type='text/javascript' src='/js/jquery.cookie.js'></script>
-        <script type='text/javascript' src='/js/shortcut.js'></script> -->
+        <script type='text/javascript' src='/js/jquery.cookie.js'></script>
+        <script type='text/javascript' src='/js/shortcut.js'></script>
         
         <?php // if(isset($outerscript)) echo $outerscript;?>
         <!-- 구글애널리틱스 시작 -->
@@ -1088,8 +1088,8 @@ $popstate='disable';
 
 	</head>
 
-<!-- <body  onload="callScheme('GRP', 6, 'DEFAULT');"> -->
-<body>
+<body  onload="callScheme('GRP', 6, 'DEFAULT');">
+
 
 
 
