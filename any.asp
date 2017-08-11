@@ -301,9 +301,9 @@ $popstate='disable';
                 </li>
                 <li>
                     <a>
-                        <figure>
+                        
                             웹 툰
-                        </figure>
+                        
                     </a>
                 </li>
             </ul>

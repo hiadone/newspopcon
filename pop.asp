@@ -720,9 +720,9 @@ $popstate='disable';
                     } else echo '<a>';
                     ?>
                     
-                        <figure>
+                        
                             웹 툰
-                        </figure>
+                        
                     </a>
                 </li>
             </ul>

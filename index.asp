@@ -252,11 +252,7 @@ var webtoon_flag=true;
 					</a>
 				</li>
 				<li>
-					<a>
-						<figure>
-							웹 툰
-						</figure>
-					</a>
+					<a>웹 툰</a>
 				</li>
 			</ul>
 		</nav>
