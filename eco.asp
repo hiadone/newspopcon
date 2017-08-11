@@ -15,7 +15,7 @@ switch ($sType) {
 
     case "hiadone": // 자사
         $popstate = 'enable';
-        $sURL=" http://www.popapp.co.kr/anytoon/md.php?MD=hiadone";
+        $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=hiadone";
 
         $sCode = "05uO"; //pv 체크
         $sIfrCode1 = "01Ca" ; // 전체기사
@@ -937,6 +937,10 @@ $popstate='disable';
 			// //로딩후 첫번째 메인 메뉴의 배경색상 변경
 			// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 			//클릭한 메뉴의 배경 색상 변경
+
+            <?php 
+            if($sType!=='genius' && $sType!=='community'){ ?>
+
 				$('header nav ul li').click(function(){
                     if($(this).index()==1){
                         $.cookie("nav_eco_<?php echo $sType?>_flag", 1);
@@ -955,6 +959,7 @@ $popstate='disable';
                     $(this).addClass('active');
                     
                 });
+            <?php } ?>
 			//header의 높이값 계산
 				// var hei =$('header').height() - 6
 				// $('header').css('height' , hei);
@@ -1116,7 +1121,6 @@ $popstate='disable';
                     
                         <figure>
                             웹 툰
-                            <img src="./images/19bg.png">
                         </figure>
                     </a>
                 </li>
@@ -1209,6 +1213,22 @@ $popstate='disable';
             </div>
 				
 		</section>
+
+        <!-- <section class="info07">
+                <h2>투데이 럭키 박스</h2>
+            <?php
+            if(rand(0,1)){
+            ?>
+                
+                    <div id="foin_pageid08" style="position: relative;padding-top: 98%;">
+                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
+                    </div>
+            <?php } else { ?>
+                    <div>
+                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode17?>&lang=utf-8&out=script'></script>
+                    </div>
+            <?php } ?>
+        </section> -->
 
 	<!-- 하단 배너 08 -->
 		<section class="info08" style="margin-bottom: 0">

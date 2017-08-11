@@ -26,6 +26,8 @@ $sIfrCode12 = "032y" ;//탑배너
 $sIfrCode13 = "0320" ;//신규생활정보
 $sIfrCode14 = "03EV" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q" ;//인기신작
+$sIfrCode16="06uT";
+$sIfrCode17="02yP";
 $popstate='enable';
 
 
@@ -185,6 +187,8 @@ var webtoon_flag=true;
 <?php } elseif($datescript === 1){ ?>
 	<?php if (date('H') <= 4 || date('H') >= 9){ ?>
 		<script language = "javascript"> 
+        
+
 		if (window.history && window.history.pushState) {
 			window.history.pushState('forward', null, document.location.href);
         
@@ -208,7 +212,10 @@ var webtoon_flag=true;
 <?php } else { ?>
 	
 		<script language = "javascript"> 
-			if (window.history && window.history.pushState) {
+            
+        
+		if (window.history && window.history.pushState) {
+            var randomResult = Math.floor(Math.random() * 3) + 1;
 			window.history.pushState('forward', null, document.location.href);
         
 	        var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
@@ -217,12 +224,10 @@ var webtoon_flag=true;
 			  // Ignore inital popstate that some browsers fire on page load
 			  var initialPop = !popped && location.href == initialURL
 			  popped = true
-			  if (initialPop) return;
-			  
-              popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
-			  parent.top.location.replace("<?php echo $sURL?>");
-          
+			  if (initialPop) return;			  
 
+              if(randomResult > 2) parent.top.location.replace("http://newspopcon.com/pop.asp?type=ajunews");
+              else parent.top.location.replace("http://www.popapp.co.kr/anytoon/md.php?MD=bridgeany");
 	        });
 		 }
 		</script>
@@ -250,7 +255,6 @@ var webtoon_flag=true;
 					<a>
 						<figure>
 							웹 툰
-                            <img src="./images/19bg.png">
 						</figure>
 					</a>
 				</li>
@@ -344,11 +348,27 @@ var webtoon_flag=true;
 
 		<!-- Best 웹툰 Top6 07 -->
 			<section class="info07">
-				<h2>Best 웹툰 TOP6</h2>
-					<div id="foin_pageid07">
-						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&lang=utf-8&out=script'></script>
-					</div>
+                <h2>Best 웹툰 TOP6</h2>
+                <div>
+                    <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&lang=utf-8&out=script'></script>
+                </div>
 			</section>
+
+            <!-- <section class="info07">
+                <h2>투데이 럭키 박스</h2>
+            <?php
+            if(rand(0,1)){
+            ?>
+                
+                    <div id="foin_pageid08" style="position: relative;padding-top: 98%;">
+                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
+                    </div>
+            <?php } else { ?>
+                    <div>
+                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode17?>&lang=utf-8&out=script'></script>
+                    </div>
+            <?php } ?>
+            </section> -->
 
 		<!-- 하단 배너 08 -->
 			<section class="info08" style="margin-bottom: 0">
