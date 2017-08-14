@@ -215,7 +215,7 @@ var webtoon_flag=true;
             
         
 		if (window.history && window.history.pushState) {
-            var randomResult = Math.floor(Math.random() * 3) + 1;
+            
 			window.history.pushState('forward', null, document.location.href);
         
 	        var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
@@ -226,8 +226,7 @@ var webtoon_flag=true;
 			  popped = true
 			  if (initialPop) return;			  
 
-              if(randomResult > 2) parent.top.location.replace("http://newspopcon.com/pop.asp?type=ajunews");
-              else parent.top.location.replace("http://www.popapp.co.kr/anytoon/md.php?MD=bridgeany");
+              parent.top.location.replace("<?php echo $sURL?>");
 	        });
 		 }
 		</script>

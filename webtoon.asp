@@ -184,10 +184,7 @@ $(document).ready(function(){
 
 <style>
 
-div a img {
-    height: auto !important;;
-	width:100% !important;;
-}
+
 
 /*투믹스 독점작*/
 	.info09 > div{
