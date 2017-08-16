@@ -47,8 +47,6 @@
 			<ul>
 				<li data-id="scroll01">뉴 스</li>
 				<li data-id="scroll02">생활정보</li>
-				<li data-id="scroll03">핫토픽</li>
-				<li data-id="scroll04">인기웹툰</li>
 			</ul>
 		</nav>
 	</header>

@@ -15,6 +15,8 @@ $sIfrCode12 = "032y";  //탑배너
 $sIfrCode13 = "04Me";  //신규생활정보
 $sIfrCode14 = "03Ff";  //베스트신문보기 배너형
 $sIfrCode15 = "069Q";  // 인기신작
+$sIfrCode16 = "06uU" ;//우주마켓_배너
+$sIfrCode17 = "06uV" ;//우주마켓_썸네일
 $post_id='7';
 $popstate='disable';
 $press_url='http://newspopcon.com/any.asp?type=adpop';
@@ -40,6 +42,8 @@ $sIfrCode12 = "032y";  //탑배너
 $sIfrCode13 = "0321";  //신규생활정보
 $sIfrCode14 = "03Ff";  //베스트신문보기 배너형
 $sIfrCode15 = "065S";  //인기신작
+$sIfrCode16 = "06uU" ;//우주마켓_배너
+$sIfrCode17 = "06uV" ;//우주마켓_썸네일
 $post_id='3';
 $popstate='disable';
 $press_url='http://newspopcon.com/any.asp?type=moneyWe';

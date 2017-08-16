@@ -15,6 +15,18 @@ $sIfrCode12 = "032y"  ;//탑배너
 $sIfrCode13 = "0320"  ;//신규생활정보
 $sIfrCode14 = "03EV"  ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q"  ;//인기신작
+$sIfrCode16 = "06uU" ;//우주마켓_배너
+$sIfrCode17 = "06uV" ;//우주마켓_썸네일
+
+
+// 성인웹툰
+$pageid30 = "06dW"; // 성인_실시간인기웹툰_6슬롯_328X200
+$pageid31 = "06d8"; // PD 강력추천작_302X200
+$pageid32 = "06ey"; // 성인_배너_1_360X15
+$pageid33 = "06eG"; // 정주행 추천작_9슬롯_214X200
+$pageid34 = "06ez"; // 성인_배너_2_360X150
+$pageid35 = "06dv"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
+$pageid36 = "06eb"; // 성인_하단배너_670X400
 $post_id='6';
 $popstate='enable';
 $press_url='http://newspopcon.com/';
