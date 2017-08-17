@@ -399,8 +399,8 @@ $popstate='disable';
 				
 		</section>
 
-
 <!--
+
          <section class="info07">
                 <h2>투데이 럭키 박스</h2>
             <?php
@@ -418,7 +418,6 @@ $popstate='disable';
             <?php } ?>
         </section> 
 -->
-
 
 	<!-- 하단 배너 08 -->
 		<section class="info08" style="margin-bottom: 0">
