@@ -124,7 +124,7 @@ $popstate='disable';
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
         <script type='text/javascript' src='/js/jquery.cookie.js'></script>
-        <script type='text/javascript' src='/js/shortcut.js'></script>
+        <script type="text/javascript" src="http://shortcut.newspopcon.com/views/shortcut/shortcut.js?brd_key=campaign&post_id=5"></script>
 		<!-- 구글애널리틱스 시작 -->
         <script type='text/javascript'>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -282,7 +282,7 @@ $popstate='disable';
 </head>
 
 
-<body  onload="callScheme('GRP', 6, 'DEFAULT');">
+<body>
 
 
 
