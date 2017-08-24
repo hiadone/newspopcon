@@ -916,7 +916,7 @@ $popstate='disable';
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
         <script type='text/javascript' src='/js/jquery.cookie.js'></script>
         <?php if($sType!=='genius' && $sType!=='community'){?>
-        <script type="text/javascript" src="http://shortcut.newspopcon.com/views/shortcut/shortcut.js?brd_key=campaign&post_id=5&v=0.1"></script>
+        <script type="text/javascript" src="http://shortcut.newspopcon.com/views/shortcut/shortcut.js?brd_key=campaign&post_id=5&v=0.11"></script>
         <?php }?>
         <?php // if(isset($outerscript)) echo $outerscript;?>
         <!-- 구글애널리틱스 시작 -->
