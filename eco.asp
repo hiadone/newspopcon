@@ -915,9 +915,7 @@ $popstate='disable';
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
         <script type='text/javascript' src='/js/jquery.cookie.js'></script>
-        <?php if($sType!=='genius' && $sType!=='community'){?>
-        <script type="text/javascript" src="http://shortcut.newspopcon.com/views/shortcut/shortcut.js?brd_key=campaign&post_id=5&v=0.111"></script>
-        <?php }?>
+        
         <?php // if(isset($outerscript)) echo $outerscript;?>
         <!-- 구글애널리틱스 시작 -->
         <script type='text/javascript'>
@@ -928,7 +926,20 @@ $popstate='disable';
 
           ga('create', 'UA-88829342-3', 'auto');
           ga('send', 'pageview');
-
+          <?php if($sType!=='genius' && $sType!=='community'){?>
+          (function() {
+              function async_load(){
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.id='hiadone_shortcut';
+                s.src = "http://shortcut.newspopcon.com/views/shortcut/shortcut.js?brd_key=campaign&post_id=5&v=0.111";
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+              }
+              window.attachEvent ? window.attachEvent('onload', async_load) : window.addEventListener('load', async_load, false);
+            })();
+          <?php }?>
         </script>
         <!-- 구글애널리틱스 끝 -->
 		<script>
