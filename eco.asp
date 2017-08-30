@@ -1257,7 +1257,7 @@ $popstate='disable';
 
  	<!-- 하단 푸터 -->
 	 	<footer>
-	 		<a href="mailto:webtoonpopcon@gmail.com">
+	 		<a href="mailto:newspopcon@gmail.com">
 	 			<h3>
 	 				광 고 문 의 			 			
 	 			</h3>
