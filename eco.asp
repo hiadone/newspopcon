@@ -32,6 +32,8 @@ switch ($sType) {
         $sIfrCode13 = "0320" ; //신규생활정보
         $sIfrCode14 = "03EV" ; //베스트신문보기 배너형
         $sIfrCode15 = "065R" ;//인기신작
+        $sIfrCode16="06uT";
+        $sIfrCode17="02yP";
         break;
 
     case "community": // 지니어스 커뮤니티
