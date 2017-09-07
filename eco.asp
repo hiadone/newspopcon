@@ -916,34 +916,8 @@ $popstate='disable';
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
-        <script type='text/javascript' src='/js/jquery.cookie.js'></script>
+        <script type='text/javascript' src="/common/js/com.js"></script>
         
-        <?php // if(isset($outerscript)) echo $outerscript;?>
-        <!-- 구글애널리틱스 시작 -->
-        <script type='text/javascript'>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-88829342-3', 'auto');
-          ga('send', 'pageview');
-          <?php if($sType!=='genius' && $sType!=='community'){?>
-          (function() {
-              function async_load(){
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = true;
-                s.id='hiadone_shortcut';
-                s.src = "http://shortcut.newspopcon.com/views/shortcut/shortcut.js?brd_key=campaign&post_id=5&v=0.111";
-                var x = document.getElementsByTagName('script')[0];
-                x.parentNode.insertBefore(s, x);
-              }
-              window.attachEvent ? window.attachEvent('onload', async_load) : window.addEventListener('load', async_load, false);
-            })();
-          <?php }?>
-        </script>
-        <!-- 구글애널리틱스 끝 -->
 		<script>
         var webtoon_flag=true;
 			$(document).ready(function(){
@@ -956,14 +930,14 @@ $popstate='disable';
 
 				$('header nav ul li').click(function(){
                     if($(this).index()==1){
-                        $.cookie("nav_eco_<?php echo $sType?>_flag", 1);
+                        set_cookie("nav_eco_<?php echo $sType?>_flag", 1);
                         if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $sType?>&webtoon_type=eco');
                             webtoon_flag=false;
                         }
                         $("#newspopcon").hide();
                         $("#webtoon").fadeIn();
                     } else {
-                        $.cookie("nav_eco_<?php echo $sType?>_flag", 0);
+                        set_cookie("nav_eco_<?php echo $sType?>_flag", 0);
                         $('html , body').animate({scrollTop : 0});
                         $("#webtoon").hide();
                         $("#newspopcon").fadeIn();
@@ -980,7 +954,7 @@ $popstate='disable';
 		   //scrollTop 의 위치 0으로 지정
 				$('html , body').animate({scrollTop : 0 });
 
-                if($.cookie("nav_eco_<?php echo $sType?>_flag")==1) $('header nav ul li:nth-child(2)').click();
+                if(get_cookie("nav_eco_<?php echo $sType?>_flag")==1) $('header nav ul li:nth-child(2)').click();
 			//서브메뉴 클릭시 scroll bar 이동 
 				
 		    //홈버튼 클릭시 top 으로 이동
@@ -988,14 +962,7 @@ $popstate='disable';
 		    		$('html , body').animate({scrollTop : 0});
 		    	});
 
-                <?php 
-                if($post_id){
-                        ?>
-                         popstateStat("<?php echo $post_id?>");
-                        <?php
-                    
-                }
-                 ?>
+                
 
                 <?php if(isset($outerscript)){ ?>
                     $.ajax({

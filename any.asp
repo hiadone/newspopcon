@@ -125,80 +125,58 @@ $popstate='disable';
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
-        <script type='text/javascript' src='/js/jquery.cookie.js'></script>
-        
-		<!-- 구글애널리틱스 시작 -->
-        <script type='text/javascript'>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-88829342-3', 'auto');
-          ga('send', 'pageview');
-          (function() {
-              function async_load(){
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = true;
-                s.id='hiadone_shortcut';
-                s.src = "http://shortcut.newspopcon.com/views/shortcut/shortcut.js?brd_key=campaign&post_id=5&v=0.111";
-                var x = document.getElementsByTagName('script')[0];
-                x.parentNode.insertBefore(s, x);
-              }
-              window.attachEvent ? window.attachEvent('onload', async_load) : window.addEventListener('load', async_load, false);
-            })();
-        </script>
-        <!-- 구글애널리틱스 끝 -->
+        <script type='text/javascript' src="/common/js/com.js"></script>
 		<script>
         var webtoon_flag=true;
-			$(document).ready(function(){
+		$(document).ready(function(){
 			// //로딩후 첫번째 메인 메뉴의 배경색상 변경
 			// 	$('header nav ul li:first-child').css('background-color' , '#fd8c30');
 			//클릭한 메뉴의 배경 색상 변경
-				$('header nav ul li').click(function(){
+			$('header nav ul li').click(function(){
 
-                    if($(this).index()==1){
-                        $.cookie("nav_any_<?php echo $sType?>_flag", 1);
-                        if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $sType?>&webtoon_type=any');
-                            webtoon_flag=false;
-                        }
-                        $("#newspopcon").hide();
-                        $("#webtoon").fadeIn();
-                    } else {
-                        $.cookie("nav_any_<?php echo $sType?>_flag", 0);
-                        $('html , body').animate({scrollTop : 0});
-                        $("#webtoon").hide();
-                        $("#newspopcon").fadeIn();
+                if($(this).index()==1){
+                    set_cookie("nav_<?php echo $sType?>_flag", 1);
+                    if(webtoon_flag) {$("#webtoon").load('./webtoon.asp?type=<?php echo $sType?>&webtoon_type=any');
+                        webtoon_flag=false;
                     }
-                    $('header nav ul li').removeClass('active');
-                    $(this).addClass('active');
-                    
-                });
-			//header의 높이값 계산
-				// var hei =$('header').height() - 6
-				// $('header').css('height' , hei);
-
-		   //scrollTop 의 위치 0으로 지정
-				$('html , body').animate({scrollTop : 0 });
-
-                if($.cookie("nav_any_<?php echo $sType?>_flag")==1) $('header nav ul li:nth-child(2)').click();
-			
-				
-		    //홈버튼 클릭시 top 으로 이동
-		    	$('header h1 span img').click(function(){
-		    		$('html , body').animate({scrollTop : 0});
-		    	});
-
-
-		    	<?php 
-                if($post_id){
-                        ?>
-                         popstateStat("<?php echo $post_id?>");
-                        <?php
-                    
+                    $("#newspopcon").hide();
+                    $("#webtoon").fadeIn();
+                } else {
+                    set_cookie("nav_<?php echo $sType?>_flag", 0);
+                    $('html , body').animate({scrollTop : 0});
+                    $("#webtoon").hide();
+                    $("#newspopcon").fadeIn();
                 }
-                 ?>
+                $('header nav ul li').removeClass('active');
+                $(this).addClass('active');
+                
+            });
+		//header의 높이값 계산
+			// var hei =$('header').height() - 6
+			// $('header').css('height' , hei);
+
+	   //scrollTop 의 위치 0으로 지정
+			$('html , body').animate({scrollTop : 0 });
+
+            if(get_cookie("nav_<?php echo $sType?>_flag")==1) $('header nav ul li:nth-child(2)').click();
+		
+			
+	    //홈버튼 클릭시 top 으로 이동
+	    	$('header h1 span img').click(function(){
+	    		$('html , body').animate({scrollTop : 0});
+	    	});
+
+
+	    	/*
+            <?php 
+            if($post_id){
+                    ?>
+                     popstateStat("<?php echo $post_id?>");
+                    <?php
+                
+            }
+             ?>
+            */
 	});
 
 	function popstateStat(post_id,link_id) {
@@ -411,26 +389,6 @@ $popstate='disable';
             </div>
 				
 		</section>
-
-<!--
-
-         <section class="info07">
-                <h2>투데이 럭키 박스</h2>
-            <?php
-            if(rand(0,1)){
-            ?>
-                
-                    <div id="foin_pageid08" style="position: relative;padding-top: 98%;">
-                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
-                        
-                    </div>
-            <?php } else { ?>
-                    <div>
-                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode17?>&lang=utf-8&out=script'></script>
-                    </div>
-            <?php } ?>
-        </section> 
--->
 
 	<!-- 하단 배너 08 -->
 		<section class="info08" style="margin-bottom: 0">
