@@ -664,7 +664,7 @@ $popstate='disable';
 			  popped = true
 			  if (initialPop) return;
 			  
-              popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
+             // popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 
@@ -687,7 +687,7 @@ $popstate='disable';
 			  popped = true
 			  if (initialPop) return;
 			  
-              popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
+              //popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
 			  parent.top.location.replace("<?php echo $sURL?>");
           
 

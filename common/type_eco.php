@@ -195,7 +195,7 @@ $press_url='http://newspopcon.com/eco.asp?type=tfnews';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
-$post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=tfnews';
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=fnews';
 $post_link[0]['pln_id']='32';
 }
 if($sType=='community3'){
@@ -361,7 +361,7 @@ $press_url='http://newspopcon.com/eco.asp?type=topstarnews';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
-$post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=topstarnews';
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=topstarnews';
 $post_link[0]['pln_id']='27';
 }
 if($sType=='adcommunity'){

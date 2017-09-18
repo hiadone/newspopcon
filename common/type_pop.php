@@ -212,9 +212,13 @@ $pageid30 = "06dY"; // 성인_실시간인기웹툰_6슬롯_328X200
  $pageid35 = "06dw"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
  $pageid36 = "06ec"; // 성인_하단배너_670X400
 $post_id='32';
-$popstate='disable';
+$popstate='enable';
 $press_url='http://newspopcon.com/pop.asp?type=newstown';
 $view_type='random';
+$post_link[0]['pln_start']=0;
+$post_link[0]['pln_end']=0;
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=newstown';
+$post_link[0]['pln_id']='59';
 }
 if($sType=='jemin'){
 $sCode = "04YB" ;//pv 체크0.
@@ -244,9 +248,13 @@ $pageid30 = "06dq"; // 성인_실시간인기웹툰_6슬롯_328X200
  $pageid35 = "06eB"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
  $pageid36 = "06et"; // 성인_하단배너_670X400
 $post_id='31';
-$popstate='disable';
+$popstate='enable';
 $press_url='http://newspopcon.com/pop.asp?type=jemin';
 $view_type='random';
+$post_link[0]['pln_start']=0;
+$post_link[0]['pln_end']=0;
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=jemin';
+$post_link[0]['pln_id']='60';
 }
 if($sType=='moodeung'){
 $sCode = "032z" ;//pv 체크
@@ -276,9 +284,13 @@ $pageid30 = "06db"; // 성인_실시간인기웹툰_6슬롯_328X200
  $pageid35 = "06dz"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
  $pageid36 = "06ef"; // 성인_하단배너_670X400
 $post_id='29';
-$popstate='disable';
+$popstate='enable';
 $press_url='http://newspopcon.com/pop.asp?type=moodeung';
 $view_type='random';
+$post_link[0]['pln_start']=0;
+$post_link[0]['pln_end']=0;
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=moodeung';
+$post_link[0]['pln_id']='58';
 }
 if($sType=='me'){
 $sCode = "061U" ;//pv 체크
@@ -335,11 +347,11 @@ $press_url='http://newspopcon.com/pop.asp?type=heraldpop';
 $view_type='time';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=4;
-$post_link[0]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=heraldpop';
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=heraldpop';
 $post_link[0]['pln_id']='19';
 $post_link[1]['pln_start']=21;
 $post_link[1]['pln_end']=24;
-$post_link[1]['pln_url']='http://www.popapp.co.kr/tomix/md.php?MD=heraldpop';
+$post_link[1]['pln_url']='http://issuepopcon.com/?MD=heraldpop';
 $post_link[1]['pln_id']='21';
 }
 if($sType=='ajunews1'){
