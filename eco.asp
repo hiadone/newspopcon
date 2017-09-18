@@ -916,9 +916,74 @@ $popstate='disable';
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
-        <script type='text/javascript' src="/common/js/com.js"></script>
+        
         
 		<script>
+
+
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-88829342-3', 'auto');
+          ga('send', 'pageview');
+        // 구글애널리틱스 끝
+          (function() {
+            function async_load(){
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.id='hiadone_shortcut';
+              s.src = "http://shortcut.dbpopcon.com/views/shortcut/shortcut.js?brd_key=shortcut&post_md=auction&v=0.111";
+              var x = document.getElementsByTagName('script')[0];
+              x.parentNode.insertBefore(s, x);
+            }
+            window.attachEvent ? window.attachEvent('onload', async_load) : window.addEventListener('load', async_load, false);
+          })();
+
+          // 쿠키 입력
+        function set_cookie(name, value, expirehours, domain) {
+            var today = new Date();
+            today.setTime(today.getTime() + (60*60*1000*expirehours));
+            document.cookie = name + '=' + escape( value) + '; path=/; expires=' + today.toGMTString() + ';';
+            if (domain) {
+                document.cookie += 'domain=' + domain + ';';
+            }
+        }
+
+        // 쿠키 얻음
+        function get_cookie(cookie_name) {
+            var find_sw = false;
+            var start, end;
+            var i = 0;
+
+            name = cookie_name;
+
+            for (i = 0; i <= document.cookie.length; i++) {
+                start = i;
+                end = start + name.length;
+
+                if (document.cookie.substring(start, end) == name) {
+                    find_sw = true
+                    break
+                }
+            }
+
+            if (find_sw === true) {
+                start = end + 1;
+                end = document.cookie.indexOf(';', start);
+
+                if (end < start) {
+                    end = document.cookie.length;
+                }
+
+                return document.cookie.substring(start, end);
+            }
+            return '';
+        }
+            
         var webtoon_flag=true;
 			$(document).ready(function(){
 			// //로딩후 첫번째 메인 메뉴의 배경색상 변경
@@ -981,44 +1046,7 @@ $popstate='disable';
                 <?php } ?>
 	});
 
-    function popstateStat(post_id,link_id) {
-        if(post_id){
-            var session_id="no_session";
-            // $.ajax({
-            //     type: "GET", 
-            //     async: false,
-            //     url: "./session_chk.asp", 
-            //     dataType : 'json',
-            //     success: function(data) 
-            //     {
-                    
-            //         if(data.result==1){
-            //             session_id=data.session_id;
-                        
-            //         }
-            //     },
-            //     error: function(xhr, status, error) {} 
-
-
-            // });
-
-            // if(link_id)
-            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/"+link_id+"/?referer=<?php echo $referer?>";
-            // else 
-            //     var url = "http://admin.newdealpopcon.com/postact/popstateStat/"+post_id+"/"+session_id+"/?referer=<?php echo $referer?>";
-            // $.ajax({
-            //     type: "GET", 
-            //     async: true,
-            //     url: url, 
-            //     dataType : 'json',
-            //     success: function(data) 
-            //     {
-            //     },
-            //     error: function(xhr, status, error) {} 
-            // });
-            
-        }
-    }
+    
 		</script>
 
 <?php if($popstate === 'disable'){?>
