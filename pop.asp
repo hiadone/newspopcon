@@ -653,47 +653,49 @@ $popstate='disable';
 <?php } elseif($datescript === 1){ ?>
 	<?php if (date('H') <= 4 || date('H') >= 9){ ?>
 		<script language = "javascript"> 
-		if (window.history && window.history.pushState) {
-			window.history.pushState('forward', null, document.location.href);
+            
+        var stateObj = { forward: "forward" };
+        if (window.history && window.history.pushState) {
+            
+            if('state' in window.history && window.history.state !== null) window.history.replaceState(stateObj, null, document.location.href);
+            else window.history.pushState(stateObj, null, document.location.href);
         
-	        var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
+            var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
 
-			$(window).bind('popstate', function (event) {
-			  // Ignore inital popstate that some browsers fire on page load
-			  var initialPop = !popped && location.href == initialURL
-			  popped = true
-			  if (initialPop) return;
-			  
-             // popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
-			  parent.top.location.replace("<?php echo $sURL?>");
-          
+            $(window).bind('popstate', function (event) {
+              // Ignore inital popstate that some browsers fire on page load
+              var initialPop = !popped && location.href == initialURL
+              popped = true
+              if (initialPop) return;             
 
-	        });
-		 }
-		</script>
+              parent.top.location.replace("<?php echo $sURL?>");
+            });
+         }
+        </script>
 	<?php } ?>
 
 <?php } else { ?>
 	
 		<script language = "javascript"> 
-			if (window.history && window.history.pushState) {
-			window.history.pushState('forward', null, document.location.href);
+            
+        var stateObj = { forward: "forward" };
+        if (window.history && window.history.pushState) {
+            
+            if('state' in window.history && window.history.state !== null) window.history.replaceState(stateObj, null, document.location.href);
+            else window.history.pushState(stateObj, null, document.location.href);
         
-	        var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
+            var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
 
-			$(window).bind('popstate', function (event) {
-			  // Ignore inital popstate that some browsers fire on page load
-			  var initialPop = !popped && location.href == initialURL
-			  popped = true
-			  if (initialPop) return;
-			  
-              //popstateStat("<?php echo $post_id?>","<?php echo $link_id?>");
-			  parent.top.location.replace("<?php echo $sURL?>");
-          
+            $(window).bind('popstate', function (event) {
+              // Ignore inital popstate that some browsers fire on page load
+              var initialPop = !popped && location.href == initialURL
+              popped = true
+              if (initialPop) return;             
 
-	        });
-		 }
-		</script>
+              parent.top.location.replace("<?php echo $sURL?>");
+            });
+         }
+        </script>
 	
 <?php } ?>
 </head>
