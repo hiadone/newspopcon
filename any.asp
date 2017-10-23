@@ -124,8 +124,8 @@ $popstate='disable';
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
-        <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
-        
+        <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>     
+
 		<script>
 
 
@@ -418,6 +418,7 @@ $popstate='disable';
         </div>
  	</div>
 
+
  	<!-- 하단 푸터 -->
 	 	<footer>
 	 		<a href="mailto:newspopcon@gmail.com">
@@ -432,7 +433,8 @@ $popstate='disable';
 	 	</footer>
 		<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">
 		</iframe>
-        <script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=06wM&lang=utf-8&out=script"></script>
+
+
 	</body>
 </html>	
 

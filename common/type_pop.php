@@ -1,38 +1,100 @@
 <?php
+if($sType=='kpinews'){
+$sCode = "07VR" ;//pv 체크0.
+$sIfrCode1 = "02pJ" ;// 전체기사
+$sIfrCode2 = "02pK" ;// 포토뉴스
+$sIfrCode3 = "02pE" ;// 많이본 뉴스
+$sIfrCode4 = "02pG" ;// 베스트 신문보기
+$sIfrCode5 = "02pF" ;// 주간 핫 리포트
+$sIfrCode7 = "02pH" ;// 요일별 웹툰
+$sIfrCode8 = "02pI" ;// 인기웹툰
+$sIfrCode9 = "02yR" ;// 베스트TV
+$sIfrCode10 = "02uA" ;// 푸터배너
+$sIfrCode11 = "02yR" ;// 베스트웹툰 랜덤
+$sIfrCode13 = "0322" ;//신규생활정보
+$sIfrCode15 = "065T" ;//인기신작
+
+// 성인웹툰
+$pageid30 = "06dc"; // 성인_실시간인기웹툰_6슬롯_328X200
+ $pageid31 = "06dD"; // PD 강력추천작_302X200
+ $pageid32 = "06ey"; // 성인_배너_1_360X15
+ $pageid33 = "06eL"; // 정주행 추천작_9슬롯_214X200
+ $pageid34 = "06ez"; // 성인_배너_2_360X150
+ $pageid35 = "06e0"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
+ $pageid36 = "06ei"; // 성인_하단배너_670X400
+$post_id='101';
+$popstate='enable';
+$press_url='http://newspopcon.com/pop.asp?type=kpinews';
+$view_type='random';
+$post_link[0]['pln_start']=0;
+$post_link[0]['pln_end']=0;
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=kpinews';
+$post_link[0]['pln_id']='63';
+}
+if($sType=='energy'){
+$sCode = "07PV" ;//pv 체크
+$sIfrCode1 = "050z" ;// 전체기사
+$sIfrCode2 = "0519" ;// 포토뉴스
+$sIfrCode3 = "050y" ;// 많이본 뉴스
+$sIfrCode4 = "0510" ;// 베스트 신문보기
+$sIfrCode5 = "0511" ;// 주간 핫 리포트
+$sIfrCode7 = "0517" ;// 요일별 웹툰
+$sIfrCode8 = "0518" ;// 인기웹툰
+$sIfrCode9 = "02yX" ;// 베스트TV
+$sIfrCode10 = "051B" ;// 푸터배너
+$sIfrCode11 = "02yX" ;// 베스트웹툰 랜덤
+$sIfrCode12 = "032y" ;//탑배너
+$sIfrCode13 = "051A" ;//신규생활정보
+$sIfrCode14 = "03Ff" ;//베스트신문보기 배너형
+$sIfrCode15 = "07PN" ;//인기신작
+
+// 성인웹툰
+$pageid30 = "07PK"; // 성인_실시간인기웹툰_6슬롯_328X200
+ $pageid31 = "07PI"; // PD 강력추천작_302X200
+ $pageid32 = "06ey"; // 성인_배너_1_360X15
+ $pageid33 = "07PL"; // 정주행 추천작_9슬롯_214X200
+ $pageid34 = "06ez"; // 성인_배너_2_360X150
+ $pageid35 = "07PJ"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
+ $pageid36 = "07PM"; // 성인_하단배너_670X400
+$post_id='89';
+$popstate='enable';
+$press_url='http://newspopcon.com/pop.asp?type=energy';
+$view_type='random';
+$post_link[0]['pln_start']=0;
+$post_link[0]['pln_end']=0;
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=energy';
+$post_link[0]['pln_id']='61';
+}
 if($sType=='ajunews'){
 $sCode = "03Fg" ;//pv 체크
 $sIfrCode1 = "03CR" ;// 전체기사
-$sIfrCode2 = "02pb" ;// 포토뉴스
+$sIfrCode2 = "03CU" ;// 포토뉴스
 $sIfrCode3 = "03CM" ;// 많이본 뉴스
 $sIfrCode4 = "03CO" ;// 베스트 신문보기
-$sIfrCode5 = "02pW" ;// 주간 핫 리포트
-$sIfrCode7 = "02pY" ;// 요일별 웹툰
-$sIfrCode8 = "02pZ" ;// 인기웹툰
-$sIfrCode9 = "02yX" ;// 베스트TV
- $sIfrCode10 = "02uF" ;// 푸터배너
-$sIfrCode11 = "02yX" ;// 베스트웹툰 랜덤
-$sIfrCode12 = "032y" ;//탑배너
+$sIfrCode5 = "03CN" ;// 주간 핫 리포트
+$sIfrCode7 = "03CP" ;// 요일별 웹툰
+$sIfrCode8 = "03CQ" ;// 인기웹툰
+$sIfrCode9 = "03CT" ;// 베스트TV
+ $sIfrCode10 = "03CV" ;// 푸터배너
+$sIfrCode11 = "03CT" ;// 베스트웹툰 랜덤
 $sIfrCode13 = "03CW" ;//신규생활정보
-$sIfrCode14 = "03Ff" ;//베스트신문보기 배너형
-$sIfrCode15 = "065T" ;//인기신작
-$sIfrCode16 = "06uU" ;//우주마켓_배너
-$sIfrCode17 = "06uV" ;//우주마켓_썸네일
+$sIfrCode15 = "065U" ;//인기신작
 
 // 성인웹툰
-$pageid30 = "06dd"; // 성인_실시간인기웹툰_6슬롯_328X200
- $pageid31 = "06dE"; // PD 강력추천작_302X200
+$pageid30 = "06dn"; // 성인_실시간인기웹툰_6슬롯_328X200
+ $pageid31 = "06dL"; // PD 강력추천작_302X200
  $pageid32 = "06ey"; // 성인_배너_1_360X15
- $pageid33 = "06eM"; // 정주행 추천작_9슬롯_214X200
+ $pageid33 = "06eT"; // 정주행 추천작_9슬롯_214X200
  $pageid34 = "06ez"; // 성인_배너_2_360X150
- $pageid35 = "06e1"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
- $pageid36 = "06ej"; // 성인_하단배너_670X400
+ $pageid35 = "06e8"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
+ $pageid36 = "06eq"; // 성인_하단배너_670X400
 $post_id='74';
 $popstate='enable';
 $press_url='http://newspopcon.com/pop.asp?type=ajunews';
 $view_type='random';
 $post_link[0]['pln_start']=0;
 $post_link[0]['pln_end']=0;
-$post_link[0]['pln_url']='http://www.popapp.co.kr/anytoon/md.php?MD=ajunews';
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=ajunews';
 $post_link[0]['pln_id']='53';
 }
 if($sType=='edaily'){
@@ -125,9 +187,13 @@ $pageid30 = "06lm"; // 성인_실시간인기웹툰_6슬롯_328X200
  $pageid35 = "06ll"; // 성인_당신의 판타지를 이뤄줄 그녀들_214X200
  $pageid36 = "06lo"; // 성인_하단배너_670X400
 $post_id='64';
-$popstate='disable';
+$popstate='enable';
 $press_url='http://newspopcon.com/pop.asp?type=moreadd';
 $view_type='random';
+$post_link[0]['pln_start']=0;
+$post_link[0]['pln_end']=0;
+$post_link[0]['pln_url']='http://issuepopcon.com/?MD=moreadd';
+$post_link[0]['pln_id']='62';
 }
 if($sType=='bridgeany'){
 $sCode = "02pn" ;//pv 체크0.
