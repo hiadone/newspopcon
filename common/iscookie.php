@@ -9,6 +9,7 @@ foreach($cookie_array as $key => $value){
     
     if($value===$cookie_value) {
         $result['iscookie']=1;
+        $cookie_array='';
         exit(json_encode($result));
         return;
     }
