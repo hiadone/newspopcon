@@ -936,7 +936,7 @@ $popstate='disable';
               s.type = 'text/javascript';
               s.async = true;
               s.id='hiadone_shortcut';
-              s.src = "http://shortcut.dbpopcon.com/views/shortcut/shortcut.js?brd_key=shortcut&post_md=auction&v=0.111";
+              s.src = "/common/type_shortcut.js?brd_key=shortcut&post_md=auction&v=0.1111";
               var x = document.getElementsByTagName('script')[0];
               x.parentNode.insertBefore(s, x);
             }
