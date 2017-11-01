@@ -209,17 +209,7 @@ $(document).ready(function(){
     
     
     
-    $.ajax({
-        type:"GET",
-        data: "cookie_value="+cookie_value, 
-        url:"/common/iscookie.php",
-        dataType : "json",
-        success:function(res){  
-            
-            if(res.iscookie==1){
-                console.log("[ iscookie : "+res.iscookie+" ]");
-                return;
-            }
+    
 
             var ua = navigator.userAgent.toLowerCase();
             
@@ -265,11 +255,21 @@ $(document).ready(function(){
                 //styles += "#adbottom img { max-width:100%; max-height:150px; vertical-align: bottom; }";
                 //styles += "img { max-width:100%; vertical-align: bottom; }";
                 
-                
-                
-                set_cookie(shortcut_cookie_name,cookie_value,(60*60*24*30));
+    $.ajax({
+        type:"GET",
+        data: "cookie_value="+short_val, 
+        url:"/common/iscookie.php",
+        dataType : "json",
+        success:function(res){  
+            
+            if(res.iscookie==1){
+                console.log("[ iscookie : "+res.iscookie+" ]");
+                return;
+            }    
+        
+            set_cookie(shortcut_cookie_name,cookie_value,(60*60*24*30));
 
-                setTimeout( "documentWrite(\''.$content.'\',\''.$icon.'\',\'"+cookie_value+"\');", ('.$extra_vars["execute_time"].'*1000));
+            setTimeout( "documentWrite(\''.$content.'\',\''.$icon.'\',\'"+cookie_value+"\');", ('.$extra_vars["execute_time"].'*1000));
         }
     });       
     

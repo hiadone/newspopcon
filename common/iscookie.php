@@ -7,7 +7,7 @@ $result=array();
 $result['iscookie']=0;
 foreach($cookie_array as $key => $value){
     
-    if($value===$cookie_value) {
+    if($value===$cookie_value && !empty($cookie_value)) {
         $result['iscookie']=1;
         $cookie_array='';
         exit(json_encode($result));
