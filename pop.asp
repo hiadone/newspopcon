@@ -643,6 +643,30 @@ $popstate='disable';
 		    		$('html , body').animate({scrollTop : 0});
 		    	});
 
+
+                
+            <?php if($_GET['brd_key']==='mobusi'){ 
+              $locationUrl.='?param2='.$_GET['param2'].'&param3='.$_GET['param3'].'&param1='.$_GET['param1'];
+              ?>
+              
+              $('section').bind('click',function(){
+                $.ajax({
+                    type: "GET", 
+                    async: true,
+                    data: "PREFIJO=<?=$_GET['param2']?>&PUBID=<?=$_GET['param3']?>&PIXEL=<?=$_GET['param1']?>", 
+                    url: "http://dbpopcon.com/postact/mobusi_click/<?=$_GET['type']?>/<?=$_GET['brd_key']?>",
+                    dataType : 'json',
+                    success: function(data) 
+                    {
+                    },
+                    error: function(xhr, status, error) {} 
+                });
+
+            });
+
+            <?php } ?>
+                
+
 	});
 
     
