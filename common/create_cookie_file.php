@@ -1,8 +1,8 @@
 <?php
-include_once "./dc_dbpdomysql.php";
-include_once "./db_mysql.php";
+include_once "/home/newspopcon/www/common/dc_dbpdomysql.php";
+include_once "/home/newspopcon/www/common/db_mysql.php";
 
-include_once "./database_campaign.php";
+include_once "/home/newspopcon/www/common/database_campaign.php";
 
 $db_db = new DB_mysql($db['dsn'],$db['username'],$db['password']) ;
 $db_db2 = new DB_mysql($db['dsn'],$db['username'],$db['password']) ;

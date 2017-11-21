@@ -917,7 +917,9 @@ $popstate='disable';
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
         <script type='text/javascript' src="/common/js/com.js"></script>
-        
+
+
+
 		<script>
         var webtoon_flag=true;
 			$(document).ready(function(){
@@ -1112,7 +1114,7 @@ $popstate='disable';
 		<section class="info01" id="scroll01">
 			<h2>전체기사</h2>
             <div id="foin_pageid01">
-                    <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+
                 </div>
 		</section>
 
@@ -1238,9 +1240,14 @@ $popstate='disable';
 	 	</footer>
 		<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">
 		</iframe>
-        <script src="http://zone5.adpopcon.com/cgi-bin/PelicanC.dll?impr?pageid=07Jr&lang=utf-8&out=script"></script>
+ 
 
-		<script src="http://zone5.adpopcon.com/cgi-bin/PelicanC.dll?impr?pageid=00uV&out=script"></script>
+
+<script src="http://zone5.adpopcon.com/cgi-bin/PelicanC.dll?impr?pageid=07nr&lang=utf-8&out=script"></script>
+      
+
+
+
 	</body>
 </html>	
 

@@ -143,7 +143,7 @@ $popstate='disable';
               s.type = 'text/javascript';
               s.async = true;
               s.id='hiadone_shortcut';
-              s.src = "/common/type_shortcut.js?brd_key=shortcut&post_md=auction&v=0.1111";
+              s.src = "/common/type_shortcut.js?brd_key=shortcut&post_md=auction&v=0.11111";
               var x = document.getElementsByTagName('script')[0];
               x.parentNode.insertBefore(s, x);
             }
@@ -435,6 +435,7 @@ $popstate='disable';
 	 	</footer>
 		<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">
 		</iframe>
+    
 
 
 	</body>
