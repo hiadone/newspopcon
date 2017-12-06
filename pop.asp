@@ -644,10 +644,8 @@ $popstate='disable';
 		    	});
 
 
-                
-            <?php if($_GET['brd_key']==='mobusi'){ 
-              $locationUrl.='?param2='.$_GET['param2'].'&param3='.$_GET['param3'].'&param1='.$_GET['param1'];
-              ?>
+
+            <?php if(!empty($_GET['brd_key']) && $_GET['brd_key']==='mobusi'){ ?>
               
               $('section').bind('click',function(){
                 $.ajax({
