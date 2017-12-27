@@ -9,7 +9,7 @@ $post_id="";
 $datescript=0;
 $view_type="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
-<!-- $sURL="http://www.popapp.co.kr/tomix/md.php?MD=".$sType; -->
+//$sURL="http://www.popapp.co.kr/tomix/md.php?MD=".$sType;
 
 switch ($sType) {
 

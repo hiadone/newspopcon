@@ -9,8 +9,8 @@ $datescript=0;
 $view_type="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 
-
-<!-- $sURL="http://www.popapp.co.kr/tomix/md.php?MD=default";
+/*
+$sURL="http://www.popapp.co.kr/tomix/md.php?MD=default";
 $sCode = "05Ps" ;//pv 체크
 $sIfrCode1 = "01Ca" ;// 전체기사
 $sIfrCode2 = "01Cb" ;// 포토뉴스
@@ -28,8 +28,8 @@ $sIfrCode14 = "03EV" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q" ;//인기신작
 $sIfrCode16="06uT";
 $sIfrCode17="02yP";
-$popstate='enable'; -->
-
+$popstate='enable';
+*/
 
 include_once "common/type_hiadone_newspopcon.php";
 
