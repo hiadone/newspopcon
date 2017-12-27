@@ -10,7 +10,7 @@ $view_type="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 
 
-$sURL="http://www.popapp.co.kr/tomix/md.php?MD=default";
+<!-- $sURL="http://www.popapp.co.kr/tomix/md.php?MD=default";
 $sCode = "05Ps" ;//pv 체크
 $sIfrCode1 = "01Ca" ;// 전체기사
 $sIfrCode2 = "01Cb" ;// 포토뉴스
@@ -28,7 +28,7 @@ $sIfrCode14 = "03EV" ;//베스트신문보기 배너형
 $sIfrCode15 = "065Q" ;//인기신작
 $sIfrCode16="06uT";
 $sIfrCode17="02yP";
-$popstate='enable';
+$popstate='enable'; -->
 
 
 include_once "common/type_hiadone_newspopcon.php";
@@ -360,11 +360,11 @@ var webtoon_flag=true;
             ?>
                 
                     <div id="foin_pageid08" style="position: relative;padding-top: 98%;">
-                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
+                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
                     </div>
             <?php } else { ?>
                     <div>
-                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode17?>&lang=utf-8&out=script'></script>
+                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode17?>&lang=utf-8&out=script'></script>
                     </div>
             <?php } ?>
             </section> 

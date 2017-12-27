@@ -8,7 +8,7 @@ $link_id="";
 $post_id="";
 $datescript=0;
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
-$sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
+<!-- $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType; -->
 $view_type="";
 switch ($sType) {
  	
@@ -55,7 +55,7 @@ switch ($sType) {
         $sIfrCode14 = "03Ff"; //베스트신문보기 배너형
         $sIfrCode15 = "065S"; //인기신작
 		break;
-	default:
+	<!-- default:
  		$popstate = 'enable';
 		$sCode = "02ca"; //pv 체크
 		$sIfrCode1 = "02cI";	// 전체기사
@@ -71,7 +71,7 @@ switch ($sType) {
 	    $sIfrCode12 = "032y";  //탑배너
 		$sIfrCode13 = "0321";  //신규생활정보
 		$sIfrCode14 = "03Ff";  //베스트신문보기 배너형
- 		break;
+ 		break; -->
  }
 
 include_once "common/type_any.php";

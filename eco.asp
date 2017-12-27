@@ -9,7 +9,7 @@ $post_id="";
 $datescript=0;
 $outerscript="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
-$sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
+<!-- $sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType; -->
 $view_type="";
 switch ($sType) {
 
@@ -845,7 +845,7 @@ switch ($sType) {
 
     
         
-default:
+<!-- default:
         $popstate = 'enable';
         $sCode = "02ca"; //pv 체크
         $sIfrCode1 = "02cI";    // 전체기사
@@ -861,7 +861,7 @@ default:
         $sIfrCode12 = "032y";  //탑배너
         $sIfrCode13 = "0321";  //신규생활정보
         $sIfrCode14 = "03Ff";  //베스트신문보기 배너형
-        break;
+        break; -->
  } 
 
 include_once "common/type_eco.php";
@@ -1222,24 +1222,23 @@ $popstate='disable';
 				
 		</section>
 
-
-<!--
+<!-- 
     <section class="info07">
                 <h2>투데이 럭키 박스</h2>
-            <?php
+            <?php            
             if(rand(0,1)){
             ?>
                 
                     <div id="foin_pageid08" style="position: relative;padding-top: 98%;">
-                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
+                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
                     </div>
             <?php } else { ?>
                     <div>
-                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode17?>&lang=utf-8&out=script'></script>
+                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode17?>&lang=utf-8&out=script'></script>
                     </div>
             <?php } ?>
         </section> 
--->
+ -->
 
 
 	<!-- 하단 배너 08 -->

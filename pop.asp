@@ -9,7 +9,7 @@ $post_id="";
 $datescript=0;
 $view_type="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
-$sURL="http://www.popapp.co.kr/tomix/md.php?MD=".$sType;
+<!-- $sURL="http://www.popapp.co.kr/tomix/md.php?MD=".$sType; -->
 
 switch ($sType) {
 
@@ -458,24 +458,7 @@ break;
 
     
 
- 	default:
- 		$popstate = 'enable';
- 			$sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
- 			$sCode = "05uO" ;//pv 체크
- 			$sIfrCode1 = "01Ca"	;// 전체기사
- 			$sIfrCode2 = "02vo"	;// 포토뉴스
- 			$sIfrCode3 = "01Cc"   ;// 많이본 뉴스
- 			$sIfrCode4 = "032o"	;// 베스트 신문보기
- 			$sIfrCode5 = "02vi"	;// 주간 핫 리포트
- 			$sIfrCode7 = "02vk"	;// 요일별 웹툰
- 			$sIfrCode8 = "02vl"	;// 인기웹툰
- 			$sIfrCode9 = "02yT"	;// 베스트게임
- 			$sIfrCode10 = "02vp"	;// 푸터배너
- 			$sIfrCode11 = "02yT"	;// 베스트웹툰 랜덤
- 			$sIfrCode12 = "032y"  ;//탑배너
- 			$sIfrCode13 = "0320"  ;//신규생활정보
- 			$sIfrCode14 = "03EV"  ;//베스트신문보기 배너형
- 		break;
+ 	
  } 
 
 include_once "common/type_pop.php";
