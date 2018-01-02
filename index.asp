@@ -7,6 +7,7 @@ $link_id="";
 $post_id="";
 $datescript=0;
 $view_type="";
+$sURL="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 
 /*
