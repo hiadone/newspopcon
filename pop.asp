@@ -1,5 +1,6 @@
 <?php
 
+setcookie("ilyosisa","1",time()+60*5);
 
 $sType = isset($_REQUEST["type"]) ? $_REQUEST["type"] : "ajunews";
 $db_db="";
@@ -407,7 +408,15 @@ $popstate='disable';
 	 			Copyright ⓒ NEWSPOPCON ALL RIGHT RESERVED
 	 		</p>
 	 	</footer>
-		<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" >
+    <?php 
+    if($_REQUEST["type"]==="ilyosisa"){
+      if(empty($_COOKIE['ilyosisa'])){
+          echo '<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid='.$sCode.'&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" >';
+      }		
+    } else {
+      echo '<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid='.$sCode.'&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" >';
+    }
+    ?>
 		</iframe>
         
 	</body>
