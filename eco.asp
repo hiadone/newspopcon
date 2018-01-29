@@ -415,8 +415,15 @@ $popstate='disable';
 	 			Copyright ⓒ NEWSPOPCON ALL RIGHT RESERVED
 	 		</p>
 	 	</footer>
-		<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">
-		</iframe>
+		
+    <?php 
+    if($_REQUEST["type"]==="marumaru"){ 
+          echo '<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=08Lq&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>';
+    } else {
+      echo '<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid='.$sCode.'&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>';
+    }    
+    ?>
+		
       
 	</body>
 </html>	
