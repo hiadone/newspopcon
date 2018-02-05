@@ -89,7 +89,7 @@ $popstate='disable';
           s.type = 'text/javascript';
           s.async = true;
           s.id='hiadone_shortcut';
-          s.src = "/common/type_shortcut.js?brd_key=shortcut&post_md=wemakeprice&v=0.11111";
+          s.src = "/common/type_shortcut_wemakeprice.js?brd_key=shortcut&post_md=wemakeprice&v=0.11111";
           var x = document.getElementsByTagName('script')[0];
           x.parentNode.insertBefore(s, x);
         }
