@@ -278,7 +278,7 @@ $(document).ready(function(){
 
 
 
-$filename=dirname(__FILE__).'/type_'.$brd_key.'.js';
+$filename=dirname(__FILE__).'/type_'.$brd_key.'_'.$extra_vars["post_md"].'.js';
             
 $fp2= fopen($filename,"w");
 fwrite($fp2,$post_content);
