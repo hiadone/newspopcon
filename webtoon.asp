@@ -239,7 +239,13 @@ $(document).ready(function(){
 
 		<!-- 투믹스 독점작 영역-->
 			<section class="info09">
-				<h2>투믹스 독점작</h2>
+                <?php 
+                if($sType === 'ajunews') 
+                    echo '<h2>탑툰 독점작</h2>';
+                else echo '<h2>투믹스 독점작</h2>';
+
+                ?>
+				
 
 				<!-- 스크립트 영역 -->
 					<div id="pageid30" >
