@@ -240,10 +240,7 @@ $(document).ready(function(){
 		<!-- 투믹스 독점작 영역-->
 			<section class="info09">
                 <?php 
-                if($sType === 'ajunews') 
-                    echo '<h2>탑툰 독점작</h2>';
-                else echo '<h2>투믹스 독점작</h2>';
-
+                echo '<h2>투믹스 독점작</h2>';
                 ?>
 				
 
