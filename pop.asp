@@ -325,7 +325,12 @@ $popstate='disable';
 
 	<!-- 요일별 웹툰 04 -->
 		<section class="info04">
-			<h2>요일별 웹툰</h2>
+			<h2>
+      <?php 
+        if($sType==='ajunews') echo '미소설 HOT 독점';
+        else echo '요일별 웹툰';
+      ?>
+      </h2>
 				<div id="foin_pageid04">
 				<iframe width="100%" height="348px"  src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 				</div>
@@ -341,7 +346,12 @@ $popstate='disable';
 
         <?php if (!empty($sIfrCode15)){ ?>
         <section class="info02" id="scroll03">
-            <h2>인기신작</h2>
+            <h2>
+              <?php 
+                if($sType==='ajunews') echo '강력추천';
+                else echo '인기신작';
+              ?>
+            </h2>
             <div>
                 <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
                 
@@ -361,7 +371,12 @@ $popstate='disable';
 
 	<!-- 인기웹툰 04 -->
 		<section class="info04" id="scroll04">
-			<h2>인기 웹툰</h2>
+			<h2>
+      <?php 
+        if($sType==='ajunews') echo '인기 S소설';
+        else echo '인기 웹툰';
+      ?>
+      </h2>
             <div id="foin_pageid04">
 			<iframe width="100%" height="348" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
             </div>
@@ -377,7 +392,12 @@ $popstate='disable';
 
 	<!-- Best 웹툰 Top6 07 -->
 		<section class="info07" id="scroll04">
-			<h2>Best 웹툰 TOP6</h2>
+			<h2>
+      <?php 
+        if($sType==='ajunews') echo '고수위 TOP6';
+        else echo 'Best 웹툰 TOP6';
+      ?>
+      </h2>
             <div id="foin_pageid07">
 			<iframe width="100%" height="330" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>	
             </div>

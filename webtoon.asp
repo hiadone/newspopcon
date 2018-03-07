@@ -239,11 +239,11 @@ $(document).ready(function(){
 
 		<!-- 투믹스 독점작 영역-->
 			<section class="info09">
-                <?php 
-                echo '<h2>투믹스 독점작</h2>';
+				<?php  
+                  if($sType==='ajunews') echo '<h2>미소설 HOT 독점</h2>';
+                  elseif($sType==='tvdaily') echo '<h2>탑툰 독점작</h2>';
+                  else echo '<h2>투믹스 독점작</h2>';
                 ?>
-				
-
 				<!-- 스크립트 영역 -->
 					<div id="pageid30" >
 						
