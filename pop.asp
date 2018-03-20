@@ -327,7 +327,7 @@ $popstate='disable';
 		<section class="info04">
 			<h2>
       <?php 
-        if($sType==='ajunews') echo '미소설 HOT 독점';
+        if($sType==='ajunews' && false) echo '미소설 HOT 독점';
         else echo '요일별 웹툰';
       ?>
       </h2>
@@ -348,7 +348,7 @@ $popstate='disable';
         <section class="info02" id="scroll03">
             <h2>
               <?php 
-                if($sType==='ajunews') echo '강력추천';
+                if($sType==='ajunews' && false) echo '강력추천';
                 else echo '인기신작';
               ?>
             </h2>
@@ -373,7 +373,7 @@ $popstate='disable';
 		<section class="info04" id="scroll04">
 			<h2>
       <?php 
-        if($sType==='ajunews') echo '인기 S소설';
+        if($sType==='ajunews' && false) echo '인기 S소설';
         else echo '인기 웹툰';
       ?>
       </h2>
@@ -394,7 +394,7 @@ $popstate='disable';
 		<section class="info07" id="scroll04">
 			<h2>
       <?php 
-        if($sType==='ajunews') echo '고수위 TOP6';
+        if($sType==='ajunews' && false) echo '고수위 TOP6';
         else echo 'Best 웹툰 TOP6';
       ?>
       </h2>
