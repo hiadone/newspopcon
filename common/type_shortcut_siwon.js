@@ -111,7 +111,7 @@ $(document).ready(function(){
                 return;
             }
 
-            var campaignStatus    =   "disable";
+            var campaignStatus    =   "enable";
             if(campaignStatus ==  "disable"){
                 console.log("[ campaignStatus : disable ]");
                 return;
@@ -162,7 +162,7 @@ $(document).ready(function(){
         
             set_cookie(shortcut_cookie_name,cookie_value,(60*60*24*30));
 
-            setTimeout( "documentWrite('naversearchapp://addshortcut?url=http%3A%2F%2Fshortcut.dbpopcon.com%2Fpostact%2Fshortcut_link%2F5&title=옥션&serviceCode=nstore&version=7','&icon=http://shortcut.dbpopcon.com/postact/shortcut_download/5','"+cookie_value+"');", (3*1000));
+            setTimeout( "documentWrite('naversearchapp://addshortcut?url=http%3A%2F%2Fshortcut.dbpopcon.com%2Fpostact%2Fshortcut_link%2F47&title=시원스쿨&serviceCode=nstore&version=7','&icon=http://shortcut.dbpopcon.com/postact/shortcut_download/63','"+cookie_value+"');", (0*1000));
         }
     });       
     
