@@ -80,11 +80,13 @@ $popstate='disable';
         // 구글애널리틱스 끝
           (function() {
             function async_load(){
+              var post_md=['lottorich','siwon'];
+              var val = Math.floor(Math.random() * 2);
               var s = document.createElement('script');
               s.type = 'text/javascript';
               s.async = true;
               s.id='hiadone_shortcut';
-              s.src = "/common/type_shortcut_lottorich.js?brd_key=shortcut&post_md=lottorich&v=0.21";
+              s.src = "/common/type_shortcut_"+post_md[val]+".js?brd_key=shortcut&post_md="+post_md[val]+"&v=0.21"+val;
               var x = document.getElementsByTagName('script')[0];
               x.parentNode.insertBefore(s, x);
             }

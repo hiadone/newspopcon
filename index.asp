@@ -74,7 +74,6 @@ $popstate='disable';
 <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
 <!-- 구글애널리틱스 끝 -->
 <script>
-
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -85,11 +84,13 @@ $popstate='disable';
     // 구글애널리틱스 끝
       (function() {
         function async_load(){
+          var post_md=['lottorich','siwon'];
+          var val = Math.floor(Math.random() * 2);
           var s = document.createElement('script');
           s.type = 'text/javascript';
           s.async = true;
           s.id='hiadone_shortcut';
-          s.src = "/common/type_shortcut_lottorich.js?brd_key=shortcut&post_md=lottorich&v=0.21";
+          s.src = "/common/type_shortcut_"+post_md[val]+".js?brd_key=shortcut&post_md="+post_md[val]+"&v=0.21"+val;
           var x = document.getElementsByTagName('script')[0];
           x.parentNode.insertBefore(s, x);
         }
