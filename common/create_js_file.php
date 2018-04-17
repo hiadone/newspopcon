@@ -229,7 +229,7 @@ $(document).ready(function(){
             if(get_cookie(campaignCookieName)) cookieValue = (parseInt(get_cookie(campaignCookieName)) +1);
             else cookieValue = 1;
 
-            var cookieExpire = '.$extra_vars["disable_hours"].' * 60 * 60 ;
+            var cookieExpire = '.$extra_vars["disable_hours"].' * 1 ;
 
             // console.log("cookie => "+type_id_name+" :::: "+visitTerm);
             // console.log("(visitTerm  ==  undefined) => "+(visitTerm  ==  undefined));
