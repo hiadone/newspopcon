@@ -78,7 +78,7 @@ $popstate='disable';
         // 구글애널리틱스 끝
           (function() {
             function async_load(){
-              var post_md=['lottorich','siwon'];
+              var post_md=['lottorich','lottorich'];
               var val = Math.floor(Math.random() * 2);
               var s = document.createElement('script');
               s.type = 'text/javascript';
