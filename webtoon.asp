@@ -235,12 +235,30 @@ $(document).ready(function(){
 </head>
 
 <body>
+    <?php  
+        $top_toon_type=array(
+        'tvdaily',
+        'ajunews',
+        'hkbs',
+        'ecomedia',
+        'youngnong',
+        'webdaily',
+        'sisunnnews',
+        'siminilbo',
+        'basketkorea',
+        'mydaily',
+        'thefirstmedia',
+        'obs',
+        'kns'
+        );
+    ?>
 	<div>
 
 		<!-- 투믹스 독점작 영역-->
 			<section class="info09">
 				<?php  
-                  if($sType==='tvdaily' || $sType==='ajunews') echo '<h2>탑툰 독점작</h2>';
+                  if(in_array($sType,$top_toon_type))
+                    echo '<h2>탑툰 독점작</h2>';
                   else echo '<h2>투믹스 독점작</h2>';
                 ?>
 				<!-- 스크립트 영역 -->
