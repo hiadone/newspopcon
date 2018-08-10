@@ -296,7 +296,7 @@ var webtoon_flag=true;
 
 		<!-- 요일별 웹툰 영역 -->
 			<section class="info04">
-				<h2>요일별 웹툰</h2>
+				<h2>인기 웹툰</h2>
 					<div id="foin_pageid04">
 						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&lang=utf-8&out=script'></script>
 					</div>
@@ -334,7 +334,7 @@ var webtoon_flag=true;
 
 		<!-- 인기웹툰 04 -->
 			<section class="info04">
-				<h2>인기 웹툰</h2>
+				<h2>추천 웹툰</h2>
 				<div id="foin_pageid04">
 					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&lang=utf-8&out=script'></script>
 				</div>

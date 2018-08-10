@@ -316,7 +316,7 @@ $popstate='disable';
 
 <!-- 요일별 웹툰 04 -->
 		<section class="info04">
-			<h2>요일별 웹툰</h2>
+			<h2>인기 웹툰</h2>
 			     <div id="foin_pageid04">
 				<iframe width="100%" height="348px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 			     </div>
@@ -351,7 +351,7 @@ $popstate='disable';
 
 	<!-- 인기웹툰 04 -->
 		<section class="info04" id="scroll04">
-			<h2>인기 웹툰</h2>
+			<h2>추천 웹툰</h2>
             <div id="foin_pageid04">
 			<iframe width="100%" height="348" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
             </div>

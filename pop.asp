@@ -330,7 +330,7 @@ $popstate='disable';
 			<h2>
       <?php 
         if($sType==='ajunews' && false) echo '미소설 HOT 독점';
-        else echo '요일별 웹툰';
+        else echo '인기 웹툰';
       ?>
       </h2>
 				<div id="foin_pageid04">
@@ -376,7 +376,7 @@ $popstate='disable';
 			<h2>
       <?php 
         if($sType==='ajunews' && false) echo '인기 S소설';
-        else echo '인기 웹툰';
+        else echo '추천 웹툰';
       ?>
       </h2>
             <div id="foin_pageid04">

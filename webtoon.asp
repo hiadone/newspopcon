@@ -259,7 +259,7 @@ $(document).ready(function(){
 				<?php  
                   if(in_array($sType,$top_toon_type))
                     echo '<h2>탑툰 독점작</h2>';
-                  else echo '<h2>투믹스 독점작</h2>';
+                  else echo '<h2>독점 연재작</h2>';
                 ?>
 				<!-- 스크립트 영역 -->
 					<div id="pageid30" >
