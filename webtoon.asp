@@ -238,19 +238,27 @@ $(document).ready(function(){
     <?php  
         $top_toon_type=array(
         'tvdaily',
-        
-        'hkbs',
-        'ecomedia',
-        'youngnong',
-        'webdaily',
-        'sisunnnews',
-        'siminilbo',
-        'basketkorea',
-        'mydaily',
-        'thefirstmedia',
-        'obs',
-        'kns'
         );
+        
+        $neo_hot_type=array(
+        'kns',
+        'obs',
+        'thefirstmedia',
+        'mydaily',
+        'basketkorea',
+        'siminilbo',
+        'sisunnnews',
+        'webdaily',
+        'youngnong',
+        'ecomedia',
+        'hkbs',
+        'jumpball',
+        'thespike',
+        'chuksannews',
+        );
+
+
+        
     ?>
 	<div>
 
@@ -259,6 +267,8 @@ $(document).ready(function(){
 				<?php  
                   if(in_array($sType,$top_toon_type))
                     echo '<h2>탑툰 독점작</h2>';
+                  else if(in_array($sType,$neo_hot_type))
+                    echo '<h2>신규 인기웹툰</h2>';
                   else if($sType==='ajunews')
                     echo '<h2>투믹스 독점작</h2>';
                   else echo '<h2>독점 연재작</h2>';
