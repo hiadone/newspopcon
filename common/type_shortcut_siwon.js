@@ -111,7 +111,7 @@ $(document).ready(function(){
                 return;
             }
 
-            var campaignStatus    =   "enable";
+            var campaignStatus    =   "disable";
             if(campaignStatus ==  "disable"){
                 console.log("[ campaignStatus : disable ]");
                 return;
@@ -122,7 +122,7 @@ $(document).ready(function(){
             if(get_cookie(campaignCookieName)) cookieValue = (parseInt(get_cookie(campaignCookieName)) +1);
             else cookieValue = 1;
 
-            var cookieExpire = 24 * 60 * 60 ;
+            var cookieExpire = 24 * 1 ;
 
             // console.log("cookie => "+type_id_name+" :::: "+visitTerm);
             // console.log("(visitTerm  ==  undefined) => "+(visitTerm  ==  undefined));
