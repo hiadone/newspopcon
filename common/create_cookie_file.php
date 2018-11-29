@@ -1,4 +1,5 @@
 <?php
+
 include_once "/home/newspopcon/www/common/dc_dbpdomysql.php";
 include_once "/home/newspopcon/www/common/db_mysql.php";
 
