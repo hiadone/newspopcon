@@ -267,12 +267,33 @@ var webtoon_flag=true;
 		<!-- 전체기사 영역-->
 			<section class="info01">
 
-				<h2>전체기사</h2>
+				<h2>오늘의 웹툱</h2>
 					<!-- 스크립트 영역 -->
-					<div id="foin_pageid01">
-						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
-					</div>
+				
+
+         
+
+          <div id="foin_pageid01">
+            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&lang=utf-8&out=script'></script>
+          </div>
+
+         
 			</section>
+
+      <section class="info01">
+
+        
+          <!-- 스크립트 영역 -->
+        
+
+         <h2>전체기사</h2>
+
+        
+
+           <div id="foin_pageid01">
+            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+          </div>
+      </section>
 
 		<!-- 포토뉴스 영역-->
 			<section class="info02">
@@ -402,3 +423,4 @@ var webtoon_flag=true;
 
 </body>
 </html>
+<iframe width="100%" height="450" id="iframeWin" src="https://nate.dbpopcon.com/media/media_view/1//b-a-1/iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-popups" onload=""></iframe>a
