@@ -292,11 +292,34 @@ $popstate='disable';
         <div id="newspopcon">
 	<!-- 전체기사 영역 01 -->
 		<section class="info01" id="scroll01">
-			<h2>전체기사</h2>
-            <div id="foin_pageid01">
-                    <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
-                </div>
-		</section>
+
+                <h2>오늘의 웹툱</h2>
+                    <!-- 스크립트 영역 -->
+                
+
+         
+
+          <div id="foin_pageid01">
+            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&lang=utf-8&out=script'></script>
+          </div>
+
+         
+            </section>
+
+      <section class="info01">
+
+        
+          <!-- 스크립트 영역 -->
+        
+
+         <h2>전체기사</h2>
+
+        
+
+           <div id="foin_pageid01">
+            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+          </div>
+      </section>
 
 	<!-- 포토뉴스영역 02-->
 		<section class="info02">
