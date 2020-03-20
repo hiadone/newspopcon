@@ -265,7 +265,7 @@ var webtoon_flag=true;
 	<div class="wrap">
         <div id="newspopcon">
 		<!-- 전체기사 영역-->
-			<section class="info01">
+			<section class="info02">
 
 				<h2>오늘의 웹툰</h2>
 					<!-- 스크립트 영역 -->
@@ -273,8 +273,8 @@ var webtoon_flag=true;
 
          
 
-          <div id="foin_pageid01">
-            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&lang=utf-8&out=script'></script>
+          <div >
+            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=0Cuz&lang=utf-8&out=script'></script>
           </div>
 
          
@@ -300,7 +300,7 @@ var webtoon_flag=true;
 				<h2>포토뉴스</h2>
 
 				<div>
-				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode2?>&lang=utf-8&out=script'></script>
+				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Cb&lang=utf-8&out=script'></script>
 				</div>
 
 			</section>
