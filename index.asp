@@ -267,7 +267,7 @@ var webtoon_flag=true;
 		<!-- 전체기사 영역-->
 			<section class="info01">
 
-				<h2>오늘의 웹툱</h2>
+				<h2>오늘의 웹툰</h2>
 					<!-- 스크립트 영역 -->
 				
 
