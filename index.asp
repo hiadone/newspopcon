@@ -423,4 +423,4 @@ var webtoon_flag=true;
 
 </body>
 </html>
-<iframe width="100%" height="450" id="iframeWin" src="https://nate.dbpopcon.com/media/media_view/1//b-a-1/iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-scripts allow-forms allow-top-navigation allow-popups" onload=""></iframe>a
+
