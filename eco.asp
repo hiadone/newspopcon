@@ -291,10 +291,10 @@ $popstate='disable';
 	<div class="wrap">
         <div id="newspopcon">
 	<!-- 전체기사 영역 01 -->
-		<section class="info02" id="scroll01">
+		<!-- <section class="info02" id="scroll01">
 
                 <h2>오늘의 웹툰</h2>
-                    <!-- 스크립트 영역 -->
+                    
                 
 
          
@@ -304,9 +304,9 @@ $popstate='disable';
           </div>
 
          
-            </section>
+            </section> -->
 
-      <section class="info01">
+      <section class="info01" id="scroll01">
 
         
           <!-- 스크립트 영역 -->

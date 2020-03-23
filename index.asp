@@ -265,10 +265,10 @@ var webtoon_flag=true;
 	<div class="wrap">
         <div id="newspopcon">
 		<!-- 전체기사 영역-->
-			<section class="info02">
+			<!-- <section class="info02">
 
 				<h2>오늘의 웹툰</h2>
-					<!-- 스크립트 영역 -->
+			
 				
 
          
@@ -278,7 +278,7 @@ var webtoon_flag=true;
           </div>
 
          
-			</section>
+			</section> -->
 
       <section class="info01">
 
