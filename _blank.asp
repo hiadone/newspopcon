@@ -10,6 +10,7 @@
 <!-- 구글애널리틱스 끝 -->
 <script>
 
+
       (function() {
         function async_load(){
           var post_md=['ssg_shortcut','ssg_shortcut'];
@@ -28,8 +29,10 @@
      
 
    
-</script>
 
+
+</script>
+<script src="//zone5.adpopcon.com/cgi-bin/PelicanC.dll?impr?pageid=0Czg&out=script"></script>
 
 
 </head>
