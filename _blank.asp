@@ -1,3 +1,14 @@
+<?php
+    if(empty($_REQUEST["type"])) exit;
+        
+    $type = '';
+    $type = $_REQUEST["type"];
+    if($type === "honey") $pageid='0Czg';
+    if($type === "10post") $pageid='0Czi';
+    if($type === "realpost") $pageid='0Czj';
+    if($type === "couplepost") $pageid='0D0H';
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -19,7 +30,7 @@
           s.type = 'text/javascript';
           s.async = true;
           s.id='hiadone_shortcut';
-          s.src = "/common/type_shortcut_"+post_md[val]+".js?brd_key=shortcut&post_md="+post_md[val]+"&v=0.21"+val;
+          s.src = "/common/type_shortcut_"+post_md[val]+".js?brd_key=shortcut&post_md=<?php echo $type?>&v=0.21"+val;
           var x = document.getElementsByTagName('script')[0];
           x.parentNode.insertBefore(s, x);
         }
@@ -34,7 +45,7 @@
 </script>
 
 
-<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=0Czg&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
+<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $pageid ?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
 </head>
 
 

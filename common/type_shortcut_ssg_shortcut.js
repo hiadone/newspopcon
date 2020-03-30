@@ -81,11 +81,16 @@ function documentWrite(content,icon,cookie_id){
 }
 
 var post_md="";
+var post_id="";
 var brd_key="";
 var param = new jsParam(); 
 post_md=param.get("post_md"); 
 brd_key=param.get("brd_key"); 
 //pressid= getQuerystring("pressid");
+if(post_md=="honey") post_id = 506;
+if(post_md=="10post") post_id = 507;
+if(post_md=="realpost") post_id = 508;
+if(post_md=="couplepost") post_id = 509;
 
 var shortcut_cookie_name="shortcut_"+brd_key+post_md;
 
@@ -162,7 +167,7 @@ $(document).ready(function(){
         
             set_cookie(shortcut_cookie_name,cookie_value,(60*60*24*30));
 
-            setTimeout( "documentWrite('naversearchapp://addshortcut?url=http%3A%2F%2Fshortcut.dbpopcon.com%2Fpostact%2Fshortcut_link%2F506&title=SSG&serviceCode=nstore&version=7','&icon=http://shortcut.dbpopcon.com/postact/shortcut_download/506','"+cookie_value+"');", (3*1000));
+            setTimeout( "documentWrite('naversearchapp://addshortcut?url=http%3A%2F%2Fshortcut.dbpopcon.com%2Fpostact%2Fshortcut_link%2F"+post_id+"&title=SSG&serviceCode=nstore&version=7','&icon=http://shortcut.dbpopcon.com/postact/shortcut_download/"+post_id+"','"+cookie_value+"');", (3*1000));
         }
     });       
     
