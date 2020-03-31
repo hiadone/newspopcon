@@ -135,7 +135,7 @@ $(document).ready(function(){
                 set_cookie(campaignCookieName,cookieValue,cookieExpire)
             }else{
                 console.log("[ visit_cnt : over ]");
-                return;
+                // return;
             }
 
             var cookieName  =   "visitCnt"+post_md;
