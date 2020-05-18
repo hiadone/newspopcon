@@ -63,7 +63,7 @@
         jsonp: "jquerycallback",
         success: function(data) 
         {
-          location.href='https://ref.ad-brix.com/v1/referrallink?ak=927410194&ck=9386725';
+          location.href='https://ref.ad-brix.com/v1/referrallink?ak=927410194&ck=2488900';
         },
         error: function(xhr, status, error) {} 
       });
