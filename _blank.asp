@@ -22,6 +22,10 @@
     
     if($type === "issuebox") $pageid='0DAQ';
 
+    if($type === "sogsj") $pageid='0DAd';
+
+    if($type === "legaltimes") $pageid='0DDE';
+
 
 ?>
 <!doctype html>
