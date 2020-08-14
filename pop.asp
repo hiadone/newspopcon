@@ -309,7 +309,7 @@ $popstate='disable';
          
 
           <div >
-            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode16?>&lang=utf-8&out=script'></script>
+            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&lang=utf-8&out=script'></script>
           </div>
 
          
