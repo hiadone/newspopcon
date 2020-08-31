@@ -10,7 +10,7 @@ $datescript=0;
 $outerscript="";
 $sURL="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
-//$sURL="http://www.popapp.co.kr/anytoon/md.php?MD=".$sType;
+//$sURL="//www.popapp.co.kr/anytoon/md.php?MD=".$sType;
 $view_type="";
 
 
@@ -61,8 +61,8 @@ $popstate='disable';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=yes">
         <link rel="shortcut icon" href="/images/favi.png">
 		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
         <link href="css_new/import.css" rel="stylesheet" type="text/css">
         <script type='text/javascript' src="/js/jquery-1.11.1.min.js"></script>
@@ -75,7 +75,7 @@ $popstate='disable';
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-88829342-3', 'auto');
           ga('send', 'pageview');
@@ -275,7 +275,7 @@ $popstate='disable';
                 <li>
                     <?php 
                     if($sType==='genius' || $sType==='community'){
-                        echo '<a href="http://www.popapp.co.kr/tomix/md.php?MD='.$sType.'" target="_blank">';
+                        echo '<a href="//www.popapp.co.kr/tomix/md.php?MD='.$sType.'" target="_blank">';
                     } else echo '<a>';
                     ?>
                     
@@ -300,7 +300,7 @@ $popstate='disable';
          
 
           <div >
-            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&lang=utf-8&out=script'></script>
+            <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&lang=utf-8&out=script'></script>
           </div>
 
          
@@ -317,7 +317,7 @@ $popstate='disable';
         
 
            <div id="foin_pageid01">
-            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+            <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
           </div>
       </section>
 
@@ -325,7 +325,7 @@ $popstate='disable';
 		<section class="info02">
 				<h2>포토뉴스</h2>
                 <div>
-                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode2?>&lang=utf-8&out=script'></script>
+                <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode2?>&lang=utf-8&out=script'></script>
                 </div>
 		</section>
 
@@ -333,7 +333,7 @@ $popstate='disable';
 		<section class="info03" id="scroll02">
 			<h2>생활정보</h2>
 				<div id="foin_pageid03">
-                    <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&lang=utf-8&out=script'></script>
+                    <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&lang=utf-8&out=script'></script>
                 </div>
 		</section>
 
@@ -341,7 +341,7 @@ $popstate='disable';
 		<section class="info04">
 			<h2>인기 웹툰</h2>
 			     <div id="foin_pageid04">
-				<iframe width="100%" height="348px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+				<iframe width="100%" height="348px" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 			     </div>
 		</section>
 
@@ -349,7 +349,7 @@ $popstate='disable';
 		<section class="info02" id="scroll03">
 			<h2>핫토픽</h2>
 			<div>
-				<iframe width="100%" height="120px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode13?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+				<iframe width="100%" height="120px" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode13?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 			</div>
 		</section>
 
@@ -357,7 +357,7 @@ $popstate='disable';
         <section class="info02" id="scroll03">
             <h2>인기신작</h2>
             <div>
-                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
+                <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
                 
             </div>
             
@@ -368,7 +368,7 @@ $popstate='disable';
 		<section class="info05">
 			<h2>BEST 신문보기</h2>
             <div id="foin_pageid05">
-				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode4?>&lang=utf-8&out=script'></script>
+				<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode4?>&lang=utf-8&out=script'></script>
             </div>
 		</section>
 
@@ -376,7 +376,7 @@ $popstate='disable';
 		<section class="info04" id="scroll04">
 			<h2>추천 웹툰</h2>
             <div id="foin_pageid04">
-			<iframe width="100%" height="348" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+			<iframe width="100%" height="348" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
             </div>
 		</section>
 
@@ -384,7 +384,7 @@ $popstate='disable';
 		<section class="info6">
 				<h2>주간 핫 리포트</h2>
 				<div style="position:relative; padding-top: 83%;">
-				<iframe width="100%" height="100%" style="position:absolute; top:0; left: 0; padding:0%;" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+				<iframe width="100%" height="100%" style="position:absolute; top:0; left: 0; padding:0%;" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&out=iframe" allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
 				<div>
 		</section>
 
@@ -392,7 +392,7 @@ $popstate='disable';
 		<section class="info07" id="scroll04">
 			<h2>Best 웹툰 TOP6</h2>
             <div id="foin_pageid07">
-			<iframe width="100%" height="330px" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>	
+			<iframe width="100%" height="330px" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>	
             </div>
 				
 		</section>
@@ -405,11 +405,11 @@ $popstate='disable';
             ?>
                 
                     <div id="foin_pageid08" style="position: relative;padding-top: 98%;">
-                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
+                        <iframe width="100%" height="100%" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
                     </div>
             <?php } else { ?>
                     <div>
-                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode17?>&lang=utf-8&out=script'></script>
+                        <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode17?>&lang=utf-8&out=script'></script>
                     </div>
             <?php } ?>
         </section> 
@@ -418,7 +418,7 @@ $popstate='disable';
 
 	<!-- 하단 배너 08 -->
 		<section class="info08" style="margin-bottom: 0">
-			<script src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&out=script"></script>
+			<script src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&out=script"></script>
 		</section>
         </div>
 
@@ -443,10 +443,10 @@ $popstate='disable';
 		
     <?php 
     if($_REQUEST["type"]==="marumaru"){ 
-          echo '<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=08Lq&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>';
+          echo '<iframe width="0" height="0" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=08Lq&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>';
     }    
     ?>
-	<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode;?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
+	<iframe width="0" height="0" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode;?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
       
 	</body>
 </html>	

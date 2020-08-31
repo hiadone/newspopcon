@@ -11,7 +11,7 @@ $sURL="";
 $referer = empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
 
 /*
-$sURL="http://www.popapp.co.kr/tomix/md.php?MD=default";
+$sURL="//www.popapp.co.kr/tomix/md.php?MD=default";
 $sCode = "05Ps" ;//pv 체크
 $sIfrCode1 = "01Ca" ;// 전체기사
 $sIfrCode2 = "01Cb" ;// 포토뉴스
@@ -77,7 +77,7 @@ $popstate='disable';
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-88829342-3', 'auto');
       ga('send', 'pageview');
@@ -274,7 +274,7 @@ var webtoon_flag=true;
          
 
           <div >
-            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=0Cuz&lang=utf-8&out=script'></script>
+            <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=0Cuz&lang=utf-8&out=script'></script>
           </div>
 
          
@@ -291,7 +291,7 @@ var webtoon_flag=true;
         
 
            <div id="foin_pageid01">
-            <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
+            <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode1?>&lang=utf-8&out=script'></script>
           </div>
       </section>
 
@@ -300,7 +300,7 @@ var webtoon_flag=true;
 				<h2>포토뉴스</h2>
 
 				<div>
-				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Cb&lang=utf-8&out=script'></script>
+				<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=01Cb&lang=utf-8&out=script'></script>
 				</div>
 
 			</section>
@@ -310,7 +310,7 @@ var webtoon_flag=true;
 				<h2>생활정보</h2>
 
 					<div id="foin_pageid03">
-						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&lang=utf-8&out=script'></script>					   
+						<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode3?>&lang=utf-8&out=script'></script>					   
 					</div>
 
 			</section>
@@ -319,7 +319,7 @@ var webtoon_flag=true;
 			<section class="info04">
 				<h2>인기 웹툰</h2>
 					<div id="foin_pageid04">
-						<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&lang=utf-8&out=script'></script>
+						<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode7?>&lang=utf-8&out=script'></script>
 					</div>
 			</section>
 
@@ -327,7 +327,7 @@ var webtoon_flag=true;
 			<section class="info02">
 				<h2>핫토픽</h2>
 				<div>
-					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode13?>&lang=utf-8&out=script'></script>
+					<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode13?>&lang=utf-8&out=script'></script>
 					
 				</div>
 			</section>
@@ -337,7 +337,7 @@ var webtoon_flag=true;
 	        <section class="info02" id="scroll03">
 	            <h2>인기신작</h2>
 	            <div>
-	                <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
+	                <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode15?>&lang=utf-8&out=script'></script>
 	                
 	            </div>
 	            
@@ -349,7 +349,7 @@ var webtoon_flag=true;
 
 				<h2>BEST 신문보기</h2>
 				<div id="foin_pageid05">
-					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode4?>&lang=utf-8&out=script'></script>
+					<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode4?>&lang=utf-8&out=script'></script>
 				</div>
 			</section>
 
@@ -357,21 +357,21 @@ var webtoon_flag=true;
 			<section class="info04">
 				<h2>추천 웹툰</h2>
 				<div id="foin_pageid04">
-					<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&lang=utf-8&out=script'></script>
+					<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode8?>&lang=utf-8&out=script'></script>
 				</div>
 			</section>
 
 		<!-- 주간 핫리포트 06 -->
 			<section class="info06">
 				<h2>주간 핫 리포트</h2>
-				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&lang=utf-8&out=script'></script>
+				<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode5?>&lang=utf-8&out=script'></script>
 			</section>
 
 		<!-- Best 웹툰 Top6 07 -->
 			<section class="info07">
                 <h2>Best 웹툰 TOP6</h2>
                 <div>
-                    <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&lang=utf-8&out=script'></script>
+                    <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode11?>&lang=utf-8&out=script'></script>
                 </div>
 			</section>
 
@@ -383,11 +383,11 @@ var webtoon_flag=true;
             ?>
                 
                     <div id="foin_pageid08" style="position: relative;padding-top: 98%;">
-                        <iframe width="100%" height="100%" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
+                        <iframe width="100%" height="100%" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode16?>&out=iframe" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" style="position: absolute;top: 0;left: 0;"></iframe>
                     </div>
             <?php } else { ?>
                     <div>
-                        <script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode17?>&lang=utf-8&out=script'></script>
+                        <script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php //echo $sIfrCode17?>&lang=utf-8&out=script'></script>
                     </div>
             <?php } ?>
             </section> 
@@ -395,7 +395,7 @@ var webtoon_flag=true;
 
 		<!-- 하단 배너 08 -->
 			<section class="info08" style="margin-bottom: 0">
-				<script type='text/javascript' src='http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&lang=utf-8&out=script'></script>
+				<script type='text/javascript' src='//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sIfrCode10?>&lang=utf-8&out=script'></script>
 				</a>
 			</section>
         </div>
@@ -419,7 +419,7 @@ var webtoon_flag=true;
 	 		</p>
 	 	</footer>
  	
-	<iframe width="0" height="0" src="http://ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
+	<iframe width="0" height="0" src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=<?php echo $sCode?>&out=iframe" allowTransparency = "true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" ></iframe>
 
 </body>
 </html>

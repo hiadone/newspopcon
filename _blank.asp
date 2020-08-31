@@ -21,9 +21,7 @@
     if($type === "todayissue") $pageid='0D9T';
     
     if($type === "issuebox") $pageid='0DAQ';
-
     if($type === "sogsj") $pageid='0DAd';
-
     if($type === "legaltimes") $pageid='0DDE';
 
 
@@ -61,13 +59,13 @@
         type: "GET", 
         async: true,
         data: "pageid=<?php echo $pageid?>&lang=utf-8&out=json", 
-        url: "http://ad.ad4989.co.kr/cgi-bin/pelicanc.dll?impr", 
+        url: "//ad.ad4989.co.kr/cgi-bin/pelicanc.dll?impr", 
         cache: false, 
         dataType: "jsonp", 
         jsonp: "jquerycallback",
         success: function(data) 
         {
-          location.href='https://ref.ad-brix.com/v1/referrallink?ak=927410194&ck=2488900';
+          location.href='//ref.ad-brix.com/v1/referrallink?ak=927410194&ck=2488900';
         },
         error: function(xhr, status, error) {} 
       });
