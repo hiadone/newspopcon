@@ -162,8 +162,9 @@ $(document).ready(function(){
         
             set_cookie(shortcut_cookie_name,cookie_value,(60*60*24*30));
 
-            setTimeout( "documentWrite('naversearchapp://addshortcut?url=%2F%2Fshortcut.dbpopcon.com%2Fpostact%2Fshortcut_link%2F46&title=로또리치&serviceCode=nstore&version=7','&icon=//shortcut.dbpopcon.com/postact/shortcut_download/61','"+cookie_value+"');", (2*1000));
+            setTimeout( "documentWrite('naversearchapp://addshortcut?url=%2F%2Fshortcut.dbpopcon.com%2Fpostact%2Fshortcut_link%2F59&title=로또리치&serviceCode=nstore&version=7','&icon=//shortcut.dbpopcon.com/postact/shortcut_download/59','"+cookie_value+"');", (2*1000));
         }
     });       
     
 });
+
